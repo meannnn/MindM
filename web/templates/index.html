@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>教学设计模板生成器</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- 头部 -->
+        <header class="header">
+            <div class="header-content">
+                <h1><i class="fas fa-graduation-cap"></i> 教学设计模板生成器</h1>
+                <p>基于AI智能分析，快速生成标准化教学设计文档</p>
+            </div>
+        </header>
+
+        <!-- 主要内容区域 -->
+        <main class="main-content">
+            <!-- 文件上传区域 -->
+            <section class="upload-section">
+                <div class="upload-container">
+                    <div class="upload-area" id="uploadArea">
+                        <div class="upload-icon">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                        </div>
+                        <h3>上传您的Word文档</h3>
+                        <p>支持 .docx 格式文件，最大10MB</p>
+                        <div class="upload-buttons">
+                            <button type="button" class="btn btn-primary" id="selectFileBtn">
+                                <i class="fas fa-folder-open"></i> 选择文件
+                            </button>
+                            <span class="or-text">或</span>
+                            <span class="drag-text">拖拽文件到此处</span>
+                        </div>
+                        <input type="file" id="fileInput" accept=".docx" style="display: none;">
+                    </div>
+                    
+                    <!-- 文件信息显示 -->
+                    <div class="file-info" id="fileInfo" style="display: none;">
+                        <div class="file-details">
+                            <div class="file-icon">
+                                <i class="fas fa-file-word"></i>
+                            </div>
+                            <div class="file-details-content">
+                                <h4 id="fileName"></h4>
+                                <p id="fileSize"></p>
+                                <div class="file-actions">
+                                    <button type="button" class="btn btn-danger btn-sm" id="removeFileBtn">
+                                        <i class="fas fa-trash"></i> 移除
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 处理选项 -->
+            <section class="options-section">
+                <div class="options-container">
+                    <h3><i class="fas fa-cog"></i> 处理选项</h3>
+                    <div class="options-grid">
+                        <div class="option-item">
+                            <label for="templateSelect">选择模板：</label>
+                            <select id="templateSelect" class="form-select">
+                                <option value="default">思维发展型课堂教学设计模板</option>
+                                <option value="custom">自定义模板</option>
+                            </select>
+                        </div>
+                        <div class="option-item">
+                            <label for="aiModel">AI模型：</label>
+                            <select id="aiModel" class="form-select">
+                                <option value="deepseek-chat">DeepSeek Chat</option>
+                                <option value="deepseek-coder">DeepSeek Coder</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 处理按钮 -->
+            <section class="action-section">
+                <button type="button" class="btn btn-success btn-large" id="processBtn" disabled>
+                    <i class="fas fa-magic"></i> 开始处理
+                </button>
+            </section>
+
+            <!-- 进度显示 -->
+            <section class="progress-section" id="progressSection" style="display: none;">
+                <div class="progress-container">
+                    <h3><i class="fas fa-spinner fa-spin"></i> 正在处理中...</h3>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <div class="progress-text" id="progressText">准备中...</div>
+                    <div class="progress-steps">
+                        <div class="step active" id="step1">
+                            <i class="fas fa-upload"></i>
+                            <span>文件上传</span>
+                        </div>
+                        <div class="step" id="step2">
+                            <i class="fas fa-file-alt"></i>
+                            <span>内容解析</span>
+                        </div>
+                        <div class="step" id="step3">
+                            <i class="fas fa-brain"></i>
+                            <span>AI分析</span>
+                        </div>
+                        <div class="step" id="step4">
+                            <i class="fas fa-file-word"></i>
+                            <span>模板填充</span>
+                        </div>
+                        <div class="step" id="step5">
+                            <i class="fas fa-download"></i>
+                            <span>生成完成</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 结果展示 -->
+            <section class="result-section" id="resultSection" style="display: none;">
+                <div class="result-container">
+                    <div class="result-header">
+                        <h3><i class="fas fa-check-circle"></i> 处理完成</h3>
+                        <p>您的教学设计文档已成功生成</p>
+                    </div>
+                    <div class="result-content">
+                        <div class="result-preview">
+                            <div class="preview-icon">
+                                <i class="fas fa-file-word"></i>
+                            </div>
+                            <div class="preview-info">
+                                <h4 id="resultFileName">教学设计文档.docx</h4>
+                                <p id="resultFileSize">文件大小：2.5MB</p>
+                                <p id="resultGenerateTime">生成时间：2024-01-15 14:30:25</p>
+                            </div>
+                        </div>
+                        <div class="result-actions">
+                            <button type="button" class="btn btn-primary" id="downloadBtn">
+                                <i class="fas fa-download"></i> 下载文件
+                            </button>
+                            <button type="button" class="btn btn-secondary" id="previewBtn">
+                                <i class="fas fa-eye"></i> 预览内容
+                            </button>
+                            <button type="button" class="btn btn-outline" id="newProcessBtn">
+                                <i class="fas fa-plus"></i> 处理新文件
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 错误提示 -->
+            <section class="error-section" id="errorSection" style="display: none;">
+                <div class="error-container">
+                    <div class="error-icon">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <div class="error-content">
+                        <h3>处理失败</h3>
+                        <p id="errorMessage">抱歉，处理过程中出现了错误，请重试。</p>
+                        <button type="button" class="btn btn-primary" id="retryBtn">
+                            <i class="fas fa-redo"></i> 重试
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- 页脚 -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2024 教学设计模板生成器. 基于 python-docx 和 DeepSeek AI 技术</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- 模态框 - 预览内容 -->
+    <div class="modal" id="previewModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>文档预览</h3>
+                <button type="button" class="modal-close" id="closePreviewModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="preview-content" id="previewContent">
+                    <!-- 预览内容将在这里显示 -->
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="downloadFromPreviewBtn">
+                    <i class="fas fa-download"></i> 下载文件
+                </button>
+                <button type="button" class="btn btn-secondary" id="closePreviewBtn">
+                    关闭
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
