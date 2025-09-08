@@ -130,3 +130,955 @@ jinja2.exceptions.TemplateNotFound: index.html
 2025-09-07 22:06:44,007 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 22:06:44] "GET / HTTP/1.1" 200 -
 2025-09-07 22:07:05,877 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 22:07:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-09-07 22:07:05,893 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 22:07:05] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-09-08 11:03:37,793 - llm.clients.aliyun_client - INFO - 阿里云百炼客户端初始化完成
+2025-09-08 11:03:37,793 - llm.utils.file_handler - INFO - 文件处理器初始化完成，上传目录: ./uploads
+2025-09-08 11:03:37,793 - app - INFO - 组件初始化成功
+2025-09-08 11:04:58,900 - llm.clients.aliyun_client - INFO - 阿里云百炼客户端初始化完成
+2025-09-08 11:04:58,900 - llm.utils.file_handler - INFO - 文件处理器初始化完成，上传目录: ./uploads
+2025-09-08 11:04:58,900 - app - INFO - 组件初始化成功
+2025-09-08 11:04:58,932 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://198.18.0.1:5000
+2025-09-08 11:04:58,995 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-08 11:05:04,515 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:05:04] "GET / HTTP/1.1" 200 -
+2025-09-08 11:05:04,590 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:05:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-09-08 11:05:04,771 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:05:04] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-09-08 11:05:05,157 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:05:05] "GET /favicon.ico HTTP/1.1" 200 -
+2025-09-08 11:08:11,849 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:08:11] "[33mPOST /upload HTTP/1.1[0m" 404 -
+2025-09-08 11:08:14,832 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:08:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-09-08 11:08:15,156 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:08:15] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-09-08 11:09:43,455 - llm.clients.aliyun_client - INFO - 阿里云百炼客户端初始化完成
+2025-09-08 11:09:43,455 - llm.utils.file_handler - INFO - 文件处理器初始化完成，上传目录: ./uploads
+2025-09-08 11:09:43,455 - app - INFO - 组件初始化成功
+2025-09-08 11:09:47,258 - llm.clients.aliyun_client - INFO - 阿里云百炼客户端初始化完成
+2025-09-08 11:09:47,259 - llm.utils.file_handler - INFO - 文件处理器初始化完成，上传目录: ./uploads
+2025-09-08 11:09:47,259 - __main__ - INFO - 组件初始化成功
+2025-09-08 11:09:47,262 - __main__ - INFO - 启动AI文档助手，端口: 5000, 调试模式: False
+2025-09-08 11:09:47,274 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://198.18.0.1:5000
+2025-09-08 11:09:47,274 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-08 11:10:16,708 - llm.clients.aliyun_client - INFO - 阿里云百炼客户端初始化完成
+2025-09-08 11:10:16,708 - llm.utils.file_handler - INFO - 文件处理器初始化完成，上传目录: ./uploads
+2025-09-08 11:10:16,708 - app - INFO - 组件初始化成功
+2025-09-08 11:10:16,739 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://198.18.0.1:5000
+2025-09-08 11:10:16,801 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-08 11:10:22,330 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:10:22] "GET / HTTP/1.1" 200 -
+2025-09-08 11:10:22,395 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:10:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-09-08 11:10:22,573 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:10:22] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-09-08 11:10:22,947 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:10:22] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-09-08 11:10:26,231 - app - ERROR - 文件上传失败: FileHandler.save_uploaded_file() missing 1 required positional argument: 'filename'
+2025-09-08 11:10:26,232 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:10:26] "POST /upload HTTP/1.1" 200 -
+2025-09-08 11:10:27,539 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:10:27] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-08 11:10:28,239 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:10:28] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-08 11:10:29,556 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:10:29] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-08 11:10:30,240 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:10:30] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-08 11:10:31,556 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:10:31] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-08 11:10:32,240 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:10:32] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-08 11:10:33,556 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:10:33] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-08 11:10:34,240 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:10:34] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-08 11:10:35,556 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:10:35] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-08 11:10:36,239 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:10:36] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-08 11:10:37,556 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:10:37] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-08 11:10:38,239 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:10:38] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-08 11:10:39,556 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:10:39] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-08 11:10:40,240 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:10:40] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-08 11:10:41,557 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:10:41] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-08 11:10:42,240 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:10:42] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-08 11:10:43,557 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:10:43] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-08 11:10:44,240 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:10:44] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-08 11:10:45,557 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:10:45] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-08 11:10:46,240 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:10:46] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-08 11:10:47,557 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:10:47] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-08 11:10:48,240 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:10:48] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-08 11:10:49,556 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:10:49] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-08 11:10:50,240 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:10:50] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-08 11:10:51,557 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:10:51] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-08 11:10:52,240 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:10:52] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-08 11:10:53,557 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:10:53] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-08 11:10:54,240 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:10:54] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-08 11:10:55,557 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:10:55] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-08 11:10:56,241 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:10:56] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-08 11:10:57,557 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:10:57] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-08 11:10:58,241 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:10:58] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-08 11:10:59,557 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:10:59] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-08 11:11:00,241 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:11:00] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-08 11:11:12,425 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:11:12] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-08 11:11:12,691 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:11:12] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-08 11:11:12,741 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:11:12] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-08 11:11:13,008 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:11:13] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-08 11:11:13,058 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:11:13] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-08 11:11:13,325 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:11:13] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-08 11:11:13,375 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:11:13] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-08 11:11:13,642 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:11:13] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-08 11:11:13,690 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:11:13] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-08 11:11:13,959 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:11:13] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-08 11:11:13,998 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:11:13] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-08 11:11:14,273 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:11:14] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-08 11:11:14,309 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:11:14] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-08 11:16:45,284 - llm.clients.aliyun_client - INFO - 阿里云百炼客户端初始化完成
+2025-09-08 11:16:45,285 - llm.utils.file_handler - INFO - 文件处理器初始化完成，上传目录: ./uploads
+2025-09-08 11:16:45,285 - app - INFO - 组件初始化成功
+2025-09-08 11:16:49,169 - llm.clients.aliyun_client - INFO - 阿里云百炼客户端初始化完成
+2025-09-08 11:16:49,169 - llm.utils.file_handler - INFO - 文件处理器初始化完成，上传目录: ./uploads
+2025-09-08 11:16:49,170 - __main__ - INFO - 组件初始化成功
+2025-09-08 11:16:49,173 - __main__ - INFO - 启动AI文档助手，端口: 5000, 调试模式: False
+2025-09-08 11:16:49,191 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://198.18.0.1:5000
+2025-09-08 11:16:49,191 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-08 11:17:48,765 - llm.clients.aliyun_client - INFO - 阿里云百炼客户端初始化完成
+2025-09-08 11:17:48,765 - llm.utils.file_handler - INFO - 文件处理器初始化完成，上传目录: ./uploads
+2025-09-08 11:17:48,765 - app - INFO - 组件初始化成功
+2025-09-08 11:17:48,797 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://198.18.0.1:5000
+2025-09-08 11:17:48,797 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-08 11:17:54,657 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:17:54] "GET / HTTP/1.1" 200 -
+2025-09-08 11:17:54,736 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:17:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-09-08 11:17:54,913 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:17:54] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-09-08 11:17:55,365 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:17:55] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-09-08 11:18:00,342 - llm.utils.file_handler - INFO - 文件验证完成: 导数.docx, 结果: 通过
+2025-09-08 11:18:00,343 - llm.utils.file_handler - INFO - 文件保存成功: 导数.docx -> f56d6ccd-374e-4d5d-b0a4-b1b995d52efe.docx
+2025-09-08 11:18:00,365 - llm.utils.file_handler - INFO - 文本提取成功: ./uploads\f56d6ccd-374e-4d5d-b0a4-b1b995d52efe.docx
+2025-09-08 11:18:00,378 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:18:00] "POST /upload HTTP/1.1" 200 -
+2025-09-08 11:18:01,711 - llm.clients.aliyun_client - ERROR - OpenAI客户端文件上传失败: No module named 'openai'
+2025-09-08 11:18:01,711 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:18:01] "GET /status/33c183aa-7a73-4f5b-9dc2-9bf7677e986a HTTP/1.1" 200 -
+2025-09-08 11:18:09,510 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:18:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-09-08 11:18:09,833 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:18:09] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-09-08 11:19:48,033 - llm.clients.aliyun_client - INFO - 阿里云百炼客户端初始化完成
+2025-09-08 11:19:48,034 - llm.utils.file_handler - INFO - 文件处理器初始化完成，上传目录: ./uploads
+2025-09-08 11:19:48,034 - __main__ - INFO - 组件初始化成功
+2025-09-08 11:19:48,038 - __main__ - INFO - 启动AI文档助手，端口: 5000, 调试模式: False
+2025-09-08 11:19:48,052 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://198.18.0.1:5000
+2025-09-08 11:19:48,052 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-08 11:24:40,016 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:24:40] "GET /health HTTP/1.1" 200 -
+2025-09-08 11:30:34,441 - llm.clients.aliyun_client - INFO - 阿里云百炼客户端初始化完成
+2025-09-08 11:30:34,441 - llm.utils.file_handler - INFO - 文件处理器初始化完成，上传目录: ./uploads
+2025-09-08 11:30:34,441 - app - INFO - 组件初始化成功
+2025-09-08 11:30:34,457 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://198.18.0.1:5000
+2025-09-08 11:30:34,457 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-08 11:30:40,187 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:30:40] "GET / HTTP/1.1" 200 -
+2025-09-08 11:30:40,270 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:30:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-09-08 11:30:40,435 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:30:40] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-09-08 11:30:40,811 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:30:40] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-09-08 11:30:44,241 - llm.utils.file_handler - INFO - 文件验证完成: 导数.docx, 结果: 通过
+2025-09-08 11:30:44,241 - llm.utils.file_handler - INFO - 文件保存成功: 导数.docx -> a987ed6e-e117-417f-be36-19e5b893eb31.docx
+2025-09-08 11:30:44,252 - llm.utils.file_handler - INFO - 文本提取成功: ./uploads\a987ed6e-e117-417f-be36-19e5b893eb31.docx
+2025-09-08 11:30:44,252 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:30:44] "POST /upload HTTP/1.1" 200 -
+2025-09-08 11:30:48,060 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 11:30:48,069 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\Administrator\Desktop\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-08 11:30:49,423 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 11:30:49,423 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-08 11:31:03,918 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-09-08 11:31:04,252 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:04] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-09-08 11:31:07,926 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 11:31:07,935 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\Administrator\Desktop\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-08 11:31:09,062 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 11:31:09,071 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\Administrator\Desktop\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-08 11:31:09,448 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 11:31:09,448 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-08 11:31:09,769 - llm.utils.file_handler - INFO - 文件验证完成: 导数.docx, 结果: 通过
+2025-09-08 11:31:09,769 - llm.utils.file_handler - INFO - 文件保存成功: 导数.docx -> 65a4fa8f-98f8-46aa-8c54-b8e4912e327e.docx
+2025-09-08 11:31:09,769 - llm.utils.file_handler - INFO - 文本提取成功: ./uploads\65a4fa8f-98f8-46aa-8c54-b8e4912e327e.docx
+2025-09-08 11:31:09,769 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:09] "POST /upload HTTP/1.1" 200 -
+2025-09-08 11:31:10,292 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 11:31:10,301 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\Administrator\Desktop\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-08 11:31:10,838 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 11:31:10,838 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-08 11:31:11,318 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 11:31:11,344 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\Administrator\Desktop\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-08 11:31:12,209 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 11:31:12,209 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-08 11:31:12,393 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 11:31:12,402 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\Administrator\Desktop\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-08 11:31:13,092 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 11:31:13,092 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-08 11:31:14,017 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 11:31:14,018 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-08 11:31:39,280 - llm.clients.aliyun_client - INFO - 阿里云百炼客户端初始化完成
+2025-09-08 11:31:39,280 - llm.utils.file_handler - INFO - 文件处理器初始化完成，上传目录: ./uploads
+2025-09-08 11:31:39,280 - app - INFO - 组件初始化成功
+2025-09-08 11:31:39,312 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://198.18.0.1:5000
+2025-09-08 11:31:39,312 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-08 11:31:39,687 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:39] "GET /status/8cfd5c19-0638-493b-b4f9-4f29f681fbe8 HTTP/1.1" 200 -
+2025-09-08 11:31:39,687 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:39] "GET /status/8cfd5c19-0638-493b-b4f9-4f29f681fbe8 HTTP/1.1" 200 -
+2025-09-08 11:31:39,687 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:39] "GET /status/8cfd5c19-0638-493b-b4f9-4f29f681fbe8 HTTP/1.1" 200 -
+2025-09-08 11:31:39,687 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:39] "GET /status/8cfd5c19-0638-493b-b4f9-4f29f681fbe8 HTTP/1.1" 200 -
+2025-09-08 11:31:39,687 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:39] "GET /status/8cfd5c19-0638-493b-b4f9-4f29f681fbe8 HTTP/1.1" 200 -
+2025-09-08 11:31:39,703 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:39] "GET /status/8cfd5c19-0638-493b-b4f9-4f29f681fbe8 HTTP/1.1" 200 -
+2025-09-08 11:31:40,002 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:40] "GET /status/8cfd5c19-0638-493b-b4f9-4f29f681fbe8 HTTP/1.1" 200 -
+2025-09-08 11:31:40,002 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:40] "GET /status/8cfd5c19-0638-493b-b4f9-4f29f681fbe8 HTTP/1.1" 200 -
+2025-09-08 11:31:40,002 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:40] "GET /status/8cfd5c19-0638-493b-b4f9-4f29f681fbe8 HTTP/1.1" 200 -
+2025-09-08 11:31:40,002 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:40] "GET /status/8cfd5c19-0638-493b-b4f9-4f29f681fbe8 HTTP/1.1" 200 -
+2025-09-08 11:31:40,002 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:40] "GET /status/8cfd5c19-0638-493b-b4f9-4f29f681fbe8 HTTP/1.1" 200 -
+2025-09-08 11:31:40,017 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:40] "GET /status/8cfd5c19-0638-493b-b4f9-4f29f681fbe8 HTTP/1.1" 200 -
+2025-09-08 11:31:40,314 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:40] "GET /status/8cfd5c19-0638-493b-b4f9-4f29f681fbe8 HTTP/1.1" 200 -
+2025-09-08 11:31:40,314 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:40] "GET /status/8cfd5c19-0638-493b-b4f9-4f29f681fbe8 HTTP/1.1" 200 -
+2025-09-08 11:31:40,314 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:40] "GET /status/8cfd5c19-0638-493b-b4f9-4f29f681fbe8 HTTP/1.1" 200 -
+2025-09-08 11:31:40,314 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:40] "GET /status/e20bc95f-07aa-41cf-9646-b5fa5cfede4e HTTP/1.1" 200 -
+2025-09-08 11:31:40,314 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:40] "GET /status/e20bc95f-07aa-41cf-9646-b5fa5cfede4e HTTP/1.1" 200 -
+2025-09-08 11:31:40,314 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:40] "GET /status/e20bc95f-07aa-41cf-9646-b5fa5cfede4e HTTP/1.1" 200 -
+2025-09-08 11:31:40,628 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:40] "GET /status/e20bc95f-07aa-41cf-9646-b5fa5cfede4e HTTP/1.1" 200 -
+2025-09-08 11:31:40,628 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:40] "GET /status/e20bc95f-07aa-41cf-9646-b5fa5cfede4e HTTP/1.1" 200 -
+2025-09-08 11:31:40,628 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:40] "GET /status/e20bc95f-07aa-41cf-9646-b5fa5cfede4e HTTP/1.1" 200 -
+2025-09-08 11:31:40,628 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:40] "GET /status/e20bc95f-07aa-41cf-9646-b5fa5cfede4e HTTP/1.1" 200 -
+2025-09-08 11:31:40,628 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:40] "GET /status/e20bc95f-07aa-41cf-9646-b5fa5cfede4e HTTP/1.1" 200 -
+2025-09-08 11:31:40,628 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:40] "GET /status/e20bc95f-07aa-41cf-9646-b5fa5cfede4e HTTP/1.1" 200 -
+2025-09-08 11:31:40,941 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:40] "GET /status/e20bc95f-07aa-41cf-9646-b5fa5cfede4e HTTP/1.1" 200 -
+2025-09-08 11:31:41,255 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:41] "GET /status/e20bc95f-07aa-41cf-9646-b5fa5cfede4e HTTP/1.1" 200 -
+2025-09-08 11:31:41,523 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:41] "GET /status/e20bc95f-07aa-41cf-9646-b5fa5cfede4e HTTP/1.1" 200 -
+2025-09-08 11:31:41,570 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:41] "GET /status/e20bc95f-07aa-41cf-9646-b5fa5cfede4e HTTP/1.1" 200 -
+2025-09-08 11:31:41,836 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:41] "GET /status/e20bc95f-07aa-41cf-9646-b5fa5cfede4e HTTP/1.1" 200 -
+2025-09-08 11:31:41,883 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:41] "GET /status/e20bc95f-07aa-41cf-9646-b5fa5cfede4e HTTP/1.1" 200 -
+2025-09-08 11:31:42,150 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:42] "GET /status/e20bc95f-07aa-41cf-9646-b5fa5cfede4e HTTP/1.1" 200 -
+2025-09-08 11:31:42,198 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:42] "GET /status/e20bc95f-07aa-41cf-9646-b5fa5cfede4e HTTP/1.1" 200 -
+2025-09-08 11:31:42,465 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:42] "GET /status/e20bc95f-07aa-41cf-9646-b5fa5cfede4e HTTP/1.1" 200 -
+2025-09-08 11:31:42,512 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:42] "GET /status/e20bc95f-07aa-41cf-9646-b5fa5cfede4e HTTP/1.1" 200 -
+2025-09-08 11:31:42,778 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:42] "GET /status/e20bc95f-07aa-41cf-9646-b5fa5cfede4e HTTP/1.1" 200 -
+2025-09-08 11:31:42,825 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:42] "GET /status/e20bc95f-07aa-41cf-9646-b5fa5cfede4e HTTP/1.1" 200 -
+2025-09-08 11:31:43,093 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:43] "GET /status/e20bc95f-07aa-41cf-9646-b5fa5cfede4e HTTP/1.1" 200 -
+2025-09-08 11:31:43,141 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:43] "GET /status/e20bc95f-07aa-41cf-9646-b5fa5cfede4e HTTP/1.1" 200 -
+2025-09-08 11:31:43,409 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:43] "GET /status/e20bc95f-07aa-41cf-9646-b5fa5cfede4e HTTP/1.1" 200 -
+2025-09-08 11:31:43,457 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:43] "GET /status/e20bc95f-07aa-41cf-9646-b5fa5cfede4e HTTP/1.1" 200 -
+2025-09-08 11:31:43,723 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:43] "GET /status/e20bc95f-07aa-41cf-9646-b5fa5cfede4e HTTP/1.1" 200 -
+2025-09-08 11:31:43,770 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:43] "GET /status/e20bc95f-07aa-41cf-9646-b5fa5cfede4e HTTP/1.1" 200 -
+2025-09-08 11:31:44,037 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:44] "GET /status/e20bc95f-07aa-41cf-9646-b5fa5cfede4e HTTP/1.1" 200 -
+2025-09-08 11:31:44,084 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:44] "GET /status/e20bc95f-07aa-41cf-9646-b5fa5cfede4e HTTP/1.1" 200 -
+2025-09-08 11:31:44,350 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:44] "GET /status/e20bc95f-07aa-41cf-9646-b5fa5cfede4e HTTP/1.1" 200 -
+2025-09-08 11:31:44,397 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:44] "GET /status/e20bc95f-07aa-41cf-9646-b5fa5cfede4e HTTP/1.1" 200 -
+2025-09-08 11:31:44,674 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:44] "GET / HTTP/1.1" 200 -
+2025-09-08 11:31:44,753 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-09-08 11:31:44,904 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:44] "GET /status/e20bc95f-07aa-41cf-9646-b5fa5cfede4e HTTP/1.1" 200 -
+2025-09-08 11:31:45,005 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:45] "GET /status/e20bc95f-07aa-41cf-9646-b5fa5cfede4e HTTP/1.1" 200 -
+2025-09-08 11:31:45,005 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:45] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-09-08 11:31:45,222 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:45] "GET /status/e20bc95f-07aa-41cf-9646-b5fa5cfede4e HTTP/1.1" 200 -
+2025-09-08 11:31:45,316 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:45] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-09-08 11:31:45,387 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:45] "GET /status/e20bc95f-07aa-41cf-9646-b5fa5cfede4e HTTP/1.1" 200 -
+2025-09-08 11:31:45,536 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:45] "GET /status/e20bc95f-07aa-41cf-9646-b5fa5cfede4e HTTP/1.1" 200 -
+2025-09-08 11:31:45,704 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:45] "GET /status/e20bc95f-07aa-41cf-9646-b5fa5cfede4e HTTP/1.1" 200 -
+2025-09-08 11:31:45,854 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:45] "GET /status/e20bc95f-07aa-41cf-9646-b5fa5cfede4e HTTP/1.1" 200 -
+2025-09-08 11:31:46,007 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:46] "GET /status/e20bc95f-07aa-41cf-9646-b5fa5cfede4e HTTP/1.1" 200 -
+2025-09-08 11:31:46,171 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:46] "GET /status/e20bc95f-07aa-41cf-9646-b5fa5cfede4e HTTP/1.1" 200 -
+2025-09-08 11:31:46,313 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:46] "GET /status/e20bc95f-07aa-41cf-9646-b5fa5cfede4e HTTP/1.1" 200 -
+2025-09-08 11:31:46,485 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:46] "GET /status/e20bc95f-07aa-41cf-9646-b5fa5cfede4e HTTP/1.1" 200 -
+2025-09-08 11:31:46,617 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:46] "GET /status/e20bc95f-07aa-41cf-9646-b5fa5cfede4e HTTP/1.1" 200 -
+2025-09-08 11:31:46,805 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:46] "GET /status/e20bc95f-07aa-41cf-9646-b5fa5cfede4e HTTP/1.1" 200 -
+2025-09-08 11:31:46,931 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:46] "GET /status/e20bc95f-07aa-41cf-9646-b5fa5cfede4e HTTP/1.1" 200 -
+2025-09-08 11:31:47,121 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:47] "GET /status/e20bc95f-07aa-41cf-9646-b5fa5cfede4e HTTP/1.1" 200 -
+2025-09-08 11:31:47,247 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:47] "GET /status/e20bc95f-07aa-41cf-9646-b5fa5cfede4e HTTP/1.1" 200 -
+2025-09-08 11:31:47,438 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:47] "GET /status/e20bc95f-07aa-41cf-9646-b5fa5cfede4e HTTP/1.1" 200 -
+2025-09-08 11:31:49,370 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-09-08 11:31:49,707 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:49] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-09-08 11:31:54,237 - llm.utils.file_handler - INFO - 文件验证完成: 导数.docx, 结果: 通过
+2025-09-08 11:31:54,237 - llm.utils.file_handler - INFO - 文件保存成功: 导数.docx -> 01c03a1b-1e39-44dc-b410-ea493fce918c.docx
+2025-09-08 11:31:54,256 - llm.utils.file_handler - INFO - 文本提取成功: ./uploads\01c03a1b-1e39-44dc-b410-ea493fce918c.docx
+2025-09-08 11:31:54,257 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:31:54] "POST /upload HTTP/1.1" 200 -
+2025-09-08 11:31:58,072 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 11:31:58,072 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\Administrator\Desktop\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-08 11:31:59,735 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 11:31:59,737 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-08 11:32:17,641 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 11:32:17,641 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\Administrator\Desktop\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-08 11:32:19,312 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 11:32:19,322 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\Administrator\Desktop\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-08 11:32:19,378 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 11:32:19,378 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-08 11:32:20,292 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 11:32:20,294 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\Administrator\Desktop\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-08 11:32:21,049 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 11:32:21,051 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-08 11:32:21,344 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 11:32:21,355 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\Administrator\Desktop\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-08 11:32:21,999 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 11:32:21,999 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-08 11:32:22,233 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 11:32:22,255 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\Administrator\Desktop\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-08 11:32:22,959 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 11:32:22,959 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-08 11:32:23,798 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 11:32:23,799 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-08 11:32:58,312 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:32:58] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:32:58,624 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:32:58] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:32:58,934 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:32:58] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:32:59,251 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:32:59] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:32:59,558 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:32:59] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:32:59,867 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:32:59] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:33:00,180 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:33:00] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:33:00,492 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:33:00] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:33:00,803 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:33:00] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:33:01,116 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:33:01] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:33:01,429 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:33:01] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:33:01,742 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:33:01] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:33:02,057 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:33:02] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:33:02,368 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:33:02] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:33:02,685 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:33:02] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:33:02,993 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:33:02] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:33:03,301 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:33:03] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:33:03,610 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:33:03] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:33:03,924 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:33:03] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:33:04,235 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:33:04] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:33:04,542 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:33:04] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:33:04,854 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:33:04] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:33:05,176 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:33:05] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:33:05,482 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:33:05] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:33:05,795 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:33:05] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:33:06,099 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:33:06] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:33:06,411 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:33:06] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:33:06,721 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:33:06] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:33:07,025 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:33:07] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:33:07,330 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:33:07] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:33:07,636 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:33:07] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:33:07,942 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:33:07] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:33:08,246 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:33:08] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:33:08,559 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:33:08] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:33:08,870 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:33:08] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:33:09,181 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:33:09] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:33:09,486 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:33:09] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:33:09,801 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:33:09] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:33:10,107 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:33:10] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:33:10,418 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:33:10] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:33:10,733 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:33:10] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:33:11,042 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:33:11] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:33:11,357 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:33:11] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:33:11,666 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:33:11] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:33:11,976 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:33:11] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:33:12,286 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:33:12] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:33:12,592 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:33:12] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:33:12,898 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:33:12] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:33:13,210 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:33:13] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:33:13,525 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:33:13] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:33:13,842 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:33:13] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:33:14,148 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:33:14] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:33:14,457 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:33:14] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:33:14,769 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:33:14] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:33:15,080 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:33:15] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:33:15,389 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:33:15] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:33:15,698 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:33:15] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:33:16,018 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:33:16] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:33:16,330 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:33:16] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:33:16,873 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:33:16] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:33:17,907 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:33:17] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:33:25,502 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:33:25] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:33:29,407 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:33:29] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:33:31,385 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:33:31] "GET /status/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1" 200 -
+2025-09-08 11:33:49,027 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:33:49] "[33mGET /download/bfeb0997-37a3-4503-a869-f1d87721940f HTTP/1.1[0m" 404 -
+2025-09-08 11:36:38,332 - llm.clients.aliyun_client - INFO - 阿里云百炼客户端初始化完成
+2025-09-08 11:36:38,333 - llm.utils.file_handler - INFO - 文件处理器初始化完成，上传目录: ./uploads
+2025-09-08 11:36:38,333 - app - INFO - 组件初始化成功
+2025-09-08 11:44:53,311 - llm.clients.aliyun_client - INFO - 阿里云百炼客户端初始化完成
+2025-09-08 11:44:53,311 - llm.utils.file_handler - INFO - 文件处理器初始化完成，上传目录: ./uploads
+2025-09-08 11:44:53,311 - app - INFO - 组件初始化成功
+2025-09-08 11:44:53,341 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://198.18.0.1:5000
+2025-09-08 11:44:53,344 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-08 11:44:58,909 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:44:58] "GET / HTTP/1.1" 200 -
+2025-09-08 11:44:58,987 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:44:58] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-09-08 11:44:59,162 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:44:59] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-09-08 11:44:59,544 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:44:59] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-09-08 11:45:03,512 - llm.utils.file_handler - INFO - 文件验证完成: 导数.docx, 结果: 通过
+2025-09-08 11:45:03,512 - llm.utils.file_handler - INFO - 文件保存成功: 导数.docx -> 943c2c47-b1a6-408e-9819-ef96cb859a9d.docx
+2025-09-08 11:45:03,528 - llm.utils.file_handler - INFO - 文本提取成功: ./uploads\943c2c47-b1a6-408e-9819-ef96cb859a9d.docx
+2025-09-08 11:45:03,528 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:45:03] "POST /upload HTTP/1.1" 200 -
+2025-09-08 11:45:07,217 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 11:45:07,228 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\Administrator\Desktop\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-08 11:45:08,593 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 11:45:08,594 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-08 11:45:26,916 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 11:45:26,916 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\Administrator\Desktop\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-08 11:45:28,776 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 11:45:28,779 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\Administrator\Desktop\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-08 11:45:28,847 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 11:45:28,847 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-08 11:45:29,604 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 11:45:29,612 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\Administrator\Desktop\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-08 11:45:30,737 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 11:45:30,737 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-08 11:45:30,860 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 11:45:30,870 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\Administrator\Desktop\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-08 11:45:31,527 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 11:45:31,528 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-08 11:45:31,751 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 11:45:31,751 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\Administrator\Desktop\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-08 11:45:32,644 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 11:45:32,646 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-08 11:45:33,211 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 11:45:33,212 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-08 11:46:17,895 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:17] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:18,215 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:18] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:18,533 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:18] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:18,849 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:18] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:19,167 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:19] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:19,483 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:19] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:19,798 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:19] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:20,108 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:20] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:20,416 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:20] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:20,733 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:20] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:21,041 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:21] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:21,350 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:21] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:21,666 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:21] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:21,983 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:21] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:22,299 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:22] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:22,617 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:22] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:22,933 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:22] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:23,250 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:23] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:23,345 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:23] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:23,567 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:23] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:23,649 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:23] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:23,883 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:23] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:23,967 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:23] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:24,200 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:24] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:24,283 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:24] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:24,516 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:24] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:24,600 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:24] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:24,825 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:24] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:24,916 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:24] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:25,134 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:25] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:25,233 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:25] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:25,450 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:25] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:25,550 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:25] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:25,767 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:25] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:25,866 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:25] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:26,083 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:26] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:26,183 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:26] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:26,400 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:26] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:26,500 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:26] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:26,716 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:26] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:26,816 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:26] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:27,033 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:27] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:27,133 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:27] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:27,350 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:27] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:27,450 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:27] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:27,667 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:27] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:27,766 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:27] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:27,983 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:27] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:28,083 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:28] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:28,291 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:28] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:28,400 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:28] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:28,600 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:28] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:28,717 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:28] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:28,910 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:28] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:29,009 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:29] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:29,034 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:29] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:29,217 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:29] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:29,316 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:29] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:29,351 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:29] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:29,533 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:29] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:29,633 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:29] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:29,666 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:29] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:29,866 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:29] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:29,983 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:29] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:30,300 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:30] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:30,617 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:30] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:30,915 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:30] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:31,234 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:31] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:31,550 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:31] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:31,866 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:31] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:32,183 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:32] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:37,461 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:37] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:40,083 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:40] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:40,176 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:40] "GET /status/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1" 200 -
+2025-09-08 11:46:46,349 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:46:46] "[33mGET /download/69702d54-b693-4055-81aa-70fe41835d36 HTTP/1.1[0m" 404 -
+2025-09-08 11:49:31,194 - llm.clients.aliyun_client - INFO - 阿里云百炼客户端初始化完成
+2025-09-08 11:49:31,195 - llm.utils.file_handler - INFO - 文件处理器初始化完成，上传目录: ./uploads
+2025-09-08 11:49:31,195 - app - INFO - 组件初始化成功
+2025-09-08 11:50:40,906 - llm.clients.aliyun_client - INFO - 阿里云百炼客户端初始化完成
+2025-09-08 11:50:40,907 - llm.utils.file_handler - INFO - 文件处理器初始化完成，上传目录: ./uploads
+2025-09-08 11:50:40,907 - app - INFO - 组件初始化成功
+2025-09-08 11:50:40,932 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://198.18.0.1:5000
+2025-09-08 11:50:40,934 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-08 11:50:46,497 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:50:46] "GET / HTTP/1.1" 200 -
+2025-09-08 11:50:46,569 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:50:46] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-09-08 11:50:46,763 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:50:46] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-09-08 11:50:47,145 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:50:47] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-09-08 11:50:51,590 - llm.utils.file_handler - INFO - 文件验证完成: 导数.docx, 结果: 通过
+2025-09-08 11:50:51,590 - llm.utils.file_handler - INFO - 文件保存成功: 导数.docx -> b7a468ca-0003-431c-a49a-5ddb989850cc.docx
+2025-09-08 11:50:51,596 - llm.utils.file_handler - INFO - 文本提取成功: ./uploads\b7a468ca-0003-431c-a49a-5ddb989850cc.docx
+2025-09-08 11:50:51,596 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:50:51] "POST /upload HTTP/1.1" 200 -
+2025-09-08 11:50:55,374 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 11:50:55,379 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\Administrator\Desktop\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-08 11:50:56,743 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 11:50:56,745 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-08 11:51:15,047 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 11:51:15,057 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\Administrator\Desktop\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-08 11:51:16,385 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 11:51:16,390 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\Administrator\Desktop\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-08 11:51:16,547 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 11:51:16,548 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-08 11:51:17,470 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 11:51:17,480 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\Administrator\Desktop\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-08 11:51:17,907 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 11:51:17,907 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-08 11:51:18,406 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 11:51:18,416 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\Administrator\Desktop\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-08 11:51:19,088 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 11:51:19,088 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-08 11:51:19,528 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 11:51:19,535 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\Administrator\Desktop\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-08 11:51:19,988 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 11:51:19,988 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-08 11:51:20,742 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 500 Internal Server Error"
+2025-09-08 11:51:20,744 - openai._base_client - INFO - Retrying request to /files in 0.463526 seconds
+2025-09-08 11:51:21,560 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 11:51:21,560 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-08 11:51:56,476 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:51:56] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:51:56,788 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:51:56] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:51:57,095 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:51:57] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:51:57,400 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:51:57] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:51:57,706 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:51:57] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:51:58,016 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:51:58] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:51:58,329 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:51:58] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:51:58,632 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:51:58] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:51:58,943 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:51:58] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:51:59,254 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:51:59] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:51:59,566 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:51:59] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:51:59,882 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:51:59] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:52:00,199 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:52:00] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:52:00,504 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:52:00] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:52:00,809 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:52:00] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:52:01,121 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:52:01] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:52:01,432 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:52:01] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:52:01,737 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:52:01] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:52:02,049 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:52:02] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:52:02,353 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:52:02] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:52:02,662 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:52:02] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:52:02,971 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:52:02] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:52:03,277 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:52:03] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:52:03,587 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:52:03] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:52:03,900 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:52:03] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:52:04,215 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:52:04] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:52:04,522 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:52:04] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:52:04,829 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:52:04] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:52:05,138 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:52:05] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:52:05,449 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:52:05] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:52:05,756 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:52:05] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:52:06,065 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:52:06] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:52:06,380 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:52:06] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:52:06,692 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:52:06] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:52:07,009 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:52:07] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:52:07,325 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:52:07] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:52:07,632 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:52:07] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:52:07,943 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:52:07] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:52:08,249 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:52:08] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:52:08,555 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:52:08] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:52:08,864 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:52:08] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:52:09,182 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:52:09] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:52:09,493 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:52:09] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:52:09,799 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:52:09] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:52:10,114 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:52:10] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:52:10,464 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:52:10] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:52:10,776 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:52:10] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:52:11,082 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:52:11] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:52:11,398 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:52:11] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:52:11,710 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:52:11] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:52:12,021 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:52:12] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:52:12,333 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:52:12] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:52:12,643 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:52:12] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:52:12,960 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:52:12] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:52:13,267 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:52:13] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:52:13,571 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:52:13] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:52:13,883 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:52:13] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:52:14,200 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:52:14] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:52:14,516 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:52:14] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:52:15,172 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:52:15] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:52:15,193 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:52:15] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:52:17,035 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:52:17] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:52:18,899 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:52:18] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:52:20,018 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:52:20] "GET /status/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1" 200 -
+2025-09-08 11:53:12,487 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:53:12] "[33mGET /download/fe4916ec-2cf7-44ed-820d-1b4f940c0079 HTTP/1.1[0m" 404 -
+2025-09-08 11:54:16,305 - llm.clients.aliyun_client - INFO - 阿里云百炼客户端初始化完成
+2025-09-08 11:54:16,305 - llm.utils.file_handler - INFO - 文件处理器初始化完成，上传目录: ./uploads
+2025-09-08 11:54:16,306 - app - INFO - 组件初始化成功
+2025-09-08 11:59:25,556 - llm.clients.aliyun_client - INFO - 阿里云百炼客户端初始化完成
+2025-09-08 11:59:25,556 - llm.utils.file_handler - INFO - 文件处理器初始化完成，上传目录: ./uploads
+2025-09-08 11:59:25,556 - app - INFO - 组件初始化成功
+2025-09-08 11:59:25,583 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://198.18.0.1:5000
+2025-09-08 11:59:25,584 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-08 11:59:31,161 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:59:31] "GET / HTTP/1.1" 200 -
+2025-09-08 11:59:31,229 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:59:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-09-08 11:59:31,402 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:59:31] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-09-08 11:59:31,791 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:59:31] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-09-08 11:59:36,047 - llm.utils.file_handler - INFO - 文件验证完成: 导数.docx, 结果: 通过
+2025-09-08 11:59:36,048 - llm.utils.file_handler - INFO - 文件保存成功: 导数.docx -> 13cf67c4-4a9f-4ba8-ac9d-f1b2ef76fca3.docx
+2025-09-08 11:59:36,056 - llm.utils.file_handler - INFO - 文本提取成功: ./uploads\13cf67c4-4a9f-4ba8-ac9d-f1b2ef76fca3.docx
+2025-09-08 11:59:36,056 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:59:36] "POST /upload HTTP/1.1" 200 -
+2025-09-08 11:59:39,911 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 11:59:39,911 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\Administrator\Desktop\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-08 11:59:41,359 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 11:59:41,359 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-08 11:59:59,416 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 11:59:59,423 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\Administrator\Desktop\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-08 12:00:01,055 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 12:00:01,056 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\Administrator\Desktop\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-08 12:00:01,186 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 12:00:01,186 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-08 12:00:02,106 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 12:00:02,107 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\Administrator\Desktop\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-08 12:00:02,790 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 12:00:02,790 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-08 12:00:02,981 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 12:00:02,990 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\Administrator\Desktop\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-08 12:00:03,931 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 12:00:03,931 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-08 12:00:04,118 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 12:00:04,123 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\Administrator\Desktop\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-08 12:00:04,810 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 12:00:04,810 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-08 12:00:05,766 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 12:00:05,767 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-08 12:00:58,689 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:00:58] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:00:58,993 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:00:58] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:00:59,309 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:00:59] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:00:59,626 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:00:59] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:00:59,943 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:00:59] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:00,260 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:00] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:00,577 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:00] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:00,893 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:00] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:01,209 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:01] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:01,527 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:01] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:01,845 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:01] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:02,159 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:02] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:02,476 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:02] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:02,793 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:02] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:03,109 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:03] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:03,426 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:03] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:03,743 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:03] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:04,060 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:04] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:04,378 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:04] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:04,693 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:04] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:05,010 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:05] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:05,328 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:05] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:05,643 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:05] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:05,959 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:05] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:06,278 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:06] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:06,593 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:06] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:06,910 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:06] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:07,227 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:07] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:07,544 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:07] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:07,859 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:07] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:08,177 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:08] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:08,493 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:08] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:08,811 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:08] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:09,127 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:09] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:09,443 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:09] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:09,760 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:09] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:10,110 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:10] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:10,426 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:10] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:10,745 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:10] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:11,060 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:11] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:11,377 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:11] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:11,693 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:11] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:12,010 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:12] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:12,327 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:12] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:12,643 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:12] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:12,960 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:12] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:13,277 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:13] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:13,594 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:13] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:13,779 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:13] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:13,910 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:13] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:14,094 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:14] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:14,227 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:14] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:14,412 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:14] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:14,545 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:14] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:14,727 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:14] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:14,860 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:14] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:15,044 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:15] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:15,177 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:15] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:15,360 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:15] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:15,493 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:15] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:15,677 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:15] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:15,811 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:15] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:15,993 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:15] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:16,127 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:16] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:16,303 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:16] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:16,443 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:16] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:16,610 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:16] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:16,762 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:16] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:16,927 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:16] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:17,077 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:17] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:17,244 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:17] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:17,394 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:17] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:17,561 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:17] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:17,711 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:17] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:17,877 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:17] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:18,027 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:18] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:18,194 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:18] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:18,345 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:18] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:18,672 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:18] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:20,581 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:20] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:21,229 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:21] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:01:22,399 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:01:22] "GET /status/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1" 200 -
+2025-09-08 12:02:29,147 - app - ERROR - 文件下载失败: cannot import name 'Document' from partially initialized module 'docx' (most likely due to a circular import) (C:\Users\Administrator\Desktop\pythondocx\docx\__init__.py)
+2025-09-08 12:02:29,148 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:02:29] "[35m[1mGET /download/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1[0m" 500 -
+2025-09-08 12:02:32,564 - app - ERROR - 文件下载失败: cannot import name 'Document' from partially initialized module 'docx' (most likely due to a circular import) (C:\Users\Administrator\Desktop\pythondocx\docx\__init__.py)
+2025-09-08 12:02:32,580 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:02:32] "[35m[1mGET /download/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1[0m" 500 -
+2025-09-08 12:02:33,431 - app - ERROR - 文件下载失败: cannot import name 'Document' from partially initialized module 'docx' (most likely due to a circular import) (C:\Users\Administrator\Desktop\pythondocx\docx\__init__.py)
+2025-09-08 12:02:33,431 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:02:33] "[35m[1mGET /download/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1[0m" 500 -
+2025-09-08 12:02:34,186 - app - ERROR - 文件下载失败: cannot import name 'Document' from partially initialized module 'docx' (most likely due to a circular import) (C:\Users\Administrator\Desktop\pythondocx\docx\__init__.py)
+2025-09-08 12:02:34,187 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:02:34] "[35m[1mGET /download/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1[0m" 500 -
+2025-09-08 12:02:35,132 - app - ERROR - 文件下载失败: cannot import name 'Document' from partially initialized module 'docx' (most likely due to a circular import) (C:\Users\Administrator\Desktop\pythondocx\docx\__init__.py)
+2025-09-08 12:02:35,132 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:02:35] "[35m[1mGET /download/fb398892-42a3-4058-af77-33ab6f5c8baa HTTP/1.1[0m" 500 -
+2025-09-08 12:02:39,081 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:02:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-09-08 12:02:39,414 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:02:39] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-09-08 12:03:58,765 - llm.clients.aliyun_client - INFO - 阿里云百炼客户端初始化完成
+2025-09-08 12:03:58,766 - llm.utils.file_handler - INFO - 文件处理器初始化完成，上传目录: ./uploads
+2025-09-08 12:03:58,766 - app - INFO - 组件初始化成功
+2025-09-08 12:06:07,239 - llm.clients.aliyun_client - INFO - 阿里云百炼客户端初始化完成
+2025-09-08 12:06:07,239 - llm.utils.file_handler - INFO - 文件处理器初始化完成，上传目录: ./uploads
+2025-09-08 12:06:07,240 - app - INFO - 组件初始化成功
+2025-09-08 12:06:07,263 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://198.18.0.1:5000
+2025-09-08 12:06:07,263 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-08 12:06:12,843 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:06:12] "GET / HTTP/1.1" 200 -
+2025-09-08 12:06:12,910 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:06:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-09-08 12:06:13,107 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:06:13] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-09-08 12:06:13,489 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:06:13] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-09-08 12:06:17,282 - llm.utils.file_handler - INFO - 文件验证完成: 导数.docx, 结果: 通过
+2025-09-08 12:06:17,283 - llm.utils.file_handler - INFO - 文件保存成功: 导数.docx -> a9fbbaff-85ee-48d5-acf6-816805a62e10.docx
+2025-09-08 12:06:17,299 - llm.utils.file_handler - INFO - 文本提取成功: ./uploads\a9fbbaff-85ee-48d5-acf6-816805a62e10.docx
+2025-09-08 12:06:17,304 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:06:17] "POST /upload HTTP/1.1" 200 -
+2025-09-08 12:06:21,189 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 12:06:21,201 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\Administrator\Desktop\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-08 12:06:22,556 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 12:06:22,556 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-08 12:06:40,650 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 12:06:40,660 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\Administrator\Desktop\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-08 12:06:42,285 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 12:06:42,285 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-08 12:06:42,344 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 12:06:42,360 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\Administrator\Desktop\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-08 12:06:43,139 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 12:06:43,150 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\Administrator\Desktop\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-08 12:06:44,012 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 12:06:44,012 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-08 12:06:44,375 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 12:06:44,387 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\Administrator\Desktop\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-08 12:06:45,047 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 12:06:45,048 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-08 12:06:45,227 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 12:06:45,232 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\Administrator\Desktop\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-08 12:06:45,960 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 12:06:45,960 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-08 12:06:46,845 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 12:06:46,845 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-08 12:07:32,360 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:32] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:32,672 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:32] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:32,979 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:32] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:33,291 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:33] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:33,601 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:33] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:33,912 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:33] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:34,217 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:34] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:34,522 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:34] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:34,835 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:34] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:35,140 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:35] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:35,448 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:35] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:35,760 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:35] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:36,063 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:36] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:36,371 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:36] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:36,685 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:36] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:36,996 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:36] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:37,098 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:37] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:37,310 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:37] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:37,403 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:37] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:37,626 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:37] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:37,706 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:37] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:37,941 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:37] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:38,013 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:38] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:38,247 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:38] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:38,320 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:38] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:38,551 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:38] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:38,627 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:38] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:38,855 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:38] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:38,939 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:38] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:39,159 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:39] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:39,251 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:39] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:39,382 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:39] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:39,423 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:39] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:39,463 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:39] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:39,559 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:39] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:39,696 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:39] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:39,726 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:39] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:39,769 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:39] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:39,877 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:39] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:40,013 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:40] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:40,037 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:40] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:40,079 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:40] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:40,190 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:40] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:40,319 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:40] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:40,343 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:40] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:40,385 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:40] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:40,497 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:40] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:40,625 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:40] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:40,651 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:40] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:40,701 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:40] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:40,813 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:40] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:40,935 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:40] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:40,959 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:40] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:41,019 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:41] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:41,124 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:41] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:41,144 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:41] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:41,252 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:41] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:41,266 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:41] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:41,330 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:41] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:41,428 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:41] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:41,458 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:41] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:41,568 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:41] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:41,568 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:41] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:41,877 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:41] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:42,187 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:42] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:42,496 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:42] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:42,806 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:42] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:43,119 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:43] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:43,430 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:43] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:43,736 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:43] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:44,042 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:44] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:44,357 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:44] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:44,664 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:44] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:44,976 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:44] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:07:45,303 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:07:45] "GET /status/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:09:57,737 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:09:57] "GET /download/49d55305-61f4-442f-a6f1-9a711b391643 HTTP/1.1" 200 -
+2025-09-08 12:12:57,796 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:12:57] "GET / HTTP/1.1" 200 -
+2025-09-08 12:12:57,812 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:12:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-09-08 12:12:58,048 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:12:58] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-09-08 12:12:58,407 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:12:58] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-09-08 16:56:35,347 - llm.clients.aliyun_client - INFO - 阿里云百炼客户端初始化完成
+2025-09-08 16:56:35,347 - llm.utils.file_handler - INFO - 文件处理器初始化完成，上传目录: ./uploads
+2025-09-08 16:56:35,347 - app - INFO - 组件初始化成功
+2025-09-08 16:56:35,378 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://198.18.0.1:5000
+2025-09-08 16:56:35,442 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-08 16:56:40,980 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:56:40] "GET / HTTP/1.1" 200 -
+2025-09-08 16:56:41,048 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:56:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-09-08 16:56:41,216 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:56:41] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-09-08 16:56:41,588 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:56:41] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-09-08 16:56:47,069 - llm.utils.file_handler - INFO - 文件验证完成: 导数.docx, 结果: 通过
+2025-09-08 16:56:47,070 - llm.utils.file_handler - INFO - 文件保存成功: 导数.docx -> 22c4b240-c93f-480b-bb90-1edf8fcf70fe.docx
+2025-09-08 16:56:47,094 - llm.utils.file_handler - INFO - 文本提取成功: ./uploads\22c4b240-c93f-480b-bb90-1edf8fcf70fe.docx
+2025-09-08 16:56:47,109 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:56:47] "POST /upload HTTP/1.1" 200 -
+2025-09-08 16:56:50,968 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 16:56:50,978 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\Administrator\Desktop\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-08 16:56:52,320 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 16:56:52,321 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-08 16:57:10,480 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 16:57:10,489 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\Administrator\Desktop\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-08 16:57:12,130 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 16:57:12,141 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\Administrator\Desktop\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-08 16:57:12,304 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 16:57:12,305 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-08 16:57:13,066 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 16:57:13,073 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\Administrator\Desktop\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-08 16:57:13,815 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 16:57:13,815 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-08 16:57:14,147 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 16:57:14,158 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\Administrator\Desktop\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-08 16:57:14,787 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 16:57:14,788 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-08 16:57:15,096 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 16:57:15,107 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\Administrator\Desktop\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-08 16:57:15,633 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 16:57:15,633 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-08 16:57:16,606 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-08 16:57:16,609 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-08 16:58:01,386 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:01] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:01,692 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:01] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:02,008 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:02] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:02,325 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:02] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:02,635 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:02] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:02,949 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:02] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:03,260 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:03] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:03,576 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:03] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:03,892 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:03] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:04,209 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:04] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:04,526 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:04] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:04,843 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:04] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:05,152 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:05] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:05,458 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:05] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:05,776 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:05] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:06,092 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:06] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:06,409 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:06] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:06,725 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:06] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:07,039 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:07] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:07,349 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:07] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:07,658 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:07] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:07,976 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:07] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:08,282 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:08] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:08,592 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:08] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:08,907 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:08] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:09,215 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:09] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:09,526 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:09] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:09,842 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:09] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:10,158 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:10] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:10,475 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:10] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:10,793 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:10] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:11,100 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:11] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:11,408 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:11] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:11,725 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:11] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:12,042 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:12] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:12,359 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:12] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:12,692 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:12] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:13,009 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:13] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:13,324 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:13] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:13,632 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:13] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:13,942 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:13] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:14,259 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:14] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:14,575 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:14] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:14,891 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:14] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:15,209 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:15] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:15,518 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:15] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:15,826 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:15] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:16,144 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:16] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:16,459 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:16] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:16,775 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:16] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:17,093 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:17] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:17,404 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:17] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:17,712 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:17] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:18,027 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:18] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:18,343 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:18] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:18,660 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:18] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:18,976 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:18] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:19,292 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:19] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:19,610 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:19] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:19,921 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:19] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:20,226 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:20] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:20,543 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:20] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:20,860 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:20] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:21,175 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:21] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:21,484 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:21] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:21,798 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:21] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:22,017 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:22] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:22,109 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:22] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:22,283 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:22] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:22,305 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:22] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:22,325 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:22] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:22,423 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:22] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:27,709 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:27] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:58:27,934 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:58:27] "GET /status/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -
+2025-09-08 16:59:12,862 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 16:59:12] "GET /download/cd76eda2-7d36-4f57-8047-5c92c58d3d8a HTTP/1.1" 200 -

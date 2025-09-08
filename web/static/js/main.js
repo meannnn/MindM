@@ -107,6 +107,9 @@ function initializeEventListeners() {
         retryBtn.addEventListener('click', retryProcess);
     }
     
+    // 复制按钮
+    initializeCopyButton();
+    
     // 点击模态框外部关闭
     if (previewModal) {
         previewModal.addEventListener('click', function(e) {
@@ -222,11 +225,13 @@ async function startProcessing() {
     }
     
     try {
-        // 显示进度区域
-        showProgress();
+        // 切换到两列布局
+        switchToTwoColumnLayout();
         
-        // 重置进度
-        resetProgress();
+        // 初始化流式输出
+        initializeStreamingDisplay();
+        
+        hideError();
         
         // 上传文件
         const formData = new FormData();
@@ -246,13 +251,13 @@ async function startProcessing() {
         const result = await response.json();
         currentTaskId = result.task_id;
         
-        // 开始轮询进度
-        startProgressPolling();
+        // 开始流式轮询
+        startStreamingPolling();
         
     } catch (error) {
         console.error('处理失败:', error);
         showError(`处理失败: ${error.message}`);
-        hideProgress();
+        hideStreamingDisplay();
     }
 }
 
@@ -340,6 +345,9 @@ function showResult(result) {
     document.getElementById('resultFileSize').textContent = `文件大小：${formatFileSize(result.size || 0)}`;
     document.getElementById('resultGenerateTime').textContent = `生成时间：${new Date().toLocaleString()}`;
     
+    // 存储AI生成的内容，用于预览
+    window.generatedContent = result.result || result;
+    
     // 显示结果区域
     resultSection.style.display = 'block';
     resultSection.classList.add('fade-in');
@@ -353,23 +361,60 @@ function showResult(result) {
 
 // 显示预览
 function showPreview() {
-    // 这里可以添加预览内容的逻辑
-    // 暂时显示一个示例内容
     const previewContent = document.getElementById('previewContent');
-    previewContent.innerHTML = `
-        <h4>教学设计文档预览</h4>
-        <p><strong>课程名称：</strong>示例课程</p>
-        <p><strong>教师：</strong>示例教师</p>
-        <p><strong>学校：</strong>示例学校</p>
-        <p><strong>教学目标：</strong>通过本课程的学习，学生将能够...</p>
-        <p><strong>教学重点：</strong>重点内容...</p>
-        <p><strong>教学难点：</strong>难点内容...</p>
-        <p><strong>教学方法：</strong>讲授法、讨论法、案例分析法</p>
-        <hr>
-        <p><em>注：这是预览内容，实际文档将包含完整的教学设计信息。</em></p>
-    `;
+    
+    // 检查是否有生成的内容
+    if (window.generatedContent) {
+        // 格式化AI生成的内容
+        const formattedContent = formatGeneratedContent(window.generatedContent);
+        previewContent.innerHTML = formattedContent;
+    } else {
+        // 如果没有生成内容，显示提示
+        previewContent.innerHTML = `
+            <div class="no-content">
+                <i class="fas fa-info-circle"></i>
+                <p>暂无生成内容，请先完成文件处理。</p>
+            </div>
+        `;
+    }
     
     previewModal.style.display = 'block';
+}
+
+// 格式化生成的内容
+function formatGeneratedContent(content) {
+    if (typeof content !== 'string') {
+        return '<p>内容格式错误</p>';
+    }
+    
+    // 将换行符转换为HTML换行
+    let formattedContent = content
+        .replace(/\n\n/g, '</p><p>')  // 双换行转换为段落
+        .replace(/\n/g, '<br>')        // 单换行转换为<br>
+        .replace(/【([^】]+)】/g, '<h4 class="section-title">【$1】</h4>')  // 标题格式
+        .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')  // 粗体
+        .replace(/\*([^*]+)\*/g, '<em>$1</em>');  // 斜体
+    
+    // 添加样式类
+    formattedContent = `
+        <div class="generated-content">
+            <div class="content-header">
+                <h3><i class="fas fa-file-alt"></i> 教学设计内容预览</h3>
+                <p class="content-info">以下是由AI生成的教学设计内容：</p>
+            </div>
+            <div class="content-body">
+                <p>${formattedContent}</p>
+            </div>
+            <div class="content-footer">
+                <p class="content-note">
+                    <i class="fas fa-lightbulb"></i> 
+                    提示：这是AI生成的教学设计内容预览，您可以复制文本或下载完整文档。
+                </p>
+            </div>
+        </div>
+    `;
+    
+    return formattedContent;
 }
 
 // 关闭预览模态框
@@ -409,6 +454,12 @@ function resetProcess() {
         clearInterval(progressInterval);
         progressInterval = null;
     }
+    
+    // 隐藏流式输出
+    hideStreamingDisplay();
+    
+    // 清除生成的内容
+    window.generatedContent = null;
 }
 
 // 重试处理
@@ -565,10 +616,210 @@ document.addEventListener('visibilitychange', function() {
     }
 });
 
+// 复制内容功能
+function copyContentToClipboard() {
+    if (!window.generatedContent) {
+        showNotification('没有可复制的内容', 'warning');
+        return;
+    }
+    
+    // 创建临时文本区域
+    const textArea = document.createElement('textarea');
+    textArea.value = window.generatedContent;
+    textArea.style.position = 'fixed';
+    textArea.style.left = '-999999px';
+    textArea.style.top = '-999999px';
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+    
+    try {
+        const successful = document.execCommand('copy');
+        if (successful) {
+            showNotification('内容已复制到剪贴板', 'success');
+        } else {
+            showNotification('复制失败，请手动选择复制', 'error');
+        }
+    } catch (err) {
+        console.error('复制失败:', err);
+        showNotification('复制失败，请手动选择复制', 'error');
+    }
+    
+    document.body.removeChild(textArea);
+}
+
+// 初始化复制按钮事件
+function initializeCopyButton() {
+    const copyBtn = document.getElementById('copyContentBtn');
+    if (copyBtn) {
+        copyBtn.addEventListener('click', copyContentToClipboard);
+    }
+}
+
+// 流式输出相关函数
+function switchToTwoColumnLayout() {
+    const mainContent = document.getElementById('mainContent');
+    const rightColumn = document.getElementById('rightColumn');
+    
+    if (mainContent && rightColumn) {
+        mainContent.classList.add('two-column');
+        rightColumn.style.display = 'block';
+    }
+}
+
+function hideStreamingDisplay() {
+    const mainContent = document.getElementById('mainContent');
+    const rightColumn = document.getElementById('rightColumn');
+    
+    if (mainContent && rightColumn) {
+        mainContent.classList.remove('two-column');
+        rightColumn.style.display = 'none';
+    }
+}
+
+function initializeStreamingDisplay() {
+    const streamingContent = document.getElementById('streamingContent');
+    const statusText = document.getElementById('statusText');
+    const statusIndicator = document.getElementById('statusIndicator');
+    
+    if (streamingContent) {
+        streamingContent.innerHTML = `
+            <div class="streaming-placeholder">
+                <i class="fas fa-robot"></i>
+                <p>AI正在分析您的文档并生成教学设计...</p>
+            </div>
+        `;
+    }
+    
+    if (statusText) {
+        statusText.textContent = '准备中';
+    }
+    
+    if (statusIndicator) {
+        statusIndicator.className = 'status-indicator';
+    }
+}
+
+function startStreamingPolling() {
+    progressInterval = setInterval(async () => {
+        try {
+            const response = await fetch(`/status/${currentTaskId}`);
+            const status = await response.json();
+            
+            updateStreamingStatus(status);
+            
+            if (status.status === 'completed') {
+                clearInterval(progressInterval);
+                completeStreaming(status.result);
+            } else if (status.status === 'failed') {
+                clearInterval(progressInterval);
+                stopStreaming(status.error || '处理失败');
+            }
+            
+        } catch (error) {
+            console.error('获取状态失败:', error);
+            clearInterval(progressInterval);
+            stopStreaming('获取处理状态失败');
+        }
+    }, 1000);
+}
+
+function updateStreamingStatus(status) {
+    const statusText = document.getElementById('statusText');
+    const statusIndicator = document.getElementById('statusIndicator');
+    
+    if (statusText) {
+        statusText.textContent = status.message || '处理中...';
+    }
+    
+    if (statusIndicator) {
+        statusIndicator.className = 'status-indicator';
+    }
+}
+
+function completeStreaming(result) {
+    const streamingContent = document.getElementById('streamingContent');
+    const statusText = document.getElementById('statusText');
+    const statusIndicator = document.getElementById('statusIndicator');
+    
+    // 存储生成的内容
+    window.generatedContent = result;
+    
+    // 格式化并显示内容
+    if (streamingContent) {
+        const formattedContent = formatGeneratedContent(result);
+        streamingContent.innerHTML = formattedContent;
+    }
+    
+    if (statusText) {
+        statusText.textContent = '生成完成';
+    }
+    
+    if (statusIndicator) {
+        statusIndicator.className = 'status-indicator stopped';
+    }
+    
+    // 显示完成按钮
+    showCompletionActions();
+}
+
+function stopStreaming(error) {
+    const statusText = document.getElementById('statusText');
+    const statusIndicator = document.getElementById('statusIndicator');
+    
+    if (statusText) {
+        statusText.textContent = '处理失败';
+    }
+    
+    if (statusIndicator) {
+        statusIndicator.className = 'status-indicator stopped';
+    }
+    
+    // 显示错误信息
+    const streamingContent = document.getElementById('streamingContent');
+    if (streamingContent) {
+        streamingContent.innerHTML = `
+            <div class="streaming-placeholder">
+                <i class="fas fa-exclamation-triangle" style="color: #e74c3c;"></i>
+                <p style="color: #e74c3c;">${error}</p>
+            </div>
+        `;
+    }
+}
+
+function showCompletionActions() {
+    const streamingControls = document.querySelector('.streaming-controls');
+    if (streamingControls) {
+        streamingControls.innerHTML = `
+            <button type="button" class="btn btn-primary btn-sm" id="downloadStreamBtn">
+                <i class="fas fa-download"></i> 下载文件
+            </button>
+            <button type="button" class="btn btn-success btn-sm" id="copyStreamBtn">
+                <i class="fas fa-copy"></i> 复制内容
+            </button>
+            <button type="button" class="btn btn-outline btn-sm" id="newStreamBtn">
+                <i class="fas fa-plus"></i> 处理新文件
+            </button>
+        `;
+        
+        // 绑定新按钮事件
+        const downloadBtn = document.getElementById('downloadStreamBtn');
+        const copyBtn = document.getElementById('copyStreamBtn');
+        const newBtn = document.getElementById('newStreamBtn');
+        
+        if (downloadBtn) downloadBtn.addEventListener('click', downloadFile);
+        if (copyBtn) copyBtn.addEventListener('click', copyContentToClipboard);
+        if (newBtn) newBtn.addEventListener('click', resetProcess);
+    }
+}
+
 // 导出函数供测试使用
 window.appFunctions = {
     validateAndSetFile,
     showError,
     showNotification,
-    formatFileSize
+    formatFileSize,
+    copyContentToClipboard,
+    switchToTwoColumnLayout,
+    initializeStreamingDisplay
 };

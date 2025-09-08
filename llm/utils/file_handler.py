@@ -262,6 +262,56 @@ class FileHandler:
             logger.error(f"文件删除失败: {e}")
             return False
 
+    def get_template_file_content(self, template_path: str = None) -> Dict[str, Any]:
+        """
+        获取模板文件内容
+        
+        Args:
+            template_path: 模板文件路径，如果为None则使用默认路径
+            
+        Returns:
+            Dict[str, Any]: 模板文件内容
+        """
+        try:
+            # 如果没有指定模板路径，使用默认路径
+            if template_path is None:
+                # 查找项目根目录下的模板文件
+                current_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+                template_path = os.path.join(current_dir, "2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx")
+            
+            # 检查模板文件是否存在
+            if not os.path.exists(template_path):
+                return {
+                    'success': False,
+                    'error': 'template_not_found',
+                    'message': f'模板文件不存在: {template_path}'
+                }
+            
+            # 提取模板文件文本内容
+            text_result = self.extract_text_from_docx(template_path)
+            
+            if text_result['success']:
+                return {
+                    'success': True,
+                    'template_path': template_path,
+                    'template_content': text_result['text_content'],
+                    'extract_time': datetime.now().isoformat()
+                }
+            else:
+                return {
+                    'success': False,
+                    'error': 'template_extraction_failed',
+                    'message': text_result.get('message', '模板文件内容提取失败')
+                }
+                
+        except Exception as e:
+            logger.error(f"获取模板文件内容失败: {e}")
+            return {
+                'success': False,
+                'error': 'template_error',
+                'message': str(e)
+            }
+
 
 # 使用示例
 if __name__ == "__main__":

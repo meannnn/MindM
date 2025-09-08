@@ -18,75 +18,110 @@
         </header>
 
         <!-- 主要内容区域 -->
-        <main class="main-content">
-            <!-- 文件上传区域 -->
-            <section class="upload-section">
-                <div class="upload-container">
-                    <div class="upload-area" id="uploadArea">
-                        <div class="upload-icon">
-                            <i class="fas fa-cloud-upload-alt"></i>
-                        </div>
-                        <h3>上传您的Word文档</h3>
-                        <p>支持 .docx 格式文件，最大10MB</p>
-                        <div class="upload-buttons">
-                            <button type="button" class="btn btn-primary" id="selectFileBtn">
-                                <i class="fas fa-folder-open"></i> 选择文件
-                            </button>
-                            <span class="or-text">或</span>
-                            <span class="drag-text">拖拽文件到此处</span>
-                        </div>
-                        <input type="file" id="fileInput" accept=".docx" style="display: none;">
-                    </div>
-                    
-                    <!-- 文件信息显示 -->
-                    <div class="file-info" id="fileInfo" style="display: none;">
-                        <div class="file-details">
-                            <div class="file-icon">
-                                <i class="fas fa-file-word"></i>
+        <main class="main-content" id="mainContent">
+            <!-- 左侧列 -->
+            <div class="left-column" id="leftColumn">
+                <!-- 文件上传区域 -->
+                <section class="upload-section">
+                    <div class="upload-container">
+                        <div class="upload-area" id="uploadArea">
+                            <div class="upload-icon">
+                                <i class="fas fa-cloud-upload-alt"></i>
                             </div>
-                            <div class="file-details-content">
-                                <h4 id="fileName"></h4>
-                                <p id="fileSize"></p>
-                                <div class="file-actions">
-                                    <button type="button" class="btn btn-danger btn-sm" id="removeFileBtn">
-                                        <i class="fas fa-trash"></i> 移除
-                                    </button>
+                            <h3>上传您的Word文档</h3>
+                            <p>支持 .docx 格式文件，最大10MB</p>
+                            <div class="upload-buttons">
+                                <button type="button" class="btn btn-primary" id="selectFileBtn">
+                                    <i class="fas fa-folder-open"></i> 选择文件
+                                </button>
+                                <span class="or-text">或</span>
+                                <span class="drag-text">拖拽文件到此处</span>
+                            </div>
+                            <input type="file" id="fileInput" accept=".docx" style="display: none;">
+                        </div>
+                        
+                        <!-- 文件信息显示 -->
+                        <div class="file-info" id="fileInfo" style="display: none;">
+                            <div class="file-details">
+                                <div class="file-icon">
+                                    <i class="fas fa-file-word"></i>
+                                </div>
+                                <div class="file-details-content">
+                                    <h4 id="fileName"></h4>
+                                    <p id="fileSize"></p>
+                                    <div class="file-actions">
+                                        <button type="button" class="btn btn-danger btn-sm" id="removeFileBtn">
+                                            <i class="fas fa-trash"></i> 移除
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
 
-            <!-- 处理选项 -->
-            <section class="options-section">
-                <div class="options-container">
-                    <h3><i class="fas fa-cog"></i> 处理选项</h3>
-                    <div class="options-grid">
-                        <div class="option-item">
-                            <label for="templateSelect">选择模板：</label>
-                            <select id="templateSelect" class="form-select">
-                                <option value="default">思维发展型课堂教学设计模板</option>
-                                <option value="custom">自定义模板</option>
-                            </select>
-                        </div>
-                        <div class="option-item">
-                            <label for="aiModel">AI模型：</label>
-                            <select id="aiModel" class="form-select">
-                                <option value="deepseek-chat">DeepSeek Chat</option>
-                                <option value="deepseek-coder">DeepSeek Coder</option>
-                            </select>
+                <!-- 处理选项 -->
+                <section class="options-section">
+                    <div class="options-container">
+                        <h3><i class="fas fa-cog"></i> 处理选项</h3>
+                        <div class="options-grid">
+                            <div class="option-item">
+                                <label for="templateSelect">选择模板：</label>
+                                <select id="templateSelect" class="form-select">
+                                    <option value="default">思维发展型课堂教学设计模板</option>
+                                    <option value="custom">自定义模板</option>
+                                </select>
+                            </div>
+                            <div class="option-item">
+                                <label for="aiModel">AI模型：</label>
+                                <select id="aiModel" class="form-select">
+                                    <option value="deepseek-chat">DeepSeek Chat</option>
+                                    <option value="deepseek-coder">DeepSeek Coder</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
 
-            <!-- 处理按钮 -->
-            <section class="action-section">
-                <button type="button" class="btn btn-success btn-large" id="processBtn" disabled>
-                    <i class="fas fa-magic"></i> 开始处理
-                </button>
-            </section>
+                <!-- 处理按钮 -->
+                <section class="action-section">
+                    <button type="button" class="btn btn-success btn-large" id="processBtn" disabled>
+                        <i class="fas fa-magic"></i> 开始处理
+                    </button>
+                </section>
+            </div>
+
+            <!-- 右侧列 - 流式输出区域 -->
+            <div class="right-column" id="rightColumn" style="display: none;">
+                <div class="streaming-container">
+                    <div class="streaming-header">
+                        <h3><i class="fas fa-brain"></i> AI生成中...</h3>
+                        <div class="streaming-status">
+                            <span class="status-indicator" id="statusIndicator">
+                                <i class="fas fa-circle"></i>
+                            </span>
+                            <span id="statusText">准备中</span>
+                        </div>
+                    </div>
+                    <div class="streaming-content" id="streamingContent">
+                        <div class="streaming-placeholder">
+                            <i class="fas fa-robot"></i>
+                            <p>AI正在分析您的文档并生成教学设计...</p>
+                        </div>
+                    </div>
+                    <div class="streaming-controls">
+                        <button type="button" class="btn btn-outline btn-sm" id="pauseStreamBtn" style="display: none;">
+                            <i class="fas fa-pause"></i> 暂停
+                        </button>
+                        <button type="button" class="btn btn-outline btn-sm" id="stopStreamBtn">
+                            <i class="fas fa-stop"></i> 停止
+                        </button>
+                        <button type="button" class="btn btn-outline btn-sm" id="clearStreamBtn">
+                            <i class="fas fa-trash"></i> 清空
+                        </button>
+                    </div>
+                </div>
+            </div>
 
             <!-- 进度显示 -->
             <section class="progress-section" id="progressSection" style="display: none;">
@@ -196,6 +231,9 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-primary" id="downloadFromPreviewBtn">
                     <i class="fas fa-download"></i> 下载文件
+                </button>
+                <button type="button" class="btn btn-success" id="copyContentBtn">
+                    <i class="fas fa-copy"></i> 复制内容
                 </button>
                 <button type="button" class="btn btn-secondary" id="closePreviewBtn">
                     关闭
