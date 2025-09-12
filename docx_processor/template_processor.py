@@ -149,7 +149,8 @@ class TemplateProcessor:
             activities.append({
                 'name': activity.name,
                 'teacher_activity': activity.teacher_activity,
-                'student_activity': activity.student_activity
+                'student_activity': activity.student_activity,
+                'activity_intent': design_data.activity_intent  # 每个活动都包含活动意图
             })
         
         template_data['learning_activities'] = activities

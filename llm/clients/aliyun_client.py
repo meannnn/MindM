@@ -39,7 +39,7 @@ class AliyunClient:
         
         logger.info("阿里云百炼客户端初始化完成")
     
-    def call_model(self, prompt: str, model: Optional[str] = None, parameters: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
+    def call_model(self, prompt: str, model: Optional[str] = None, parameters: Optional[Dict[str, Any]] = None, max_retries: int = 2) -> Dict[str, Any]:
         """
         直接调用大模型进行对话
         
@@ -51,99 +51,120 @@ class AliyunClient:
         Returns:
             Dict[str, Any]: API响应结果
         """
-        try:
-            # 使用环境变量中的默认模型
-            if model is None:
-                model = os.getenv("DEFAULT_MODEL", "qwen-max")
-            
-            # 使用OpenAI兼容接口
-            url = f"{self.base_url}/chat/completions"
-            
-            # 构建请求数据，使用OpenAI兼容格式
-            data = {
-                "model": model,
-                "messages": [
-                    {
-                        "role": "user",
-                        "content": prompt
-                    }
-                ],
-                "temperature": float(os.getenv("TEMPERATURE", "0.7")),
-                "top_p": float(os.getenv("TOP_P", "0.8")),
-                "max_tokens": int(os.getenv("MAX_TOKENS", "2000")),
-                **(parameters or {})
-            }
-            
-            logger.info(f"调用阿里云大模型API: {url}")
-            logger.debug(f"请求数据: {json.dumps(data, ensure_ascii=False, indent=2)}")
-            
-            # 发送请求
-            response = self.session.post(url, json=data, timeout=60)
-            
-            # 处理响应
-            if response.status_code == HTTPStatus.OK:
-                result = response.json()
-                logger.info("API调用成功")
-                logger.debug(f"响应数据: {json.dumps(result, ensure_ascii=False, indent=2)}")
+        # 重试逻辑
+        for attempt in range(max_retries + 1):
+            try:
+                # 使用环境变量中的默认模型
+                if model is None:
+                    model = os.getenv("DEFAULT_MODEL", "qwen-max")
                 
-                # 提取响应内容（OpenAI兼容格式）
-                choices = result.get('choices', [])
-                if choices and len(choices) > 0:
-                    text = choices[0].get('message', {}).get('content', '')
-                else:
-                    text = ''
+                # 使用OpenAI兼容接口
+                url = f"{self.base_url}/chat/completions"
                 
-                return {
-                    'success': True,
-                    'data': result,
-                    'request_id': result.get('id'),
-                    'text': text,
-                    'usage': result.get('usage', {}),
-                    'model': result.get('model', model)
+                # 构建请求数据，使用OpenAI兼容格式
+                data = {
+                    "model": model,
+                    "messages": [
+                        {
+                            "role": "user",
+                            "content": prompt
+                        }
+                    ],
+                    "temperature": float(os.getenv("TEMPERATURE", "0.7")),
+                    "top_p": float(os.getenv("TOP_P", "0.8")),
+                    "max_tokens": int(os.getenv("MAX_TOKENS", "2000")),
+                    **(parameters or {})
                 }
-            else:
-                # 处理错误响应
-                try:
-                    error_data = response.json()
-                    error_message = error_data.get('message', response.text)
-                except:
-                    error_message = response.text
                 
+                logger.info(f"调用阿里云大模型API (尝试 {attempt + 1}/{max_retries + 1}): {url}")
+                logger.debug(f"请求数据: {json.dumps(data, ensure_ascii=False, indent=2)}")
+                
+                # 发送请求
+                response = self.session.post(url, json=data, timeout=120)
+                
+                # 处理响应
+                if response.status_code == HTTPStatus.OK:
+                    result = response.json()
+                    logger.info("API调用成功")
+                    logger.debug(f"响应数据: {json.dumps(result, ensure_ascii=False, indent=2)}")
+                    
+                    # 提取响应内容（OpenAI兼容格式）
+                    choices = result.get('choices', [])
+                    if choices and len(choices) > 0:
+                        text = choices[0].get('message', {}).get('content', '')
+                    else:
+                        text = ''
+                    
+                    return {
+                        'success': True,
+                        'data': result,
+                        'request_id': result.get('id'),
+                        'text': text,
+                        'usage': result.get('usage', {}),
+                        'model': result.get('model', model)
+                    }
+                else:
+                    # 处理错误响应
+                    try:
+                        error_data = response.json()
+                        error_message = error_data.get('message', response.text)
+                    except:
+                        error_message = response.text
+                    
+                    error_info = {
+                        'success': False,
+                        'status_code': response.status_code,
+                        'message': error_message,
+                        'request_id': response.headers.get('X-Request-Id')
+                    }
+                    logger.error(f"API调用失败: {error_info}")
+                    return error_info
+                
+            except requests.exceptions.Timeout:
                 error_info = {
                     'success': False,
-                    'status_code': response.status_code,
-                    'message': error_message,
-                    'request_id': response.headers.get('X-Request-Id')
+                    'error': 'timeout',
+                    'message': 'API调用超时，请稍后重试。建议检查网络连接或文件大小。'
                 }
-                logger.error(f"API调用失败: {error_info}")
-                return error_info
+                logger.error(f"API调用超时 (尝试 {attempt + 1}/{max_retries + 1})")
                 
-        except requests.exceptions.Timeout:
-            error_info = {
-                'success': False,
-                'error': 'timeout',
-                'message': '请求超时，请稍后重试'
-            }
-            logger.error("API调用超时")
-            return error_info
-            
-        except requests.exceptions.RequestException as e:
-            error_info = {
-                'success': False,
-                'error': 'request_error',
-                'message': f'网络请求失败: {str(e)}'
-            }
-            logger.error(f"API请求异常: {e}")
-            return error_info
-            
-        except Exception as e:
-            error_info = {
-                'success': False,
-                'error': 'unknown_error',
-                'message': f'未知错误: {str(e)}'
-            }
-            logger.error(f"未知错误: {e}")
-            return error_info
+                # 如果是最后一次尝试，返回错误
+                if attempt == max_retries:
+                    return error_info
+                else:
+                    logger.info(f"等待重试... (尝试 {attempt + 2}/{max_retries + 1})")
+                    continue
+                    
+            except requests.exceptions.RequestException as e:
+                error_info = {
+                    'success': False,
+                    'error': 'request_error',
+                    'message': f'网络请求失败: {str(e)}'
+                }
+                logger.error(f"API请求异常: {e}")
+                
+                # 如果是最后一次尝试，返回错误
+                if attempt == max_retries:
+                    return error_info
+                else:
+                    logger.info(f"等待重试... (尝试 {attempt + 2}/{max_retries + 1})")
+                    continue
+                    
+            except Exception as e:
+                error_info = {
+                    'success': False,
+                    'error': 'unknown_error',
+                    'message': f'未知错误: {str(e)}'
+                }
+                logger.error(f"未知错误: {e}")
+                return error_info
+        
+        # 如果所有重试都失败了
+        return {
+            'success': False,
+            'error': 'max_retries_exceeded',
+            'message': f'API调用失败，已重试 {max_retries + 1} 次'
+        }
 
     def call_model_with_history(self, messages: List[Dict[str, str]], model: Optional[str] = None, 
                                parameters: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
@@ -180,7 +201,7 @@ class AliyunClient:
             logger.debug(f"请求数据: {json.dumps(data, ensure_ascii=False, indent=2)}")
             
             # 发送请求
-            response = self.session.post(url, json=data, timeout=60)
+            response = self.session.post(url, json=data, timeout=120)
             
             # 处理响应（OpenAI兼容格式）
             if response.status_code == HTTPStatus.OK:
@@ -252,7 +273,7 @@ class AliyunClient:
                     'Authorization': f'Bearer {self.api_key}'
                 }
                 
-                response = requests.post(url, files=files, data=data, headers=headers, timeout=60)
+                response = requests.post(url, files=files, data=data, headers=headers, timeout=120)
             
             if response.status_code == HTTPStatus.OK:
                 result = response.json()
@@ -365,7 +386,7 @@ class AliyunClient:
                 "max_tokens": int(os.getenv("MAX_TOKENS", "2000"))
             }
             
-            response = self.session.post(url, json=data, timeout=60)
+            response = self.session.post(url, json=data, timeout=120)
             
             if response.status_code == HTTPStatus.OK:
                 result = response.json()

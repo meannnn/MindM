@@ -156,7 +156,7 @@ def upload():
             if text_result['success']:
                 uploaded_files[file_id]['text_content'] = text_result['text_content']
             
-            # 生成任务ID
+            # 生成任务ID（模拟异步处理）
             import uuid
             task_id = str(uuid.uuid4())
             
@@ -166,18 +166,79 @@ def upload():
             uploaded_files[file_id]['ai_model'] = ai_model
             uploaded_files[file_id]['status'] = 'processing'
             
-            # 设置状态为处理中
-            uploaded_files[file_id]['status'] = 'processing'
-            
-            return jsonify({
-                'success': True,
-                'task_id': task_id,
-                'file_id': file_id,
-                'filename': result['original_filename'],
-                'file_size': result['file_size'],
-                'template': template,
-                'ai_model': ai_model
-            })
+            # 立即开始AI处理
+            try:
+                logger.info(f"开始处理文件: {file_id}")
+                
+                # 使用Qwen-Long模型和文件上传方式生成教学设计
+                # 上传用户文件到阿里云
+                user_upload_result = llm_client.upload_file_with_openai_client(uploaded_files[file_id]['file_path'])
+                
+                if not user_upload_result['success']:
+                    uploaded_files[file_id]['status'] = 'failed'
+                    uploaded_files[file_id]['error'] = f'用户文件上传失败: {user_upload_result.get("message", "未知错误")}'
+                    return jsonify({
+                        'success': False,
+                        'error': uploaded_files[file_id]['error']
+                    })
+                
+                # 上传模板文件到阿里云
+                template_path = file_handler.get_template_file_content()['template_path']
+                template_upload_result = llm_client.upload_file_with_openai_client(template_path)
+                
+                if not template_upload_result['success']:
+                    uploaded_files[file_id]['status'] = 'failed'
+                    uploaded_files[file_id]['error'] = f'模板文件上传失败: {template_upload_result.get("message", "未知错误")}'
+                    return jsonify({
+                        'success': False,
+                        'error': uploaded_files[file_id]['error']
+                    })
+                
+                # 使用Qwen-Long模型和文件ID进行对话
+                ai_result = llm_client.chat_with_qwen_long_and_files(
+                    user_file_id=user_upload_result['file_id'],
+                    template_file_id=template_upload_result['file_id'],
+                    model="qwen-long"
+                )
+                
+                if ai_result['success']:
+                    logger.info("AI处理成功，正在更新文件状态...")
+                    uploaded_files[file_id]['status'] = 'completed'
+                    uploaded_files[file_id]['result'] = ai_result['text']
+                    uploaded_files[file_id]['ai_response'] = ai_result
+                    uploaded_files[file_id]['user_file_id'] = user_upload_result['file_id']
+                    uploaded_files[file_id]['template_file_id'] = template_upload_result['file_id']
+                    
+                    return jsonify({
+                        'success': True,
+                        'task_id': task_id,
+                        'file_id': file_id,
+                        'filename': result['original_filename'],
+                        'file_size': result['file_size'],
+                        'template': template,
+                        'ai_model': ai_model,
+                        'status': 'completed',
+                        'result': ai_result['text'],
+                        'request_id': ai_result.get('request_id'),
+                        'usage': ai_result.get('usage'),
+                        'model': ai_result.get('model')
+                    })
+                else:
+                    uploaded_files[file_id]['status'] = 'failed'
+                    uploaded_files[file_id]['error'] = ai_result.get('message', 'AI处理失败')
+                    return jsonify({
+                        'success': False,
+                        'error': uploaded_files[file_id]['error']
+                    })
+                    
+            except Exception as e:
+                logger.error(f"AI处理失败: {e}")
+                uploaded_files[file_id]['status'] = 'failed'
+                uploaded_files[file_id]['error'] = str(e)
+                return jsonify({
+                    'success': False,
+                    'error': str(e)
+                })
         else:
             return jsonify({'success': False, 'error': result['message']})
             
@@ -305,129 +366,6 @@ def get_file_content(file_id):
         logger.error(f"获取文件内容失败: {e}")
         return jsonify({'success': False, 'error': str(e)})
 
-@app.route('/status/<task_id>')
-def get_task_status(task_id):
-    """获取任务状态"""
-    try:
-        # 查找对应的文件信息
-        file_info = None
-        for file_id, info in uploaded_files.items():
-            if info.get('task_id') == task_id:
-                file_info = info
-                break
-        
-        if not file_info:
-            return jsonify({'success': False, 'error': '任务不存在'})
-        
-        # 检查任务状态
-        status = file_info.get('status', 'processing')
-        
-        if status == 'processing':
-            # 使用Qwen-Long模型和文件上传方式生成教学设计
-            try:
-                logger.info(f"开始处理文件: {file_id}")
-                
-                # 上传用户文件到阿里云
-                logger.info("正在上传用户文件到阿里云...")
-                user_upload_result = llm_client.upload_file_with_openai_client(file_info['file_path'])
-                
-                if not user_upload_result['success']:
-                    file_info['status'] = 'failed'
-                    file_info['error'] = f'用户文件上传失败: {user_upload_result.get("message", "未知错误")}'
-                    return jsonify({
-                        'success': False,
-                        'status': 'failed',
-                        'error': file_info['error']
-                    })
-                
-                logger.info(f"用户文件上传成功: {user_upload_result['file_id']}")
-                
-                # 上传模板文件到阿里云
-                logger.info("正在上传模板文件到阿里云...")
-                template_path = file_handler.get_template_file_content()['template_path']
-                template_upload_result = llm_client.upload_file_with_openai_client(template_path)
-                
-                if not template_upload_result['success']:
-                    file_info['status'] = 'failed'
-                    file_info['error'] = f'模板文件上传失败: {template_upload_result.get("message", "未知错误")}'
-                    return jsonify({
-                        'success': False,
-                        'status': 'failed',
-                        'error': file_info['error']
-                    })
-                
-                logger.info(f"模板文件上传成功: {template_upload_result['file_id']}")
-                
-                # 使用Qwen-Long模型和文件ID进行对话
-                logger.info("正在调用AI模型生成教学设计...")
-                ai_result = llm_client.chat_with_qwen_long_and_files(
-                    user_file_id=user_upload_result['file_id'],
-                    template_file_id=template_upload_result['file_id'],
-                    model="qwen-long"
-                )
-                
-                if ai_result['success']:
-                    logger.info("AI处理成功，正在更新文件状态...")
-                    file_info['status'] = 'completed'
-                    file_info['result'] = ai_result['text']
-                    file_info['ai_response'] = ai_result
-                    file_info['user_file_id'] = user_upload_result['file_id']
-                    file_info['template_file_id'] = template_upload_result['file_id']
-                    
-                    return jsonify({
-                        'success': True,
-                        'status': 'completed',
-                        'progress': 100,
-                        'result': ai_result['text'],
-                        'request_id': ai_result.get('request_id'),
-                        'usage': ai_result.get('usage'),
-                        'model': ai_result.get('model'),
-                        'message': '文件处理完成'
-                    })
-                else:
-                    file_info['status'] = 'failed'
-                    file_info['error'] = ai_result.get('message', 'AI处理失败')
-                    return jsonify({
-                        'success': False,
-                        'status': 'failed',
-                        'error': file_info['error']
-                    })
-                    
-            except Exception as e:
-                logger.error(f"AI处理失败: {e}")
-                file_info['status'] = 'failed'
-                file_info['error'] = str(e)
-                return jsonify({
-                    'success': False,
-                    'status': 'failed',
-                    'error': str(e)
-                })
-        elif status == 'completed':
-            return jsonify({
-                'success': True,
-                'status': 'completed',
-                'progress': 100,
-                'result': file_info.get('result', ''),
-                'message': '文件处理完成'
-            })
-        elif status == 'failed':
-            return jsonify({
-                'success': False,
-                'status': 'failed',
-                'error': file_info.get('error', '处理失败')
-            })
-        else:
-            return jsonify({
-                'success': True,
-                'status': 'processing',
-                'progress': 50,
-                'message': '文件正在处理中...'
-            })
-        
-    except Exception as e:
-        logger.error(f"获取任务状态失败: {e}")
-        return jsonify({'success': False, 'error': str(e)})
-
 @app.route('/generate_teaching_design', methods=['POST'])
 def generate_teaching_design():
     """生成教学设计"""
@@ -450,7 +388,9 @@ def generate_teaching_design():
             'optimized': 'templates/optimized_teaching_design_template.docx',
             'table': 'templates/table_teaching_design_template.docx',
             'advanced_table': 'templates/advanced_table_teaching_design_template.docx',
-            'docxtpl_table': 'templates/docxtpl_table_teaching_design_template.docx'
+            'docxtpl_table': 'templates/docxtpl_table_teaching_design_template.docx',
+            'final_correct': 'templates/final_correct_template.docx',
+            'final_table': 'templates/final_table_template.docx'
         }
         
         selected_template = template_paths.get(template_id, template_paths['default'])
@@ -575,9 +515,109 @@ def download_design(file_id):
         logger.error(f"下载教学设计失败: {e}")
         return jsonify({'success': False, 'error': str(e)}), 500
 
+@app.route('/templates')
+def get_templates():
+    """获取可用模板列表"""
+    try:
+        templates = [
+            {
+                'id': 'default',
+                'name': '思维发展型课堂教学设计模板（基础版）',
+                'description': '基于思维发展型课堂理念的教学设计模板，使用基础占位符',
+                'path': 'templates/teaching_design_template.docx'
+            },
+            {
+                'id': 'optimized',
+                'name': '思维发展型课堂教学设计模板（优化版）',
+                'description': '优化版教学设计模板，改进的格式和布局',
+                'path': 'templates/optimized_teaching_design_template.docx'
+            },
+            {
+                'id': 'table',
+                'name': '思维发展型课堂教学设计模板（表插入版）',
+                'description': '使用表插入形式展示学习活动的教学设计模板',
+                'path': 'templates/table_teaching_design_template.docx'
+            },
+            {
+                'id': 'advanced_table',
+                'name': '思维发展型课堂教学设计模板（高级表插入版）',
+                'description': '高级表插入形式的教学设计模板，支持复杂的表格循环',
+                'path': 'templates/advanced_table_teaching_design_template.docx'
+            },
+            {
+                'id': 'docxtpl_table',
+                'name': '思维发展型课堂教学设计模板（docxtpl表插入版）',
+                'description': '使用docxtpl表插入功能的教学设计模板，支持动态表格生成',
+                'path': 'templates/docxtpl_table_teaching_design_template.docx'
+            },
+            {
+                'id': 'final_correct',
+                'name': '思维发展型课堂教学设计模板（修复版）',
+                'description': '修复了表格插入问题的教学设计模板，支持正确的多条数据插入',
+                'path': 'templates/final_correct_template.docx'
+            },
+            {
+                'id': 'final_table',
+                'name': '思维发展型课堂教学设计模板（最终表格版）',
+                'description': '使用正确表格循环语法的教学设计模板，确保不同行数据在不同行显示',
+                'path': 'templates/final_table_template.docx'
+            }
+        ]
+        
+        return jsonify({
+            'success': True,
+            'templates': templates
+        })
+    except Exception as e:
+        logger.error(f"获取模板列表失败: {e}")
+        return jsonify({'success': False, 'error': str(e)})
+
+@app.route('/status/<task_id>')
+def get_task_status(task_id):
+    """获取任务状态"""
+    try:
+        # 查找对应的文件信息
+        file_info = None
+        for file_id, info in uploaded_files.items():
+            if info.get('task_id') == task_id:
+                file_info = info
+                break
+        
+        if not file_info:
+            return jsonify({'success': False, 'error': '任务不存在'})
+        
+        # 检查任务状态
+        status = file_info.get('status', 'processing')
+        
+        if status == 'processing':
+            # 如果状态是processing，说明还没有开始AI处理，直接返回处理中状态
+            return jsonify({
+                'success': True,
+                'status': 'processing',
+                'progress': 50,
+                'message': '文件正在处理中...'
+            })
+        elif status == 'completed':
+            return jsonify({
+                'success': True,
+                'status': 'completed',
+                'progress': 100,
+                'result': file_info.get('result', '处理完成')
+            })
+        else:
+            return jsonify({
+                'success': True,
+                'status': status,
+                'progress': 50
+            })
+        
+    except Exception as e:
+        logger.error(f"获取任务状态失败: {e}")
+        return jsonify({'success': False, 'error': str(e)})
+
 @app.route('/download/<task_id>')
 def download_file(task_id):
-    """下载生成的文件（兼容旧接口）"""
+    """下载生成的文件"""
     try:
         # 查找对应的文件信息
         file_info = None
@@ -650,51 +690,6 @@ def download_file(task_id):
 def favicon():
     """网站图标"""
     return send_file('web/static/favicon.ico', mimetype='image/vnd.microsoft.icon')
-
-@app.route('/templates')
-def get_templates():
-    """获取可用模板列表"""
-    try:
-        templates = [
-            {
-                'id': 'default',
-                'name': '思维发展型课堂教学设计模板（基础版）',
-                'description': '基于思维发展型课堂理念的教学设计模板，使用基础占位符',
-                'path': 'templates/teaching_design_template.docx'
-            },
-            {
-                'id': 'optimized',
-                'name': '思维发展型课堂教学设计模板（优化版）',
-                'description': '优化版教学设计模板，改进的格式和布局',
-                'path': 'templates/optimized_teaching_design_template.docx'
-            },
-            {
-                'id': 'table',
-                'name': '思维发展型课堂教学设计模板（表插入版）',
-                'description': '使用表插入形式展示学习活动的教学设计模板',
-                'path': 'templates/table_teaching_design_template.docx'
-            },
-            {
-                'id': 'advanced_table',
-                'name': '思维发展型课堂教学设计模板（高级表插入版）',
-                'description': '高级表插入形式的教学设计模板，支持复杂的表格循环',
-                'path': 'templates/advanced_table_teaching_design_template.docx'
-            },
-            {
-                'id': 'docxtpl_table',
-                'name': '思维发展型课堂教学设计模板（docxtpl表插入版）',
-                'description': '使用docxtpl表插入功能的教学设计模板，支持动态表格生成',
-                'path': 'templates/docxtpl_table_teaching_design_template.docx'
-            }
-        ]
-        
-        return jsonify({
-            'success': True,
-            'templates': templates
-        })
-    except Exception as e:
-        logger.error(f"获取模板列表失败: {e}")
-        return jsonify({'success': False, 'error': str(e)})
 
 @app.route('/health')
 def health():

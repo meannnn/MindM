@@ -10,3 +10,5 @@ celery==5.3.4
 redis==5.0.1
 gunicorn==21.2.0
 openai>=1.106.0
+docxtpl==0.16.7
+pydantic>=2.0.0
