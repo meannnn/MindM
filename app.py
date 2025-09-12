@@ -166,65 +166,8 @@ def upload():
             uploaded_files[file_id]['ai_model'] = ai_model
             uploaded_files[file_id]['status'] = 'processing'
             
-            # 立即开始AI处理（异步）
-            import threading
-            def process_file_async():
-                try:
-                    logger.info(f"开始异步处理文件: {file_id}")
-                    
-                    # 使用Qwen-Long模型和文件上传方式生成教学设计
-                    logger.info("正在上传用户文件到阿里云...")
-                    user_upload_result = llm_client.upload_file_with_openai_client(result['file_path'])
-                    
-                    if not user_upload_result['success']:
-                        logger.error(f"用户文件上传失败: {user_upload_result.get('message', '未知错误')}")
-                        uploaded_files[file_id]['status'] = 'failed'
-                        uploaded_files[file_id]['error'] = f'用户文件上传失败: {user_upload_result.get("message", "未知错误")}'
-                        return
-                    
-                    logger.info(f"用户文件上传成功: {user_upload_result['file_id']}")
-                    
-                    # 上传模板文件到阿里云
-                    logger.info("正在上传模板文件到阿里云...")
-                    template_path = file_handler.get_template_file_content()['template_path']
-                    template_upload_result = llm_client.upload_file_with_openai_client(template_path)
-                    
-                    if not template_upload_result['success']:
-                        logger.error(f"模板文件上传失败: {template_upload_result.get('message', '未知错误')}")
-                        uploaded_files[file_id]['status'] = 'failed'
-                        uploaded_files[file_id]['error'] = f'模板文件上传失败: {template_upload_result.get("message", "未知错误")}'
-                        return
-                    
-                    logger.info(f"模板文件上传成功: {template_upload_result['file_id']}")
-                    
-                    # 使用Qwen-Long模型和文件ID进行对话
-                    logger.info("正在调用AI模型生成教学设计...")
-                    ai_result = llm_client.chat_with_qwen_long_and_files(
-                        user_file_id=user_upload_result['file_id'],
-                        template_file_id=template_upload_result['file_id'],
-                        model="qwen-long"
-                    )
-                    
-                    if ai_result['success']:
-                        logger.info("AI处理成功，正在更新文件状态...")
-                        uploaded_files[file_id]['status'] = 'completed'
-                        uploaded_files[file_id]['result'] = ai_result['text']
-                        uploaded_files[file_id]['ai_response'] = ai_result
-                        uploaded_files[file_id]['user_file_id'] = user_upload_result['file_id']
-                        uploaded_files[file_id]['template_file_id'] = template_upload_result['file_id']
-                        logger.info(f"文件 {file_id} 处理完成")
-                    else:
-                        logger.error(f"AI处理失败: {ai_result.get('message', 'AI处理失败')}")
-                        uploaded_files[file_id]['status'] = 'failed'
-                        uploaded_files[file_id]['error'] = ai_result.get('message', 'AI处理失败')
-                        
-                except Exception as e:
-                    logger.error(f"AI处理异常: {e}")
-                    uploaded_files[file_id]['status'] = 'failed'
-                    uploaded_files[file_id]['error'] = str(e)
-            
-            # 启动异步处理
-            threading.Thread(target=process_file_async, daemon=True).start()
+            # 设置状态为处理中
+            uploaded_files[file_id]['status'] = 'processing'
             
             return jsonify({
                 'success': True,
@@ -379,7 +322,87 @@ def get_task_status(task_id):
         # 检查任务状态
         status = file_info.get('status', 'processing')
         
-        if status == 'completed':
+        if status == 'processing':
+            # 使用Qwen-Long模型和文件上传方式生成教学设计
+            try:
+                logger.info(f"开始处理文件: {file_id}")
+                
+                # 上传用户文件到阿里云
+                logger.info("正在上传用户文件到阿里云...")
+                user_upload_result = llm_client.upload_file_with_openai_client(file_info['file_path'])
+                
+                if not user_upload_result['success']:
+                    file_info['status'] = 'failed'
+                    file_info['error'] = f'用户文件上传失败: {user_upload_result.get("message", "未知错误")}'
+                    return jsonify({
+                        'success': False,
+                        'status': 'failed',
+                        'error': file_info['error']
+                    })
+                
+                logger.info(f"用户文件上传成功: {user_upload_result['file_id']}")
+                
+                # 上传模板文件到阿里云
+                logger.info("正在上传模板文件到阿里云...")
+                template_path = file_handler.get_template_file_content()['template_path']
+                template_upload_result = llm_client.upload_file_with_openai_client(template_path)
+                
+                if not template_upload_result['success']:
+                    file_info['status'] = 'failed'
+                    file_info['error'] = f'模板文件上传失败: {template_upload_result.get("message", "未知错误")}'
+                    return jsonify({
+                        'success': False,
+                        'status': 'failed',
+                        'error': file_info['error']
+                    })
+                
+                logger.info(f"模板文件上传成功: {template_upload_result['file_id']}")
+                
+                # 使用Qwen-Long模型和文件ID进行对话
+                logger.info("正在调用AI模型生成教学设计...")
+                ai_result = llm_client.chat_with_qwen_long_and_files(
+                    user_file_id=user_upload_result['file_id'],
+                    template_file_id=template_upload_result['file_id'],
+                    model="qwen-long"
+                )
+                
+                if ai_result['success']:
+                    logger.info("AI处理成功，正在更新文件状态...")
+                    file_info['status'] = 'completed'
+                    file_info['result'] = ai_result['text']
+                    file_info['ai_response'] = ai_result
+                    file_info['user_file_id'] = user_upload_result['file_id']
+                    file_info['template_file_id'] = template_upload_result['file_id']
+                    
+                    return jsonify({
+                        'success': True,
+                        'status': 'completed',
+                        'progress': 100,
+                        'result': ai_result['text'],
+                        'request_id': ai_result.get('request_id'),
+                        'usage': ai_result.get('usage'),
+                        'model': ai_result.get('model'),
+                        'message': '文件处理完成'
+                    })
+                else:
+                    file_info['status'] = 'failed'
+                    file_info['error'] = ai_result.get('message', 'AI处理失败')
+                    return jsonify({
+                        'success': False,
+                        'status': 'failed',
+                        'error': file_info['error']
+                    })
+                    
+            except Exception as e:
+                logger.error(f"AI处理失败: {e}")
+                file_info['status'] = 'failed'
+                file_info['error'] = str(e)
+                return jsonify({
+                    'success': False,
+                    'status': 'failed',
+                    'error': str(e)
+                })
+        elif status == 'completed':
             return jsonify({
                 'success': True,
                 'status': 'completed',

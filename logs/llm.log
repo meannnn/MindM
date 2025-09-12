@@ -4060,3 +4060,268 @@ jinja2.exceptions.TemplateNotFound: index.html
 2025-09-12 10:09:25,767 - docx_processor.template_processor - INFO - 文档生成成功: outputs\教学设计_《背影》教学.docx, 大小: 28288 bytes
 2025-09-12 10:09:25,767 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:25] "POST /generate_teaching_design HTTP/1.1" 200 -
 2025-09-12 10:10:11,272 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:11] "GET /download_design/ce2e2fc7-f4b9-49b6-a57e-b128418e6b07 HTTP/1.1" 200 -
+2025-09-12 12:28:24,699 - llm.clients.aliyun_client - INFO - 阿里云百炼客户端初始化完成
+2025-09-12 12:28:24,699 - llm.utils.file_handler - INFO - 文件处理器初始化完成，上传目录: ./uploads
+2025-09-12 12:28:24,699 - docx_processor.template_processor - INFO - 模板加载成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\templates\teaching_design_template.docx
+2025-09-12 12:28:24,699 - __main__ - INFO - 组件初始化成功
+2025-09-12 12:28:24,709 - __main__ - INFO - 启动AI文档助手，端口: 5000, 调试模式: False
+2025-09-12 12:28:25,631 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.124.11:5000
+2025-09-12 12:28:25,631 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-12 12:28:35,805 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2025 12:28:35] "GET / HTTP/1.1" 200 -
+2025-09-12 12:28:36,288 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2025 12:28:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-09-12 12:28:36,513 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2025 12:28:36] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-09-12 12:28:36,846 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2025 12:28:36] "GET /templates HTTP/1.1" 200 -
+2025-09-12 12:29:17,060 - llm.utils.file_handler - INFO - 文件验证完成: 集合与函数.docx, 结果: 通过
+2025-09-12 12:29:17,060 - llm.utils.file_handler - INFO - 文件保存成功: 集合与函数.docx -> e95452ce-99e1-440a-99f3-33f08b36dc97.docx
+2025-09-12 12:29:17,084 - llm.utils.file_handler - INFO - 文本提取成功: ./uploads\e95452ce-99e1-440a-99f3-33f08b36dc97.docx
+2025-09-12 12:29:17,087 - __main__ - INFO - 开始异步处理文件: e95452ce-99e1-440a-99f3-33f08b36dc97
+2025-09-12 12:29:17,088 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2025 12:29:17] "POST /upload HTTP/1.1" 200 -
+2025-09-12 12:29:17,088 - __main__ - INFO - 正在上传用户文件到阿里云...
+2025-09-12 12:29:18,426 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2025 12:29:18] "GET /status/f0260706-8772-4e1e-b25e-45bed282618c HTTP/1.1" 200 -
+2025-09-12 12:29:19,115 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2025 12:29:19] "GET /status/f0260706-8772-4e1e-b25e-45bed282618c HTTP/1.1" 200 -
+2025-09-12 12:29:20,416 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2025 12:29:20] "GET /status/f0260706-8772-4e1e-b25e-45bed282618c HTTP/1.1" 200 -
+2025-09-12 12:29:21,124 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2025 12:29:21] "GET /status/f0260706-8772-4e1e-b25e-45bed282618c HTTP/1.1" 200 -
+2025-09-12 12:29:22,403 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2025 12:29:22] "GET /status/f0260706-8772-4e1e-b25e-45bed282618c HTTP/1.1" 200 -
+2025-09-12 12:29:23,051 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-12 12:29:23,054 - __main__ - INFO - 用户文件上传成功: file-fe-2a0f9a9c65e649948c942cf8
+2025-09-12 12:29:23,054 - __main__ - INFO - 正在上传模板文件到阿里云...
+2025-09-12 12:29:23,086 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-12 12:29:23,114 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2025 12:29:23] "GET /status/f0260706-8772-4e1e-b25e-45bed282618c HTTP/1.1" 200 -
+2025-09-12 12:29:23,835 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-12 12:29:23,836 - __main__ - INFO - 模板文件上传成功: file-fe-3f9af6b507a745fca4b1caf5
+2025-09-12 12:29:23,837 - __main__ - INFO - 正在调用AI模型生成教学设计...
+2025-09-12 12:29:23,837 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-12 12:29:24,421 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2025 12:29:24] "GET /status/f0260706-8772-4e1e-b25e-45bed282618c HTTP/1.1" 200 -
+2025-09-12 12:30:36,530 - __main__ - INFO - AI处理成功，正在更新文件状态...
+2025-09-12 12:30:36,531 - __main__ - INFO - 文件 e95452ce-99e1-440a-99f3-33f08b36dc97 处理完成
+2025-09-12 12:34:17,544 - llm.clients.aliyun_client - INFO - 阿里云百炼客户端初始化完成
+2025-09-12 12:34:17,548 - llm.utils.file_handler - INFO - 文件处理器初始化完成，上传目录: ./uploads
+2025-09-12 12:34:17,548 - docx_processor.template_processor - INFO - 模板加载成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\templates\teaching_design_template.docx
+2025-09-12 12:34:17,548 - __main__ - INFO - 组件初始化成功
+2025-09-12 12:34:17,553 - __main__ - INFO - 启动AI文档助手，端口: 5000, 调试模式: False
+2025-09-12 12:34:18,456 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.124.11:5000
+2025-09-12 12:34:18,458 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-12 12:34:23,410 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2025 12:34:23] "GET / HTTP/1.1" 200 -
+2025-09-12 12:34:23,871 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2025 12:34:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-09-12 12:34:24,014 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2025 12:34:24] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-09-12 12:34:24,349 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2025 12:34:24] "GET /templates HTTP/1.1" 200 -
+2025-09-12 12:34:33,789 - llm.utils.file_handler - INFO - 文件验证完成: 集合与函数.docx, 结果: 通过
+2025-09-12 12:34:33,789 - llm.utils.file_handler - INFO - 文件保存成功: 集合与函数.docx -> 5fdc85f1-bca2-4f03-9eda-a5bf8688f1a4.docx
+2025-09-12 12:34:33,805 - llm.utils.file_handler - INFO - 文本提取成功: ./uploads\5fdc85f1-bca2-4f03-9eda-a5bf8688f1a4.docx
+2025-09-12 12:34:33,808 - __main__ - INFO - 开始异步处理文件: 5fdc85f1-bca2-4f03-9eda-a5bf8688f1a4
+2025-09-12 12:34:33,809 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2025 12:34:33] "POST /upload HTTP/1.1" 200 -
+2025-09-12 12:34:33,810 - __main__ - INFO - 正在上传用户文件到阿里云...
+2025-09-12 12:34:35,153 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2025 12:34:35] "GET /status/c4988687-7347-4bbf-a50c-3a7b006544c3 HTTP/1.1" 200 -
+2025-09-12 12:34:35,836 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2025 12:34:35] "GET /status/c4988687-7347-4bbf-a50c-3a7b006544c3 HTTP/1.1" 200 -
+2025-09-12 12:34:37,149 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2025 12:34:37] "GET /status/c4988687-7347-4bbf-a50c-3a7b006544c3 HTTP/1.1" 200 -
+2025-09-12 12:34:37,668 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-12 12:34:37,673 - __main__ - INFO - 用户文件上传成功: file-fe-260d3476cf5644c4984952e1
+2025-09-12 12:34:37,673 - __main__ - INFO - 正在上传模板文件到阿里云...
+2025-09-12 12:34:37,712 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-12 12:34:38,310 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-12 12:34:38,310 - __main__ - INFO - 模板文件上传成功: file-fe-718b1dc7d9374ee78695a4b7
+2025-09-12 12:34:38,310 - __main__ - INFO - 正在调用AI模型生成教学设计...
+2025-09-12 12:34:38,315 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-12 12:36:00,394 - __main__ - INFO - AI处理成功，正在更新文件状态...
+2025-09-12 12:36:00,394 - __main__ - INFO - 文件 5fdc85f1-bca2-4f03-9eda-a5bf8688f1a4 处理完成
+2025-09-12 12:43:21,794 - llm.clients.aliyun_client - INFO - 阿里云百炼客户端初始化完成
+2025-09-12 12:43:21,799 - llm.utils.file_handler - INFO - 文件处理器初始化完成，上传目录: ./uploads
+2025-09-12 12:43:21,800 - docx_processor.template_processor - INFO - 模板加载成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\templates\teaching_design_template.docx
+2025-09-12 12:43:21,800 - __main__ - INFO - 组件初始化成功
+2025-09-12 12:43:21,806 - __main__ - INFO - 启动AI文档助手，端口: 5000, 调试模式: False
+2025-09-12 12:43:22,713 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.124.11:5000
+2025-09-12 12:43:22,713 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-12 12:44:31,622 - llm.utils.file_handler - INFO - 文件验证完成: 集合与函数.docx, 结果: 通过
+2025-09-12 12:44:31,623 - llm.utils.file_handler - INFO - 文件保存成功: 集合与函数.docx -> 8d1b4418-01dc-4b0a-9b20-a24a4ffcc0f2.docx
+2025-09-12 12:44:31,652 - llm.utils.file_handler - INFO - 文本提取成功: ./uploads\8d1b4418-01dc-4b0a-9b20-a24a4ffcc0f2.docx
+2025-09-12 12:44:31,654 - __main__ - INFO - 开始异步处理文件: 8d1b4418-01dc-4b0a-9b20-a24a4ffcc0f2
+2025-09-12 12:44:31,656 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2025 12:44:31] "POST /upload HTTP/1.1" 200 -
+2025-09-12 12:44:31,656 - __main__ - INFO - 正在上传用户文件到阿里云...
+2025-09-12 12:44:32,676 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2025 12:44:32] "GET /status/f5b95835-7182-4464-acc8-9c6f85894608 HTTP/1.1" 200 -
+2025-09-12 12:44:34,013 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2025 12:44:34] "GET /status/f5b95835-7182-4464-acc8-9c6f85894608 HTTP/1.1" 200 -
+2025-09-12 12:44:34,744 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2025 12:44:34] "GET /status/f5b95835-7182-4464-acc8-9c6f85894608 HTTP/1.1" 200 -
+2025-09-12 12:44:37,456 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-12 12:44:37,463 - __main__ - INFO - 用户文件上传成功: file-fe-576cd0f5de774bc59f9adc8d
+2025-09-12 12:44:37,469 - __main__ - INFO - 正在上传模板文件到阿里云...
+2025-09-12 12:44:37,495 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-12 12:44:38,145 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-12 12:44:38,147 - __main__ - INFO - 模板文件上传成功: file-fe-fbab31378c9a4389a25b4cbd
+2025-09-12 12:44:38,147 - __main__ - INFO - 正在调用AI模型生成教学设计...
+2025-09-12 12:44:38,147 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-12 12:46:02,881 - __main__ - INFO - AI处理成功，正在更新文件状态...
+2025-09-12 12:46:02,881 - __main__ - INFO - 文件 8d1b4418-01dc-4b0a-9b20-a24a4ffcc0f2 处理完成
+2025-09-12 12:46:56,070 - llm.clients.aliyun_client - INFO - 阿里云百炼客户端初始化完成
+2025-09-12 12:46:56,074 - llm.utils.file_handler - INFO - 文件处理器初始化完成，上传目录: ./uploads
+2025-09-12 12:46:56,075 - docx_processor.template_processor - INFO - 模板加载成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\templates\teaching_design_template.docx
+2025-09-12 12:46:56,076 - __main__ - INFO - 组件初始化成功
+2025-09-12 12:46:56,102 - __main__ - INFO - 启动AI文档助手，端口: 5000, 调试模式: False
+2025-09-12 12:46:57,069 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.124.11:5000
+2025-09-12 12:46:57,071 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-12 12:46:57,716 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2025 12:46:57] "GET / HTTP/1.1" 200 -
+2025-09-12 12:46:58,468 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2025 12:46:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-09-12 12:46:58,597 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2025 12:46:58] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-09-12 12:46:58,958 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2025 12:46:58] "GET /templates HTTP/1.1" 200 -
+2025-09-12 12:47:04,719 - llm.utils.file_handler - INFO - 文件验证完成: 《背影》教学.docx, 结果: 通过
+2025-09-12 12:47:04,721 - llm.utils.file_handler - INFO - 文件保存成功: 《背影》教学.docx -> d9693de1-d3c2-4f4e-ae23-21a79394e756.docx
+2025-09-12 12:47:04,748 - llm.utils.file_handler - INFO - 文本提取成功: ./uploads\d9693de1-d3c2-4f4e-ae23-21a79394e756.docx
+2025-09-12 12:47:04,751 - __main__ - INFO - 开始异步处理文件: d9693de1-d3c2-4f4e-ae23-21a79394e756
+2025-09-12 12:47:04,753 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2025 12:47:04] "POST /upload HTTP/1.1" 200 -
+2025-09-12 12:47:04,754 - __main__ - INFO - 正在上传用户文件到阿里云...
+2025-09-12 12:47:06,094 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2025 12:47:06] "GET /status/5c5f1df5-09c8-4da1-8a4b-140c6ced9fd4 HTTP/1.1" 200 -
+2025-09-12 12:47:06,790 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2025 12:47:06] "GET /status/5c5f1df5-09c8-4da1-8a4b-140c6ced9fd4 HTTP/1.1" 200 -
+2025-09-12 12:47:08,113 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2025 12:47:08] "GET /status/5c5f1df5-09c8-4da1-8a4b-140c6ced9fd4 HTTP/1.1" 200 -
+2025-09-12 12:47:08,346 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-12 12:47:08,350 - __main__ - INFO - 用户文件上传成功: file-fe-c415c161c13147199c9305f9
+2025-09-12 12:47:08,352 - __main__ - INFO - 正在上传模板文件到阿里云...
+2025-09-12 12:47:08,392 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-12 12:47:08,795 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2025 12:47:08] "GET /status/5c5f1df5-09c8-4da1-8a4b-140c6ced9fd4 HTTP/1.1" 200 -
+2025-09-12 12:47:09,067 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-12 12:47:09,068 - __main__ - INFO - 模板文件上传成功: file-fe-5f33065575894cfc803b2b10
+2025-09-12 12:47:09,069 - __main__ - INFO - 正在调用AI模型生成教学设计...
+2025-09-12 12:47:09,070 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-12 12:48:37,990 - __main__ - INFO - AI处理成功，正在更新文件状态...
+2025-09-12 12:48:37,990 - __main__ - INFO - 文件 d9693de1-d3c2-4f4e-ae23-21a79394e756 处理完成
+2025-09-12 12:52:07,377 - llm.clients.aliyun_client - INFO - 阿里云百炼客户端初始化完成
+2025-09-12 12:52:07,377 - llm.utils.file_handler - INFO - 文件处理器初始化完成，上传目录: ./uploads
+2025-09-12 12:52:07,377 - docx_processor.template_processor - INFO - 模板加载成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\templates\teaching_design_template.docx
+2025-09-12 12:52:07,377 - __main__ - INFO - 组件初始化成功
+2025-09-12 12:52:07,382 - __main__ - INFO - 启动AI文档助手，端口: 5000, 调试模式: False
+2025-09-12 12:52:08,274 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.124.11:5000
+2025-09-12 12:52:08,275 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-12 12:52:18,694 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2025 12:52:18] "GET / HTTP/1.1" 200 -
+2025-09-12 12:52:19,203 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2025 12:52:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-09-12 12:52:19,360 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2025 12:52:19] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-09-12 12:52:19,706 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2025 12:52:19] "GET /templates HTTP/1.1" 200 -
+2025-09-12 12:52:24,534 - llm.utils.file_handler - INFO - 文件验证完成: 《背影》教学.docx, 结果: 通过
+2025-09-12 12:52:24,536 - llm.utils.file_handler - INFO - 文件保存成功: 《背影》教学.docx -> 0122c052-ee5e-4b62-a013-916afc8e1b54.docx
+2025-09-12 12:52:24,551 - llm.utils.file_handler - INFO - 文本提取成功: ./uploads\0122c052-ee5e-4b62-a013-916afc8e1b54.docx
+2025-09-12 12:52:24,552 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2025 12:52:24] "POST /upload HTTP/1.1" 200 -
+2025-09-12 12:52:25,891 - __main__ - INFO - 开始处理文件: 0122c052-ee5e-4b62-a013-916afc8e1b54
+2025-09-12 12:52:25,891 - __main__ - INFO - 正在上传用户文件到阿里云...
+2025-09-12 12:52:29,784 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-12 12:52:29,785 - __main__ - INFO - 用户文件上传成功: file-fe-86da3eeca050474c857ddae0
+2025-09-12 12:52:29,785 - __main__ - INFO - 正在上传模板文件到阿里云...
+2025-09-12 12:52:29,806 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-12 12:52:30,434 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-12 12:52:30,435 - __main__ - INFO - 模板文件上传成功: file-fe-7e56936d6ac04230b6cb84af
+2025-09-12 12:52:30,436 - __main__ - INFO - 正在调用AI模型生成教学设计...
+2025-09-12 12:52:30,436 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-12 12:52:46,583 - __main__ - INFO - 开始处理文件: 0122c052-ee5e-4b62-a013-916afc8e1b54
+2025-09-12 12:52:46,583 - __main__ - INFO - 正在上传用户文件到阿里云...
+2025-09-12 12:52:47,180 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-12 12:52:47,180 - __main__ - INFO - 用户文件上传成功: file-fe-d9a9463c2853421c9233bba8
+2025-09-12 12:52:47,180 - __main__ - INFO - 正在上传模板文件到阿里云...
+2025-09-12 12:52:47,190 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-12 12:52:47,834 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-12 12:52:47,836 - __main__ - INFO - 模板文件上传成功: file-fe-d575dc57330047789426098a
+2025-09-12 12:52:47,836 - __main__ - INFO - 正在调用AI模型生成教学设计...
+2025-09-12 12:52:47,836 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-12 12:52:47,876 - __main__ - INFO - 开始处理文件: 0122c052-ee5e-4b62-a013-916afc8e1b54
+2025-09-12 12:52:47,876 - __main__ - INFO - 正在上传用户文件到阿里云...
+2025-09-12 12:52:48,495 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-12 12:52:48,495 - __main__ - INFO - 用户文件上传成功: file-fe-f77a726ffdac4eb2b9eef82c
+2025-09-12 12:52:48,495 - __main__ - INFO - 正在上传模板文件到阿里云...
+2025-09-12 12:52:48,509 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-12 12:52:48,890 - __main__ - INFO - 开始处理文件: 0122c052-ee5e-4b62-a013-916afc8e1b54
+2025-09-12 12:52:48,890 - __main__ - INFO - 正在上传用户文件到阿里云...
+2025-09-12 12:52:49,107 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-12 12:52:49,107 - __main__ - INFO - 模板文件上传成功: file-fe-fb447f4a045e4f2d94717f4b
+2025-09-12 12:52:49,112 - __main__ - INFO - 正在调用AI模型生成教学设计...
+2025-09-12 12:52:49,112 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-12 12:52:49,385 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-12 12:52:49,385 - __main__ - INFO - 用户文件上传成功: file-fe-61d3a6dcd8aa4374815d007d
+2025-09-12 12:52:49,385 - __main__ - INFO - 正在上传模板文件到阿里云...
+2025-09-12 12:52:49,395 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-12 12:52:50,011 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-12 12:52:50,011 - __main__ - INFO - 模板文件上传成功: file-fe-305fd1f833364bf8ab8b4fab
+2025-09-12 12:52:50,016 - __main__ - INFO - 正在调用AI模型生成教学设计...
+2025-09-12 12:52:50,016 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-12 12:53:57,868 - __main__ - INFO - AI处理成功，正在更新文件状态...
+2025-09-12 12:53:57,868 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2025 12:53:57] "GET /status/e046f745-c992-404d-b36a-bb7fa2acd034 HTTP/1.1" 200 -
+2025-09-12 12:53:59,872 - docx_processor.template_processor - INFO - 模板加载成功: templates/teaching_design_template.docx
+2025-09-12 12:53:59,901 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-12 12:53:59,903 - llm.clients.aliyun_client - INFO - 调用阿里云大模型API: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-12 12:54:11,364 - __main__ - INFO - AI处理成功，正在更新文件状态...
+2025-09-12 12:54:11,365 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2025 12:54:11] "GET /status/e046f745-c992-404d-b36a-bb7fa2acd034 HTTP/1.1" 200 -
+2025-09-12 12:54:12,876 - docx_processor.template_processor - INFO - 模板加载成功: templates/teaching_design_template.docx
+2025-09-12 12:54:12,886 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-12 12:54:12,886 - llm.clients.aliyun_client - INFO - 调用阿里云大模型API: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-12 12:54:20,916 - __main__ - INFO - AI处理成功，正在更新文件状态...
+2025-09-12 12:54:20,917 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2025 12:54:20] "GET /status/e046f745-c992-404d-b36a-bb7fa2acd034 HTTP/1.1" 200 -
+2025-09-12 12:54:22,879 - docx_processor.template_processor - INFO - 模板加载成功: templates/teaching_design_template.docx
+2025-09-12 12:54:22,933 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-12 12:54:22,935 - llm.clients.aliyun_client - INFO - 调用阿里云大模型API: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-12 12:54:27,466 - llm.clients.aliyun_client - INFO - API调用成功
+2025-09-12 12:54:27,532 - docx_processor.template_processor - INFO - 文档生成成功: outputs\教学设计_《背影》教学.docx, 大小: 27883 bytes
+2025-09-12 12:54:27,533 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2025 12:54:27] "POST /generate_teaching_design HTTP/1.1" 200 -
+2025-09-12 12:54:30,422 - __main__ - INFO - AI处理成功，正在更新文件状态...
+2025-09-12 12:54:30,422 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2025 12:54:30] "GET /status/e046f745-c992-404d-b36a-bb7fa2acd034 HTTP/1.1" 200 -
+2025-09-12 12:54:31,893 - docx_processor.template_processor - INFO - 模板加载成功: templates/teaching_design_template.docx
+2025-09-12 12:54:31,905 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-12 12:54:31,906 - llm.clients.aliyun_client - INFO - 调用阿里云大模型API: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-12 12:54:44,115 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2025 12:54:44] "GET /download_design/0122c052-ee5e-4b62-a013-916afc8e1b54 HTTP/1.1" 200 -
+2025-09-12 12:54:48,443 - llm.clients.aliyun_client - INFO - API调用成功
+2025-09-12 12:54:48,672 - docx_processor.template_processor - INFO - 文档生成成功: outputs\教学设计_《背影》教学.docx, 大小: 27902 bytes
+2025-09-12 12:54:48,676 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2025 12:54:48] "POST /generate_teaching_design HTTP/1.1" 200 -
+2025-09-12 12:54:54,105 - llm.clients.aliyun_client - INFO - API调用成功
+2025-09-12 12:54:54,163 - docx_processor.template_processor - INFO - 文档生成成功: outputs\教学设计_《背影》教学.docx, 大小: 27947 bytes
+2025-09-12 12:54:54,164 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2025 12:54:54] "POST /generate_teaching_design HTTP/1.1" 200 -
+2025-09-12 12:55:00,167 - llm.clients.aliyun_client - INFO - API调用成功
+2025-09-12 12:55:00,228 - docx_processor.template_processor - INFO - 文档生成成功: outputs\教学设计_《背影》教学.docx, 大小: 27909 bytes
+2025-09-12 12:55:00,230 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2025 12:55:00] "POST /generate_teaching_design HTTP/1.1" 200 -
+2025-09-12 12:55:31,569 - llm.utils.file_handler - INFO - 文件验证完成: 集合与函数.docx, 结果: 通过
+2025-09-12 12:55:31,571 - llm.utils.file_handler - INFO - 文件保存成功: 集合与函数.docx -> 34318dd0-1bed-4187-8153-1a0f473426e1.docx
+2025-09-12 12:55:31,593 - llm.utils.file_handler - INFO - 文本提取成功: ./uploads\34318dd0-1bed-4187-8153-1a0f473426e1.docx
+2025-09-12 12:55:31,598 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2025 12:55:31] "POST /upload HTTP/1.1" 200 -
+2025-09-12 12:55:32,626 - __main__ - INFO - 开始处理文件: 34318dd0-1bed-4187-8153-1a0f473426e1
+2025-09-12 12:55:32,627 - __main__ - INFO - 正在上传用户文件到阿里云...
+2025-09-12 12:55:33,220 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-12 12:55:33,224 - __main__ - INFO - 用户文件上传成功: file-fe-3c9010bb6724459c990e2bb4
+2025-09-12 12:55:33,224 - __main__ - INFO - 正在上传模板文件到阿里云...
+2025-09-12 12:55:33,254 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-12 12:55:33,886 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-12 12:55:33,890 - __main__ - INFO - 模板文件上传成功: file-fe-779b02e555bc487898f4ecbd
+2025-09-12 12:55:33,890 - __main__ - INFO - 正在调用AI模型生成教学设计...
+2025-09-12 12:55:33,891 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-12 12:55:53,944 - __main__ - INFO - 开始处理文件: 34318dd0-1bed-4187-8153-1a0f473426e1
+2025-09-12 12:55:53,948 - __main__ - INFO - 正在上传用户文件到阿里云...
+2025-09-12 12:55:54,504 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-12 12:55:54,504 - __main__ - INFO - 用户文件上传成功: file-fe-7f2f1619834548caaf16c1ec
+2025-09-12 12:55:54,504 - __main__ - INFO - 正在上传模板文件到阿里云...
+2025-09-12 12:55:54,521 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-12 12:55:55,082 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-12 12:55:55,083 - __main__ - INFO - 模板文件上传成功: file-fe-a5e8c5a35fb1429e85bd65cc
+2025-09-12 12:55:55,083 - __main__ - INFO - 正在调用AI模型生成教学设计...
+2025-09-12 12:55:55,083 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-12 12:56:52,726 - __main__ - INFO - AI处理成功，正在更新文件状态...
+2025-09-12 12:56:52,727 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2025 12:56:52] "GET /status/b7e96689-8833-41e7-82a8-47336ff9f4ed HTTP/1.1" 200 -
+2025-09-12 12:56:54,878 - docx_processor.template_processor - INFO - 模板加载成功: templates/docxtpl_table_teaching_design_template.docx
+2025-09-12 12:56:54,908 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-12 12:56:54,913 - llm.clients.aliyun_client - INFO - 调用阿里云大模型API: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-12 12:57:16,121 - llm.clients.aliyun_client - INFO - API调用成功
+2025-09-12 12:57:16,198 - docx_processor.template_processor - INFO - 文档生成成功: outputs\教学设计_集合与函数.docx, 大小: 28177 bytes
+2025-09-12 12:57:16,198 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2025 12:57:16] "POST /generate_teaching_design HTTP/1.1" 200 -
+2025-09-12 12:57:21,990 - __main__ - INFO - AI处理成功，正在更新文件状态...
+2025-09-12 12:57:21,990 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2025 12:57:21] "GET /status/b7e96689-8833-41e7-82a8-47336ff9f4ed HTTP/1.1" 200 -
+2025-09-12 12:57:23,884 - docx_processor.template_processor - INFO - 模板加载成功: templates/docxtpl_table_teaching_design_template.docx
+2025-09-12 12:57:23,895 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-12 12:57:23,895 - llm.clients.aliyun_client - INFO - 调用阿里云大模型API: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-12 12:57:57,295 - llm.clients.aliyun_client - INFO - API调用成功
+2025-09-12 12:57:57,350 - docx_processor.template_processor - INFO - 文档生成成功: outputs\教学设计_集合与函数.docx, 大小: 28402 bytes
+2025-09-12 12:57:57,350 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2025 12:57:57] "POST /generate_teaching_design HTTP/1.1" 200 -
+2025-09-12 12:59:23,060 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2025 12:59:23] "GET /download_design/34318dd0-1bed-4187-8153-1a0f473426e1 HTTP/1.1" 200 -
