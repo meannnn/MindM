@@ -1,6 +1,7 @@
 // 全局变量
 let selectedFile = null;
 let currentTaskId = null;
+let currentFileId = null;
 let progressInterval = null;
 
 // DOM元素（延迟初始化）
@@ -13,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeDOMElements();
     initializeEventListeners();
     initializeUI();
+    loadTemplates();
 });
 
 // 初始化DOM元素
@@ -250,6 +252,7 @@ async function startProcessing() {
         
         const result = await response.json();
         currentTaskId = result.task_id;
+        currentFileId = result.file_id;
         
         // 开始流式轮询
         startStreamingPolling();
@@ -259,6 +262,137 @@ async function startProcessing() {
         showError(`处理失败: ${error.message}`);
         hideStreamingDisplay();
     }
+}
+
+// 新的教学设计生成函数
+async function generateTeachingDesign() {
+    if (!currentFileId) {
+        showError('请先上传文件');
+        return;
+    }
+    
+    try {
+        // 显示处理状态
+        updateStreamingStatus({
+            message: '正在生成教学设计...',
+            status: 'processing'
+        });
+        
+        // 获取选择的模板
+        const templateSelect = document.getElementById('templateSelect');
+        const selectedTemplate = templateSelect ? templateSelect.value : 'default';
+        
+        // 调用教学设计生成API
+        const response = await fetch('/generate_teaching_design', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                file_id: currentFileId,
+                template_id: selectedTemplate
+            })
+        });
+        
+        if (!response.ok) {
+            throw new Error(`生成失败: ${response.status}`);
+        }
+        
+        const result = await response.json();
+        
+        if (result.success) {
+            // 生成成功
+            updateStreamingStatus({
+                message: '教学设计生成完成',
+                status: 'completed'
+            });
+            
+            // 显示生成结果
+            showTeachingDesignResult(result);
+            
+        } else {
+            throw new Error(result.error || '生成失败');
+        }
+        
+    } catch (error) {
+        console.error('生成教学设计失败:', error);
+        updateStreamingStatus({
+            message: `生成失败: ${error.message}`,
+            status: 'failed'
+        });
+        showError(`生成教学设计失败: ${error.message}`);
+    }
+}
+
+// 显示教学设计生成结果
+function showTeachingDesignResult(result) {
+    const streamingContent = document.getElementById('streamingContent');
+    
+    // 设置下载URL
+    if (result.download_url) {
+        window.teachingDesignDownloadUrl = result.download_url;
+    } else if (currentFileId) {
+        // 如果没有直接的下载URL，使用文件ID构建下载链接
+        window.teachingDesignDownloadUrl = `/download_design/${currentFileId}`;
+    }
+    
+    if (streamingContent) {
+        streamingContent.innerHTML = `
+            <div class="teaching-design-result">
+                <div class="result-header">
+                    <i class="fas fa-check-circle" style="color: #2ecc71; font-size: 2em; margin-bottom: 15px;"></i>
+                    <h3 style="color: #2ecc71; margin-bottom: 10px;">教学设计生成成功！</h3>
+                    <p style="color: #666; margin-bottom: 20px;">您的教学设计文档已成功生成，可以下载查看。</p>
+                </div>
+                <div class="result-info">
+                    <div class="info-item">
+                        <i class="fas fa-file-word"></i>
+                        <span>文件大小: ${formatFileSize(result.file_size || 0)}</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <span>生成时间: ${new Date().toLocaleString()}</span>
+                    </div>
+                </div>
+                <div class="result-actions">
+                    <button type="button" class="btn btn-primary" onclick="downloadTeachingDesign()">
+                        <i class="fas fa-download"></i> 下载教学设计
+                    </button>
+                    <button type="button" class="btn btn-success" onclick="previewTeachingDesign()">
+                        <i class="fas fa-eye"></i> 预览内容
+                    </button>
+                    <button type="button" class="btn btn-outline" onclick="resetProcess()">
+                        <i class="fas fa-plus"></i> 处理新文件
+                    </button>
+                </div>
+            </div>
+        `;
+    }
+    
+    // 存储下载URL
+    window.teachingDesignDownloadUrl = result.download_url;
+}
+
+// 下载教学设计
+function downloadTeachingDesign() {
+    if (window.teachingDesignDownloadUrl) {
+        const link = document.createElement('a');
+        link.href = window.teachingDesignDownloadUrl;
+        link.download = '教学设计文档.docx';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        
+        showNotification('教学设计下载已开始', 'success');
+    } else {
+        showError('下载链接不可用');
+    }
+}
+
+// 预览教学设计
+function previewTeachingDesign() {
+    // 这里可以添加预览功能
+    showNotification('预览功能开发中...', 'info');
 }
 
 // 开始进度轮询
@@ -710,7 +844,17 @@ function startStreamingPolling() {
             
             if (status.status === 'completed') {
                 clearInterval(progressInterval);
-                completeStreaming(status.result);
+                // 文件上传完成，自动开始生成教学设计
+                updateStreamingStatus({
+                    message: '文件上传完成，开始生成教学设计...',
+                    status: 'processing'
+                });
+                
+                // 延迟一秒后开始生成教学设计
+                setTimeout(() => {
+                    generateTeachingDesign();
+                }, 1000);
+                
             } else if (status.status === 'failed') {
                 clearInterval(progressInterval);
                 stopStreaming(status.error || '处理失败');
@@ -813,6 +957,36 @@ function showCompletionActions() {
     }
 }
 
+// 加载模板列表
+async function loadTemplates() {
+    try {
+        const response = await fetch('/templates');
+        const result = await response.json();
+        
+        if (result.success) {
+            const templateSelect = document.getElementById('templateSelect');
+            if (templateSelect) {
+                // 清空现有选项
+                templateSelect.innerHTML = '';
+                
+                // 添加模板选项
+                result.templates.forEach(template => {
+                    const option = document.createElement('option');
+                    option.value = template.id;
+                    option.textContent = template.name;
+                    templateSelect.appendChild(option);
+                });
+                
+                console.log('模板列表加载成功:', result.templates);
+            }
+        } else {
+            console.error('加载模板列表失败:', result.error);
+        }
+    } catch (error) {
+        console.error('加载模板列表异常:', error);
+    }
+}
+
 // 导出函数供测试使用
 window.appFunctions = {
     validateAndSetFile,
@@ -821,5 +995,6 @@ window.appFunctions = {
     formatFileSize,
     copyContentToClipboard,
     switchToTwoColumnLayout,
-    initializeStreamingDisplay
+    initializeStreamingDisplay,
+    loadTemplates
 };

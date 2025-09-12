@@ -15,7 +15,7 @@ Word文档处理模块
 
 from .parsers.document_parser import DocumentParser
 from .generators.document_generator import DocumentGenerator
-from .templates.template_processor import TemplateProcessor
+from .template_processor import TemplateProcessor
 from .utils.document_utils import DocumentUtils
 
 __version__ = "1.0.0"
