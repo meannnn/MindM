@@ -140,7 +140,6 @@ class TemplateProcessor:
             'blackboard_design': design_data.blackboard_design,
             'homework_extension': design_data.homework_extension,
             'materials_design': design_data.materials_design,
-            'activity_intent': design_data.activity_intent,
         }
         
         # 处理学习活动 - 支持表插入形式
@@ -150,7 +149,7 @@ class TemplateProcessor:
                 'name': activity.name,
                 'teacher_activity': activity.teacher_activity,
                 'student_activity': activity.student_activity,
-                'activity_intent': design_data.activity_intent  # 每个活动都包含活动意图
+                'activity_intent': activity.activity_intent  # 使用每个活动自己的意图
             })
         
         template_data['learning_activities'] = activities
@@ -331,15 +330,16 @@ if __name__ == "__main__":
             {
                 "name": "导入环节",
                 "teacher_activity": "播放春天相关的音乐，引导学生回忆春天的景象",
-                "student_activity": "听音乐，回忆并分享春天的印象"
+                "student_activity": "听音乐，回忆并分享春天的印象",
+                "activity_intent": "通过音乐导入激发学生学习兴趣，营造春天的氛围"
             },
             {
                 "name": "整体感知",
                 "teacher_activity": "指导学生朗读课文，整体把握文章内容",
-                "student_activity": "朗读课文，概括文章主要内容"
+                "student_activity": "朗读课文，概括文章主要内容",
+                "activity_intent": "通过朗读整体感知文章内容，培养学生语感和理解能力"
             }
         ],
-        "activity_intent": "通过音乐导入激发学生学习兴趣，通过朗读整体感知文章内容",
         "blackboard_design": "春\\n春草→春花→春风→春雨\\n生机勃勃 充满希望",
         "homework_extension": "1. 背诵课文第1-3段\\n2. 观察身边的春天，写一段描写春天的文字",
         "materials_design": "多媒体课件、春天相关图片、音乐",

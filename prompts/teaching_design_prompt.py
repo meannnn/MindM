@@ -49,15 +49,16 @@ def get_teaching_design_prompt(user_file_content: str, template_file_content: st
         {{
             "name": "活动环节名称",
             "teacher_activity": "教师活动描述",
-            "student_activity": "学生活动描述"
+            "student_activity": "学生活动描述",
+            "activity_intent": "该活动的教学意图和目的"
         }},
         {{
             "name": "活动环节名称",
             "teacher_activity": "教师活动描述",
-            "student_activity": "学生活动描述"
+            "student_activity": "学生活动描述",
+            "activity_intent": "该活动的教学意图和目的"
         }}
     ],
-    "activity_intent": "活动意图说明（解释各环节的教学目的和如何达成学习目标）",
     "blackboard_design": "板书设计（用文本描述板书布局，包括关键术语、图示和总结）",
     "homework_extension": "作业与拓展学习设计（1-2个家庭作业或拓展活动）",
     "materials_design": "素材设计（学习单、练习纸等，如无则写'本课未设计额外学习素材'）",
@@ -91,7 +92,7 @@ def get_teaching_design_prompt(user_file_content: str, template_file_content: st
    3. 通过小组合作探究，总结作者情感变化的脉络（重点）
    4. 联系生活实际，写出一篇关于亲情的小片段（难点）
    ```
-6. **学习活动**：设计3-5个教学环节，每个环节包含教师活动、学生活动和活动意图
+6. **学习活动**：设计3-5个教学环节，每个环节包含教师活动、学生活动和该环节的具体活动意图。**重要**：每个学习活动都必须包含独立的activity_intent字段，说明该环节的教学意图和目的
 7. **思维训练点**：重点关注认知冲突、思维图示、变式运用三个方面
 
 **注意：**
@@ -129,7 +130,6 @@ def get_json_schema_prompt() -> str:
 - learning_objectives: 学习目标及重难点
 - lesson_structure: 课例结构
 - learning_activities: 学习活动列表（数组）
-- activity_intent: 活动意图说明
 - blackboard_design: 板书设计
 - homework_extension: 作业与拓展学习设计
 - materials_design: 素材设计
@@ -139,6 +139,7 @@ learning_activities 数组元素结构：
 - name: 活动名称
 - teacher_activity: 教师活动
 - student_activity: 学生活动
+- activity_intent: 活动意图（该环节的教学目的）
 
 reflection_thinking_points 数组元素结构：
 - point_type: 思维训练点类型（认知冲突、思维图示、变式运用）

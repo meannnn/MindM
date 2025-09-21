@@ -15,6 +15,7 @@ class ActivityInfo:
     name: str  # 活动名称
     teacher_activity: str  # 教师活动
     student_activity: str  # 学生活动
+    activity_intent: str  # 活动意图
 
 @dataclass
 class ThinkingPoint:
@@ -41,7 +42,6 @@ class TeachingDesignData:
     learning_objectives: str
     lesson_structure: str
     learning_activities: List[ActivityInfo]
-    activity_intent: str
     blackboard_design: str
     homework_extension: str
     materials_design: str
@@ -85,7 +85,6 @@ class TeachingDesignData:
             learning_objectives=data.get('learning_objectives', ''),
             lesson_structure=data.get('lesson_structure', ''),
             learning_activities=activities,
-            activity_intent=data.get('activity_intent', ''),
             blackboard_design=data.get('blackboard_design', ''),
             homework_extension=data.get('homework_extension', ''),
             materials_design=data.get('materials_design', ''),
@@ -115,12 +114,12 @@ TEACHING_DESIGN_JSON_SCHEMA = {
                 "properties": {
                     "name": {"type": "string", "description": "活动名称"},
                     "teacher_activity": {"type": "string", "description": "教师活动"},
-                    "student_activity": {"type": "string", "description": "学生活动"}
+                    "student_activity": {"type": "string", "description": "学生活动"},
+                    "activity_intent": {"type": "string", "description": "活动意图"}
                 },
-                "required": ["name", "teacher_activity", "student_activity"]
+                "required": ["name", "teacher_activity", "student_activity", "activity_intent"]
             }
         },
-        "activity_intent": {"type": "string", "description": "活动意图说明"},
         "blackboard_design": {"type": "string", "description": "板书设计"},
         "homework_extension": {"type": "string", "description": "作业与拓展学习设计"},
         "materials_design": {"type": "string", "description": "素材设计"},
@@ -140,7 +139,7 @@ TEACHING_DESIGN_JSON_SCHEMA = {
         "lesson_name", "grade_level", "subject", "textbook_version", 
         "lesson_period", "teacher_school", "teacher_name", "summary",
         "content_analysis", "learner_analysis", "learning_objectives",
-        "lesson_structure", "learning_activities", "activity_intent",
+        "lesson_structure", "learning_activities",
         "blackboard_design", "homework_extension", "materials_design",
         "reflection_thinking_points"
     ]
@@ -164,15 +163,16 @@ EXAMPLE_TEACHING_DESIGN = {
         {
             "name": "导入环节",
             "teacher_activity": "播放春天相关的音乐，引导学生回忆春天的景象",
-            "student_activity": "听音乐，回忆并分享春天的印象"
+            "student_activity": "听音乐，回忆并分享春天的印象",
+            "activity_intent": "通过音乐导入激发学生学习兴趣，营造春天的氛围"
         },
         {
             "name": "整体感知",
             "teacher_activity": "指导学生朗读课文，整体把握文章内容",
-            "student_activity": "朗读课文，概括文章主要内容"
+            "student_activity": "朗读课文，概括文章主要内容",
+            "activity_intent": "通过朗读整体感知文章内容，培养学生语感和理解能力"
         }
     ],
-    "activity_intent": "通过音乐导入激发学生学习兴趣，通过朗读整体感知文章内容",
     "blackboard_design": "春\n春草→春花→春风→春雨\n生机勃勃 充满希望",
     "homework_extension": "1. 背诵课文第1-3段\n2. 观察身边的春天，写一段描写春天的文字",
     "materials_design": "多媒体课件、春天相关图片、音乐",
@@ -219,7 +219,7 @@ def validate_teaching_design_data(data: Dict[str, Any]) -> tuple[bool, List[str]
                 if not isinstance(activity, dict):
                     errors.append(f"学习活动 {i+1} 必须是字典")
                 else:
-                    required_activity_fields = ["name", "teacher_activity", "student_activity"]
+                    required_activity_fields = ["name", "teacher_activity", "student_activity", "activity_intent"]
                     for field in required_activity_fields:
                         if field not in activity:
                             errors.append(f"学习活动 {i+1} 缺少字段: {field}")
