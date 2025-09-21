@@ -7357,3 +7357,871 @@ jinja2.exceptions.TemplateNotFound: index.html
 2025-09-13 01:34:04,536 - docx_processor.template_processor - INFO - 文档生成成功: outputs\教学设计_《背影》.docx, 大小: 32117 bytes
 2025-09-13 01:34:04,537 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 01:34:04] "POST /generate_teaching_design HTTP/1.1" 200 -
 2025-09-13 01:34:12,942 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 01:34:12] "GET /download_design/b0dbd4bd-1816-440e-8b0a-83a8301451c7 HTTP/1.1" 200 -
+2025-09-13 01:35:17,285 - llm.clients.aliyun_client - INFO - 阿里云百炼客户端初始化完成
+2025-09-13 01:35:17,285 - llm.utils.file_handler - INFO - 文件处理器初始化完成，上传目录: ./uploads
+2025-09-13 01:35:17,286 - docx_processor.template_processor - INFO - 模板加载成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\templates\teaching_design_template.docx
+2025-09-13 01:35:17,286 - __main__ - INFO - 组件初始化成功
+2025-09-13 01:35:17,287 - __main__ - INFO - 启动AI文档助手，端口: 5000, 调试模式: False
+2025-09-13 01:35:18,171 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.124.11:5000
+2025-09-13 01:35:18,171 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-13 01:35:21,764 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 01:35:21] "GET / HTTP/1.1" 200 -
+2025-09-13 01:35:22,203 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 01:35:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-09-13 01:35:22,394 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 01:35:22] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-09-13 01:35:22,751 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 01:35:22] "GET /templates HTTP/1.1" 200 -
+2025-09-13 01:35:30,400 - llm.utils.file_handler - INFO - 文件验证完成: 集合与函数.docx, 结果: 通过
+2025-09-13 01:35:30,401 - llm.utils.file_handler - INFO - 文件保存成功: 集合与函数.docx -> 66dba9c7-2a85-41fd-92d3-5a05548961d5.docx
+2025-09-13 01:35:30,421 - llm.utils.file_handler - INFO - 文本提取成功: ./uploads\66dba9c7-2a85-41fd-92d3-5a05548961d5.docx
+2025-09-13 01:35:30,424 - __main__ - INFO - 开始处理文件: 66dba9c7-2a85-41fd-92d3-5a05548961d5
+2025-09-13 01:35:34,156 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-13 01:35:34,179 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-13 01:35:34,843 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-13 01:35:34,843 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-13 01:36:53,056 - __main__ - INFO - AI处理成功，正在更新文件状态...
+2025-09-13 01:36:53,057 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 01:36:53] "POST /upload HTTP/1.1" 200 -
+2025-09-13 01:36:54,384 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 01:36:54] "GET /status/6e186f45-070a-495e-814c-156d8a269a76 HTTP/1.1" 200 -
+2025-09-13 01:36:55,412 - docx_processor.template_processor - INFO - 模板加载成功: templates/final_table_template.docx
+2025-09-13 01:36:55,433 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-13 01:36:55,435 - llm.clients.aliyun_client - INFO - 调用阿里云大模型API (尝试 1/3): https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-13 01:37:22,766 - llm.clients.aliyun_client - INFO - API调用成功
+2025-09-13 01:37:22,865 - docx_processor.template_processor - INFO - 文档生成成功: outputs\教学设计_集合与函数.docx, 大小: 32184 bytes
+2025-09-13 01:37:22,870 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 01:37:22] "POST /generate_teaching_design HTTP/1.1" 200 -
+2025-09-13 01:38:18,570 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 01:38:18] "GET /download_design/66dba9c7-2a85-41fd-92d3-5a05548961d5 HTTP/1.1" 200 -
+2025-09-13 09:31:39,465 - llm.clients.aliyun_client - INFO - 阿里云百炼客户端初始化完成
+2025-09-13 09:31:39,466 - llm.utils.file_handler - INFO - 文件处理器初始化完成，上传目录: ./uploads
+2025-09-13 09:31:39,466 - docx_processor.template_processor - INFO - 模板加载成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\templates\teaching_design_template.docx
+2025-09-13 09:31:39,467 - __main__ - INFO - 组件初始化成功
+2025-09-13 09:31:39,474 - __main__ - INFO - 启动AI文档助手，端口: 5000, 调试模式: False
+2025-09-13 09:31:40,382 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.124.11:5000
+2025-09-13 09:31:40,383 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-13 09:31:44,380 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 09:31:44] "GET / HTTP/1.1" 200 -
+2025-09-13 09:31:44,844 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 09:31:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-09-13 09:31:45,156 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 09:31:45] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-09-13 09:31:45,518 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 09:31:45] "GET /templates HTTP/1.1" 200 -
+2025-09-13 09:32:13,447 - llm.utils.file_handler - INFO - 文件验证完成: 集合与函数.docx, 结果: 通过
+2025-09-13 09:32:13,449 - llm.utils.file_handler - INFO - 文件保存成功: 集合与函数.docx -> ddd51fe9-32bc-4f14-a2e6-09d6b36516c1.docx
+2025-09-13 09:32:13,472 - llm.utils.file_handler - INFO - 文本提取成功: ./uploads\ddd51fe9-32bc-4f14-a2e6-09d6b36516c1.docx
+2025-09-13 09:32:13,473 - __main__ - INFO - 开始处理文件: ddd51fe9-32bc-4f14-a2e6-09d6b36516c1
+2025-09-13 09:32:17,510 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-13 09:32:17,531 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-13 09:32:18,157 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-13 09:32:18,160 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-13 09:33:57,099 - __main__ - INFO - AI处理成功，正在更新文件状态...
+2025-09-13 09:33:57,100 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 09:33:57] "POST /upload HTTP/1.1" 200 -
+2025-09-13 09:33:58,784 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 09:33:58] "GET /status/5af32104-9179-41dd-8732-58973b6da18c HTTP/1.1" 200 -
+2025-09-13 09:34:00,473 - docx_processor.template_processor - INFO - 模板加载成功: templates/final_table_template.docx
+2025-09-13 09:34:00,488 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-13 09:34:00,488 - llm.clients.aliyun_client - INFO - 调用阿里云大模型API (尝试 1/3): https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-13 09:34:34,913 - llm.clients.aliyun_client - INFO - API调用成功
+2025-09-13 09:34:34,970 - docx_processor.template_processor - INFO - 文档生成成功: outputs\教学设计_集合与函数.docx, 大小: 32408 bytes
+2025-09-13 09:34:34,972 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 09:34:34] "POST /generate_teaching_design HTTP/1.1" 200 -
+2025-09-13 09:35:01,509 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 09:35:01] "GET /download_design/ddd51fe9-32bc-4f14-a2e6-09d6b36516c1 HTTP/1.1" 200 -
+2025-09-13 09:37:02,894 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 09:37:02] "GET /download_design/ddd51fe9-32bc-4f14-a2e6-09d6b36516c1 HTTP/1.1" 200 -
+2025-09-13 09:42:21,995 - llm.clients.aliyun_client - INFO - 阿里云百炼客户端初始化完成
+2025-09-13 09:42:21,996 - llm.utils.file_handler - INFO - 文件处理器初始化完成，上传目录: ./uploads
+2025-09-13 09:42:21,997 - docx_processor.template_processor - INFO - 模板加载成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\templates\teaching_design_template.docx
+2025-09-13 09:42:21,997 - __main__ - INFO - 组件初始化成功
+2025-09-13 09:42:22,006 - __main__ - INFO - 启动AI文档助手，端口: 5000, 调试模式: False
+2025-09-13 09:42:22,928 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.124.11:5000
+2025-09-13 09:42:22,928 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-13 09:43:05,233 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 09:43:05] "GET / HTTP/1.1" 200 -
+2025-09-13 09:43:05,582 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 09:43:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-09-13 09:43:05,752 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 09:43:05] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-09-13 09:43:06,086 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 09:43:06] "GET /templates HTTP/1.1" 200 -
+2025-09-13 09:43:17,199 - llm.utils.file_handler - INFO - 文件验证完成: 集合与函数.docx, 结果: 通过
+2025-09-13 09:43:17,199 - llm.utils.file_handler - INFO - 文件保存成功: 集合与函数.docx -> 5942c00a-cd7b-45f4-8c11-d1cda3edf807.docx
+2025-09-13 09:43:17,215 - llm.utils.file_handler - INFO - 文本提取成功: ./uploads\5942c00a-cd7b-45f4-8c11-d1cda3edf807.docx
+2025-09-13 09:43:17,217 - __main__ - INFO - 开始处理文件: 5942c00a-cd7b-45f4-8c11-d1cda3edf807
+2025-09-13 09:43:20,530 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-13 09:43:20,552 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-13 09:43:21,254 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-13 09:43:21,256 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-13 09:45:04,520 - __main__ - INFO - AI处理成功，正在更新文件状态...
+2025-09-13 09:45:04,522 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 09:45:04] "POST /upload HTTP/1.1" 200 -
+2025-09-13 09:45:06,787 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 09:45:06] "GET /status/238bb9e3-29dc-47f3-89c4-6fd1a6548843 HTTP/1.1" 200 -
+2025-09-13 09:45:08,472 - docx_processor.template_processor - INFO - 模板加载成功: templates/final_table_template.docx
+2025-09-13 09:45:08,499 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-13 09:45:08,499 - llm.clients.aliyun_client - INFO - 调用阿里云大模型API (尝试 1/3): https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-13 09:45:42,228 - llm.clients.aliyun_client - INFO - API调用成功
+2025-09-13 09:45:42,282 - docx_processor.template_processor - INFO - 文档生成成功: outputs\教学设计_集合与函数.docx, 大小: 32074 bytes
+2025-09-13 09:45:42,282 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 09:45:42] "POST /generate_teaching_design HTTP/1.1" 200 -
+2025-09-13 09:46:03,753 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 09:46:03] "GET /download_design/5942c00a-cd7b-45f4-8c11-d1cda3edf807 HTTP/1.1" 200 -
+2025-09-13 09:48:33,557 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 09:48:33] "GET /download_design/5942c00a-cd7b-45f4-8c11-d1cda3edf807 HTTP/1.1" 200 -
+2025-09-13 09:49:26,636 - llm.clients.aliyun_client - INFO - 阿里云百炼客户端初始化完成
+2025-09-13 09:49:26,637 - llm.utils.file_handler - INFO - 文件处理器初始化完成，上传目录: ./uploads
+2025-09-13 09:49:26,638 - docx_processor.template_processor - INFO - 模板加载成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\templates\teaching_design_template.docx
+2025-09-13 09:49:26,638 - __main__ - INFO - 组件初始化成功
+2025-09-13 09:49:26,644 - __main__ - INFO - 启动AI文档助手，端口: 5000, 调试模式: False
+2025-09-13 09:49:27,539 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.124.11:5000
+2025-09-13 09:49:27,539 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-13 09:49:34,783 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 09:49:34] "GET / HTTP/1.1" 200 -
+2025-09-13 09:49:35,366 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 09:49:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-09-13 09:49:35,550 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 09:49:35] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-09-13 09:49:35,898 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 09:49:35] "GET /templates HTTP/1.1" 200 -
+2025-09-13 09:49:44,265 - llm.utils.file_handler - INFO - 文件验证完成: 集合与函数.docx, 结果: 通过
+2025-09-13 09:49:44,266 - llm.utils.file_handler - INFO - 文件保存成功: 集合与函数.docx -> 95334ce0-83f5-4a8d-9fe3-34a0f491ce1f.docx
+2025-09-13 09:49:44,282 - llm.utils.file_handler - INFO - 文本提取成功: ./uploads\95334ce0-83f5-4a8d-9fe3-34a0f491ce1f.docx
+2025-09-13 09:49:44,284 - __main__ - INFO - 开始处理文件: 95334ce0-83f5-4a8d-9fe3-34a0f491ce1f
+2025-09-13 09:49:47,876 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-13 09:49:47,887 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-13 09:49:48,526 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-13 09:49:48,527 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-13 09:51:55,947 - __main__ - INFO - AI处理成功，正在更新文件状态...
+2025-09-13 09:51:55,948 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 09:51:55] "POST /upload HTTP/1.1" 200 -
+2025-09-13 09:51:57,282 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 09:51:57] "GET /status/fca7301c-3937-4c03-935f-85b0cc739b57 HTTP/1.1" 200 -
+2025-09-13 09:51:58,311 - docx_processor.template_processor - INFO - 模板加载成功: templates/final_table_template.docx
+2025-09-13 09:51:58,329 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-13 09:51:58,333 - llm.clients.aliyun_client - INFO - 调用阿里云大模型API (尝试 1/3): https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-13 09:52:25,954 - llm.clients.aliyun_client - INFO - API调用成功
+2025-09-13 09:52:26,024 - docx_processor.template_processor - INFO - 文档生成成功: outputs\教学设计_集合与函数.docx, 大小: 31770 bytes
+2025-09-13 09:52:26,028 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 09:52:26] "POST /generate_teaching_design HTTP/1.1" 200 -
+2025-09-13 09:53:40,643 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 09:53:40] "GET /download_design/95334ce0-83f5-4a8d-9fe3-34a0f491ce1f HTTP/1.1" 200 -
+2025-09-13 10:11:22,964 - llm.clients.aliyun_client - INFO - 阿里云百炼客户端初始化完成
+2025-09-13 10:11:22,965 - llm.utils.file_handler - INFO - 文件处理器初始化完成，上传目录: ./uploads
+2025-09-13 10:11:22,965 - docx_processor.template_processor - INFO - 模板加载成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\templates\teaching_design_template.docx
+2025-09-13 10:11:22,966 - __main__ - INFO - 组件初始化成功
+2025-09-13 10:11:22,971 - __main__ - INFO - 启动AI文档助手，端口: 5000, 调试模式: False
+2025-09-13 10:11:23,930 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.124.11:5000
+2025-09-13 10:11:23,932 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-13 10:12:10,816 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 10:12:10] "GET / HTTP/1.1" 200 -
+2025-09-13 10:12:11,289 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 10:12:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-09-13 10:12:11,531 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 10:12:11] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-09-13 10:12:11,884 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 10:12:11] "GET /templates HTTP/1.1" 200 -
+2025-09-13 10:12:21,141 - llm.utils.file_handler - INFO - 文件验证完成: 集合与函数.docx, 结果: 通过
+2025-09-13 10:12:21,142 - llm.utils.file_handler - INFO - 文件保存成功: 集合与函数.docx -> d2f05d80-89ec-4f59-9db8-49d1bcf38300.docx
+2025-09-13 10:12:21,159 - llm.utils.file_handler - INFO - 文本提取成功: ./uploads\d2f05d80-89ec-4f59-9db8-49d1bcf38300.docx
+2025-09-13 10:12:21,160 - __main__ - INFO - 开始处理文件: d2f05d80-89ec-4f59-9db8-49d1bcf38300
+2025-09-13 10:12:24,783 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-13 10:12:24,804 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-13 10:12:25,475 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-13 10:12:25,479 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-13 10:13:54,993 - __main__ - INFO - AI处理成功，正在更新文件状态...
+2025-09-13 10:13:54,994 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 10:13:54] "POST /upload HTTP/1.1" 200 -
+2025-09-13 10:13:56,329 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 10:13:56] "GET /status/bb0f5de7-b1d3-43be-bff3-5ffdb8b85be5 HTTP/1.1" 200 -
+2025-09-13 10:13:57,352 - docx_processor.template_processor - INFO - 模板加载成功: templates/final_table_template.docx
+2025-09-13 10:13:57,369 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-13 10:13:57,371 - llm.clients.aliyun_client - INFO - 调用阿里云大模型API (尝试 1/3): https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-13 10:14:30,525 - llm.clients.aliyun_client - INFO - API调用成功
+2025-09-13 10:14:30,631 - docx_processor.template_processor - INFO - 文档生成成功: outputs\教学设计_集合与函数.docx, 大小: 32255 bytes
+2025-09-13 10:14:30,631 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 10:14:30] "POST /generate_teaching_design HTTP/1.1" 200 -
+2025-09-13 10:36:54,176 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 10:36:54] "GET /download_design/d2f05d80-89ec-4f59-9db8-49d1bcf38300 HTTP/1.1" 200 -
+2025-09-13 16:10:46,081 - llm.clients.aliyun_client - INFO - 阿里云百炼客户端初始化完成
+2025-09-13 16:10:46,082 - llm.utils.file_handler - INFO - 文件处理器初始化完成，上传目录: ./uploads
+2025-09-13 16:10:46,083 - docx_processor.template_processor - INFO - 模板加载成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\templates\teaching_design_template.docx
+2025-09-13 16:10:46,083 - __main__ - INFO - 组件初始化成功
+2025-09-13 16:10:46,089 - __main__ - INFO - 启动AI文档助手，端口: 5000, 调试模式: False
+2025-09-13 16:10:47,011 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.124.11:5000
+2025-09-13 16:10:47,012 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-13 16:11:06,801 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:11:06] "GET / HTTP/1.1" 200 -
+2025-09-13 16:11:07,296 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:11:07] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-09-13 16:11:07,434 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:11:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-09-13 16:11:07,768 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:11:07] "GET /templates HTTP/1.1" 200 -
+2025-09-13 16:11:16,607 - llm.utils.file_handler - INFO - 文件验证完成: 集合与函数.docx, 结果: 通过
+2025-09-13 16:11:16,607 - llm.utils.file_handler - INFO - 文件保存成功: 集合与函数.docx -> c0e30589-3360-47d0-bfa8-3da3a20f02de.docx
+2025-09-13 16:11:16,630 - llm.utils.file_handler - INFO - 文本提取成功: ./uploads\c0e30589-3360-47d0-bfa8-3da3a20f02de.docx
+2025-09-13 16:11:16,631 - __main__ - INFO - 开始处理文件: c0e30589-3360-47d0-bfa8-3da3a20f02de
+2025-09-13 16:11:21,398 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-13 16:11:21,443 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-13 16:11:22,167 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-13 16:11:22,170 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-13 16:12:30,930 - __main__ - INFO - AI处理成功，正在更新文件状态...
+2025-09-13 16:12:30,931 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:12:30] "POST /upload HTTP/1.1" 200 -
+2025-09-13 16:12:32,381 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:12:32] "GET /status/25ca164f-6810-4d36-909e-acecbaa670b2 HTTP/1.1" 200 -
+2025-09-13 16:12:34,066 - docx_processor.template_processor - INFO - 模板加载成功: templates/final_table_template.docx
+2025-09-13 16:12:34,080 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-13 16:12:34,081 - llm.clients.aliyun_client - INFO - 调用阿里云大模型API (尝试 1/3): https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-13 16:13:10,255 - llm.clients.aliyun_client - INFO - API调用成功
+2025-09-13 16:13:10,328 - docx_processor.template_processor - INFO - 文档生成成功: outputs\教学设计_集合与函数.docx, 大小: 32148 bytes
+2025-09-13 16:13:10,329 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:13:10] "POST /generate_teaching_design HTTP/1.1" 200 -
+2025-09-13 16:14:36,762 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:14:36] "GET /download_design/c0e30589-3360-47d0-bfa8-3da3a20f02de HTTP/1.1" 200 -
+2025-09-13 16:19:27,901 - llm.utils.file_handler - INFO - 文件验证完成: 集合与函数.docx, 结果: 通过
+2025-09-13 16:19:27,901 - llm.utils.file_handler - INFO - 文件保存成功: 集合与函数.docx -> d803cfa2-ebe5-429e-9b11-833389219b0a.docx
+2025-09-13 16:19:27,905 - llm.utils.file_handler - INFO - 文本提取成功: ./uploads\d803cfa2-ebe5-429e-9b11-833389219b0a.docx
+2025-09-13 16:19:27,908 - __main__ - INFO - 开始处理文件: d803cfa2-ebe5-429e-9b11-833389219b0a
+2025-09-13 16:19:28,578 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-13 16:19:28,599 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-13 16:19:29,320 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-13 16:19:29,321 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-13 16:19:48,545 - llm.clients.aliyun_client - ERROR - Qwen-Long双文件模式调用失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-09-13 16:19:48,548 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:19:48] "POST /upload HTTP/1.1" 200 -
+2025-09-13 16:19:50,056 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:19:50] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 16:19:51,377 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:19:51] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 16:19:52,068 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:19:52] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 16:19:53,367 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:19:53] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 16:19:54,058 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:19:54] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 16:19:55,377 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:19:55] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 16:19:56,071 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:19:56] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 16:19:57,372 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:19:57] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 16:19:58,063 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:19:58] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 16:19:59,374 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:19:59] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 16:20:00,068 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:20:00] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 16:20:01,375 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:20:01] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 16:20:02,062 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:20:02] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 16:20:03,369 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:20:03] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 16:20:04,058 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:20:04] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 16:20:05,370 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:20:05] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 16:20:06,068 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:20:06] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 16:20:07,375 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:20:07] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 16:20:08,068 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:20:08] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 16:20:09,375 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:20:09] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 16:20:10,054 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:20:10] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 16:20:11,367 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:20:11] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 16:20:12,058 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:20:12] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 16:20:13,370 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:20:13] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 16:20:14,060 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:20:14] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 16:20:15,377 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:20:15] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 16:20:16,066 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:20:16] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 16:20:17,375 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:20:17] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 16:20:18,072 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:20:18] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 16:20:19,375 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:20:19] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 16:20:20,068 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:20:20] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 16:20:21,382 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:20:21] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 16:20:22,061 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:20:22] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 16:20:23,382 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:20:23] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 16:20:24,067 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:20:24] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 16:20:25,377 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:20:25] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 16:20:26,063 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:20:26] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 16:20:27,378 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:20:27] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 16:20:28,065 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:20:28] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 16:20:29,374 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:20:29] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 16:20:30,063 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:20:30] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 16:20:31,370 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:20:31] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 16:20:32,061 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:20:32] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 16:20:33,366 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:20:33] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 16:20:34,066 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:20:34] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 16:20:35,379 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:20:35] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 16:20:36,068 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:20:36] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 16:20:37,382 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:20:37] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 16:20:38,062 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:20:38] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 16:20:49,375 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:20:49] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 16:21:49,057 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:21:49] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 16:21:54,614 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:21:54] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 16:21:54,877 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:21:54] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 16:21:55,567 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:21:55] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 16:21:56,879 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:21:56] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 16:21:57,572 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:21:57] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 16:21:58,878 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:21:58] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 16:21:59,574 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:21:59] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 16:22:00,883 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:22:00] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 16:24:30,027 - llm.clients.aliyun_client - INFO - 阿里云百炼客户端初始化完成
+2025-09-13 16:24:30,028 - llm.utils.file_handler - INFO - 文件处理器初始化完成，上传目录: ./uploads
+2025-09-13 16:24:30,029 - docx_processor.template_processor - INFO - 模板加载成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\templates\teaching_design_template.docx
+2025-09-13 16:24:30,030 - __main__ - INFO - 组件初始化成功
+2025-09-13 16:24:30,038 - __main__ - INFO - 启动AI文档助手，端口: 5000, 调试模式: False
+2025-09-13 16:24:30,957 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.124.11:5000
+2025-09-13 16:24:30,957 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-13 16:24:43,986 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:24:43] "GET / HTTP/1.1" 200 -
+2025-09-13 16:24:44,412 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:24:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-09-13 16:24:44,590 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:24:44] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-09-13 16:24:44,943 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:24:44] "GET /templates HTTP/1.1" 200 -
+2025-09-13 16:24:52,973 - llm.utils.file_handler - INFO - 文件验证完成: 集合与函数.docx, 结果: 通过
+2025-09-13 16:24:52,973 - llm.utils.file_handler - INFO - 文件保存成功: 集合与函数.docx -> 01282fff-c91e-45ae-b87a-b6df9e47df2a.docx
+2025-09-13 16:24:52,993 - llm.utils.file_handler - INFO - 文本提取成功: ./uploads\01282fff-c91e-45ae-b87a-b6df9e47df2a.docx
+2025-09-13 16:24:52,994 - __main__ - INFO - 开始处理文件: 01282fff-c91e-45ae-b87a-b6df9e47df2a
+2025-09-13 16:24:56,169 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-13 16:24:56,189 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-13 16:24:58,303 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-13 16:24:58,306 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-13 16:26:29,292 - __main__ - INFO - AI处理成功，正在更新文件状态...
+2025-09-13 16:26:29,293 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:26:29] "POST /upload HTTP/1.1" 200 -
+2025-09-13 16:26:31,371 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:26:31] "GET /status/1c0abddd-31c6-4d36-96a5-23909352ece0 HTTP/1.1" 200 -
+2025-09-13 16:26:32,382 - docx_processor.template_processor - INFO - 模板加载成功: templates/final_table_template.docx
+2025-09-13 16:26:32,410 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-13 16:26:32,411 - llm.clients.aliyun_client - INFO - 调用阿里云大模型API (尝试 1/3): https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-13 16:27:08,667 - llm.clients.aliyun_client - INFO - API调用成功
+2025-09-13 16:27:08,724 - docx_processor.template_processor - INFO - 文档生成成功: outputs\教学设计_集合与函数.docx, 大小: 31737 bytes
+2025-09-13 16:27:08,725 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:27:08] "POST /generate_teaching_design HTTP/1.1" 200 -
+2025-09-13 16:27:22,734 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:27:22] "GET /download_design/01282fff-c91e-45ae-b87a-b6df9e47df2a HTTP/1.1" 200 -
+2025-09-13 16:40:56,974 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:40:56] "GET / HTTP/1.1" 200 -
+2025-09-13 16:40:57,042 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:40:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-09-13 16:40:57,246 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:40:57] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-09-13 16:40:57,599 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:40:57] "GET /templates HTTP/1.1" 200 -
+2025-09-13 16:41:11,315 - llm.utils.file_handler - INFO - 文件验证完成: 集合与函数.docx, 结果: 通过
+2025-09-13 16:41:11,316 - llm.utils.file_handler - INFO - 文件保存成功: 集合与函数.docx -> ff169788-f3bd-43eb-ab00-2e0162b75cd6.docx
+2025-09-13 16:41:11,328 - llm.utils.file_handler - INFO - 文本提取成功: ./uploads\ff169788-f3bd-43eb-ab00-2e0162b75cd6.docx
+2025-09-13 16:41:11,331 - __main__ - INFO - 开始处理文件: ff169788-f3bd-43eb-ab00-2e0162b75cd6
+2025-09-13 16:41:12,387 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-13 16:41:12,414 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-13 16:41:13,141 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-13 16:41:13,145 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-13 16:41:13,152 - llm.clients.aliyun_client - ERROR - Qwen-Long双文件模式调用失败: HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /compatible-mode/v1/chat/completions (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))
+2025-09-13 16:41:13,153 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:41:13] "POST /upload HTTP/1.1" 200 -
+2025-09-13 16:50:23,151 - llm.clients.aliyun_client - INFO - 阿里云百炼客户端初始化完成
+2025-09-13 16:50:23,151 - llm.utils.file_handler - INFO - 文件处理器初始化完成，上传目录: ./uploads
+2025-09-13 16:50:23,152 - docx_processor.template_processor - INFO - 模板加载成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\templates\teaching_design_template.docx
+2025-09-13 16:50:23,153 - __main__ - INFO - 组件初始化成功
+2025-09-13 16:50:23,158 - __main__ - INFO - 启动AI文档助手，端口: 5000, 调试模式: False
+2025-09-13 16:50:24,057 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.124.11:5000
+2025-09-13 16:50:24,057 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-13 16:50:29,923 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:50:29] "GET / HTTP/1.1" 200 -
+2025-09-13 16:50:30,549 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:50:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-09-13 16:50:30,704 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:50:30] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-09-13 16:50:31,045 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:50:31] "GET /templates HTTP/1.1" 200 -
+2025-09-13 16:50:41,358 - llm.utils.file_handler - INFO - 文件验证完成: 集合与函数.docx, 结果: 通过
+2025-09-13 16:50:41,360 - llm.utils.file_handler - INFO - 文件保存成功: 集合与函数.docx -> 81245533-8763-4052-b774-3589839b1e5a.docx
+2025-09-13 16:50:41,376 - llm.utils.file_handler - INFO - 文本提取成功: ./uploads\81245533-8763-4052-b774-3589839b1e5a.docx
+2025-09-13 16:50:41,377 - __main__ - INFO - 开始处理文件: 81245533-8763-4052-b774-3589839b1e5a
+2025-09-13 16:50:45,050 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-13 16:50:45,074 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-13 16:50:45,773 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-13 16:50:45,776 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-13 16:52:02,498 - __main__ - INFO - AI处理成功，正在更新文件状态...
+2025-09-13 16:52:02,499 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:52:02] "POST /upload HTTP/1.1" 200 -
+2025-09-13 16:52:04,375 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:52:04] "GET /status/43eb6b88-bbda-4af1-9caa-96450444e11c HTTP/1.1" 200 -
+2025-09-13 16:52:06,064 - docx_processor.template_processor - INFO - 模板加载成功: templates/final_table_template.docx
+2025-09-13 16:52:06,077 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-13 16:52:06,078 - llm.clients.aliyun_client - INFO - 调用阿里云大模型API (尝试 1/3): https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-13 16:52:35,302 - llm.clients.aliyun_client - INFO - API调用成功
+2025-09-13 16:52:35,362 - docx_processor.template_processor - INFO - 文档生成成功: outputs\教学设计_集合与函数.docx, 大小: 32325 bytes
+2025-09-13 16:52:35,362 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:52:35] "POST /generate_teaching_design HTTP/1.1" 200 -
+2025-09-13 16:53:11,655 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 16:53:11] "GET /download_design/81245533-8763-4052-b774-3589839b1e5a HTTP/1.1" 200 -
+2025-09-13 17:01:53,670 - llm.clients.aliyun_client - INFO - 阿里云百炼客户端初始化完成
+2025-09-13 17:01:53,671 - llm.utils.file_handler - INFO - 文件处理器初始化完成，上传目录: ./uploads
+2025-09-13 17:01:53,672 - docx_processor.template_processor - INFO - 模板加载成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\templates\teaching_design_template_static.docx
+2025-09-13 17:01:53,672 - __main__ - INFO - 组件初始化成功
+2025-09-13 17:01:53,679 - __main__ - INFO - 启动AI文档助手，端口: 5000, 调试模式: False
+2025-09-13 17:01:54,580 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.124.11:5000
+2025-09-13 17:01:54,581 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-13 17:02:01,091 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:02:01] "GET / HTTP/1.1" 200 -
+2025-09-13 17:02:01,571 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:02:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-09-13 17:02:01,774 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:02:01] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-09-13 17:02:02,109 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:02:02] "GET /templates HTTP/1.1" 200 -
+2025-09-13 17:03:13,768 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:03:13] "GET /templates HTTP/1.1" 200 -
+2025-09-13 17:20:50,410 - llm.utils.file_handler - INFO - 文件验证完成: 集合与函数.docx, 结果: 通过
+2025-09-13 17:20:50,410 - llm.utils.file_handler - INFO - 文件保存成功: 集合与函数.docx -> 5fcfa554-326b-4b48-9723-9b6012ac0d3f.docx
+2025-09-13 17:20:50,431 - llm.utils.file_handler - INFO - 文本提取成功: ./uploads\5fcfa554-326b-4b48-9723-9b6012ac0d3f.docx
+2025-09-13 17:20:50,434 - __main__ - INFO - 开始处理文件: 5fcfa554-326b-4b48-9723-9b6012ac0d3f
+2025-09-13 17:20:53,671 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-13 17:20:53,701 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-13 17:20:54,478 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-13 17:20:54,480 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-13 17:22:17,844 - __main__ - INFO - AI处理成功，正在更新文件状态...
+2025-09-13 17:22:17,845 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:22:17] "POST /upload HTTP/1.1" 200 -
+2025-09-13 17:22:19,380 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:22:19] "GET /status/97d1d1a6-f696-4356-ab9b-d63fbe46e55f HTTP/1.1" 200 -
+2025-09-13 17:22:21,055 - docx_processor.template_processor - INFO - 模板加载成功: templates/final_table_template.docx
+2025-09-13 17:22:21,067 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-13 17:22:21,068 - llm.clients.aliyun_client - INFO - 调用阿里云大模型API (尝试 1/3): https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-13 17:22:48,603 - llm.clients.aliyun_client - INFO - API调用成功
+2025-09-13 17:22:48,674 - docx_processor.template_processor - INFO - 文档生成成功: outputs\教学设计_集合与函数.docx, 大小: 32376 bytes
+2025-09-13 17:22:48,674 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:22:48] "POST /generate_teaching_design HTTP/1.1" 200 -
+2025-09-13 17:22:53,979 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:22:53] "GET /download_design/5fcfa554-326b-4b48-9723-9b6012ac0d3f HTTP/1.1" 200 -
+2025-09-13 17:23:44,549 - llm.utils.file_handler - INFO - 文件验证完成: 集合与函数.docx, 结果: 通过
+2025-09-13 17:23:44,551 - llm.utils.file_handler - INFO - 文件保存成功: 集合与函数.docx -> 45fdff33-6a06-446b-87ff-15bdb7b49051.docx
+2025-09-13 17:23:44,557 - llm.utils.file_handler - INFO - 文本提取成功: ./uploads\45fdff33-6a06-446b-87ff-15bdb7b49051.docx
+2025-09-13 17:23:44,558 - __main__ - INFO - 开始处理文件: 45fdff33-6a06-446b-87ff-15bdb7b49051
+2025-09-13 17:23:45,171 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-13 17:23:45,195 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-13 17:23:45,869 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-13 17:23:45,873 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-13 17:24:53,031 - __main__ - INFO - AI处理成功，正在更新文件状态...
+2025-09-13 17:24:53,033 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:24:53] "POST /upload HTTP/1.1" 200 -
+2025-09-13 17:24:54,375 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:24:54] "GET /status/aa60cd64-d39e-4662-8e73-e699135733b9 HTTP/1.1" 200 -
+2025-09-13 17:24:56,057 - docx_processor.template_processor - INFO - 模板加载成功: templates/final_table_template.docx
+2025-09-13 17:24:56,070 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-13 17:24:56,071 - llm.clients.aliyun_client - INFO - 调用阿里云大模型API (尝试 1/3): https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-13 17:25:32,669 - llm.clients.aliyun_client - INFO - API调用成功
+2025-09-13 17:25:32,756 - docx_processor.template_processor - INFO - 文档生成成功: outputs\教学设计_集合与函数.docx, 大小: 32681 bytes
+2025-09-13 17:25:32,758 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:25:32] "POST /generate_teaching_design HTTP/1.1" 200 -
+2025-09-13 17:34:50,431 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:34:50] "GET /download_design/45fdff33-6a06-446b-87ff-15bdb7b49051 HTTP/1.1" 200 -
+2025-09-13 17:54:40,403 - llm.utils.file_handler - INFO - 文件验证完成: 集合与函数.docx, 结果: 通过
+2025-09-13 17:54:40,405 - llm.utils.file_handler - INFO - 文件保存成功: 集合与函数.docx -> 25325424-180f-4517-b645-d7efc9764360.docx
+2025-09-13 17:54:40,409 - llm.utils.file_handler - INFO - 文本提取成功: ./uploads\25325424-180f-4517-b645-d7efc9764360.docx
+2025-09-13 17:54:40,411 - __main__ - INFO - 开始处理文件: 25325424-180f-4517-b645-d7efc9764360
+2025-09-13 17:54:41,128 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-13 17:54:41,154 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-13 17:54:41,819 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-13 17:54:41,820 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-13 17:54:41,829 - llm.clients.aliyun_client - ERROR - Qwen-Long双文件模式调用失败: HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /compatible-mode/v1/chat/completions (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))
+2025-09-13 17:54:41,831 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:54:41] "POST /upload HTTP/1.1" 200 -
+2025-09-13 17:54:42,865 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:54:42] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:54:44,158 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:54:44] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:54:44,849 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:54:44] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:54:46,160 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:54:46] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:54:46,848 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:54:46] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:54:48,159 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:54:48] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:54:48,846 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:54:48] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:54:50,163 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:54:50] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:54:50,850 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:54:50] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:54:52,163 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:54:52] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:54:52,849 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:54:52] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:54:54,155 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:54:54] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:54:54,852 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:54:54] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:54:56,154 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:54:56] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:54:56,846 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:54:56] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:54:58,171 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:54:58] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:54:58,855 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:54:58] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:55:00,153 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:55:00] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:55:00,860 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:55:00] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:55:02,152 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:55:02] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:55:02,857 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:55:02] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:55:04,162 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:55:04] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:55:04,852 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:55:04] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:55:06,153 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:55:06] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:55:06,844 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:55:06] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:55:08,161 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:55:08] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:55:08,859 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:55:08] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:55:10,161 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:55:10] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:55:10,851 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:55:10] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:55:12,158 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:55:12] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:55:12,851 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:55:12] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:55:14,165 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:55:14] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:55:14,851 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:55:14] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:55:16,164 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:55:16] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:55:16,851 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:55:16] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:55:18,171 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:55:18] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:55:18,855 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:55:18] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:55:20,155 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:55:20] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:55:20,856 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:55:20] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:55:22,162 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:55:22] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:55:22,854 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:55:22] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:55:24,156 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:55:24] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:55:24,861 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:55:24] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:55:26,165 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:55:26] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:55:26,855 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:55:26] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:55:28,162 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:55:28] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:55:28,846 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:55:28] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:55:30,160 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:55:30] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:55:30,845 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:55:30] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:55:32,165 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:55:32] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:55:32,857 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:55:32] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:55:34,159 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:55:34] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:55:34,853 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:55:34] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:55:36,167 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:55:36] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:55:36,855 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:55:36] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:55:38,164 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:55:38] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:55:38,850 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:55:38] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:55:40,158 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:55:40] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:55:40,854 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:55:40] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:55:42,164 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:55:42] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:55:42,845 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:55:42] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:55:44,159 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:55:44] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:55:44,845 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:55:44] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:55:46,160 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:55:46] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:55:46,860 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:55:46] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:55:48,162 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:55:48] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:55:48,848 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:55:48] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:55:50,155 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:55:50] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:55:50,854 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:55:50] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:55:52,157 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:55:52] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:55:52,847 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:55:52] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:55:54,168 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:55:54] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:55:54,843 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:55:54] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:55:56,166 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:55:56] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:55:56,855 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:55:56] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:55:58,153 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:55:58] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:55:58,851 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:55:58] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:56:00,177 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:56:00] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:56:00,847 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:56:00] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:56:02,155 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:56:02] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:56:02,848 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:56:02] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:56:04,153 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:56:04] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:56:04,847 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:56:04] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:56:06,166 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:56:06] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:56:06,877 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:56:06] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:56:08,164 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:56:08] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:56:08,853 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:56:08] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:56:10,160 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:56:10] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:56:10,853 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:56:10] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:56:12,182 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:56:12] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:56:12,852 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:56:12] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:56:14,166 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:56:14] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:56:14,856 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:56:14] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:56:16,160 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:56:16] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:56:16,845 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:56:16] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:56:18,169 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:56:18] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:56:18,851 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:56:18] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:56:20,158 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:56:20] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:56:20,853 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:56:20] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:56:22,157 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:56:22] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:56:22,847 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:56:22] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:56:24,174 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:56:24] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:56:24,848 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:56:24] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:56:26,159 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:56:26] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:56:26,859 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:56:26] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:56:28,163 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:56:28] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:56:28,850 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:56:28] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:56:30,160 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:56:30] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:56:30,855 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:56:30] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:56:32,155 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:56:32] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:56:32,854 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:56:32] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:56:34,154 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:56:34] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:56:34,853 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:56:34] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:56:36,155 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:56:36] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:56:36,844 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:56:36] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:56:38,160 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:56:38] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:56:38,855 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:56:38] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:56:40,155 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:56:40] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:56:40,848 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:56:40] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:56:42,148 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:56:42] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:56:42,859 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:56:42] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:56:44,160 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:56:44] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:56:44,848 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:56:44] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:56:46,153 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:56:46] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:56:46,847 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:56:46] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:56:48,156 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:56:48] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:56:48,851 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:56:48] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:56:50,157 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:56:50] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:56:50,848 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:56:50] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:56:52,171 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:56:52] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:56:52,858 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:56:52] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:56:54,166 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:56:54] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:56:54,844 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:56:54] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:56:56,169 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:56:56] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:56:56,846 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:56:56] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:56:58,164 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:56:58] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:56:58,864 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:56:58] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:57:00,169 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:57:00] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:57:00,849 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:57:00] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:57:02,165 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:57:02] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:57:02,850 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:57:02] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:57:04,163 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:57:04] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:57:04,851 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:57:04] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:57:06,164 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:57:06] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:57:06,852 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:57:06] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:57:08,163 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:57:08] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:57:08,853 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:57:08] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:57:10,168 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:57:10] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:57:10,855 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:57:10] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:57:12,161 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:57:12] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:57:12,856 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:57:12] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:57:14,164 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:57:14] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:57:14,860 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:57:14] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:57:16,160 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:57:16] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:57:16,848 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:57:16] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:57:18,166 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:57:18] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:57:18,847 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:57:18] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:57:20,161 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:57:20] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:57:20,846 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:57:20] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:57:22,162 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:57:22] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:57:22,850 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:57:22] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:57:24,151 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:57:24] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:57:24,851 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:57:24] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:57:26,166 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:57:26] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:57:26,849 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:57:26] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:57:28,170 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:57:28] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:57:28,853 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:57:28] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:57:30,174 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:57:30] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:57:30,856 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:57:30] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:57:32,163 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:57:32] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:57:32,857 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:57:32] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:57:34,155 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:57:34] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:57:34,861 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:57:34] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:57:36,163 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:57:36] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:57:36,860 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:57:36] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:57:38,165 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:57:38] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:57:38,845 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:57:38] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:57:40,166 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:57:40] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:57:40,847 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:57:40] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:57:42,162 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:57:42] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:57:42,849 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:57:42] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:57:44,157 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:57:44] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:57:44,851 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:57:44] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:57:46,151 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:57:46] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:57:46,854 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:57:46] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:57:48,169 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:57:48] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:57:48,854 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:57:48] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:57:50,167 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:57:50] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:57:50,851 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:57:50] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:57:52,173 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:57:52] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:57:52,845 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:57:52] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:57:54,164 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:57:54] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:57:54,859 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:57:54] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:57:56,163 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:57:56] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:57:56,845 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:57:56] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:57:58,160 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:57:58] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:57:58,854 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:57:58] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:58:00,149 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:58:00] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:58:00,846 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:58:00] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 17:58:37,237 - llm.clients.aliyun_client - INFO - 阿里云百炼客户端初始化完成
+2025-09-13 17:58:37,239 - llm.utils.file_handler - INFO - 文件处理器初始化完成，上传目录: ./uploads
+2025-09-13 17:58:37,241 - docx_processor.template_processor - INFO - 模板加载成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\templates\teaching_design_template.docx
+2025-09-13 17:58:37,243 - __main__ - INFO - 组件初始化成功
+2025-09-13 17:58:37,253 - __main__ - INFO - 启动AI文档助手，端口: 5000, 调试模式: False
+2025-09-13 17:58:38,197 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.124.11:5000
+2025-09-13 17:58:38,199 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-13 17:58:41,544 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:58:41] "GET / HTTP/1.1" 200 -
+2025-09-13 17:58:42,130 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:58:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-09-13 17:58:42,392 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:58:42] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-09-13 17:58:42,769 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 17:58:42] "GET /templates HTTP/1.1" 200 -
+2025-09-13 17:58:50,489 - llm.utils.file_handler - INFO - 文件验证完成: 集合与函数.docx, 结果: 通过
+2025-09-13 17:58:50,489 - llm.utils.file_handler - INFO - 文件保存成功: 集合与函数.docx -> 835cabe8-417b-4ede-8a82-282429b42b88.docx
+2025-09-13 17:58:50,509 - llm.utils.file_handler - INFO - 文本提取成功: ./uploads\835cabe8-417b-4ede-8a82-282429b42b88.docx
+2025-09-13 17:58:50,510 - __main__ - INFO - 开始处理文件: 835cabe8-417b-4ede-8a82-282429b42b88
+2025-09-13 17:58:54,028 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-13 17:58:54,051 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-13 17:58:54,715 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-13 17:58:54,716 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-13 18:00:13,780 - __main__ - INFO - AI处理成功，正在更新文件状态...
+2025-09-13 18:00:13,781 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:00:13] "POST /upload HTTP/1.1" 200 -
+2025-09-13 18:00:15,122 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:00:15] "GET /status/ea21f4a5-6a9c-402d-9c78-62962f756bbd HTTP/1.1" 200 -
+2025-09-13 18:00:16,138 - docx_processor.template_processor - INFO - 模板加载成功: templates/final_table_template.docx
+2025-09-13 18:00:16,170 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-13 18:00:16,173 - llm.clients.aliyun_client - INFO - 调用阿里云大模型API (尝试 1/3): https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-13 18:01:30,278 - llm.clients.aliyun_client - INFO - API调用成功
+2025-09-13 18:01:30,279 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:01:30] "POST /generate_teaching_design HTTP/1.1" 200 -
+2025-09-13 18:08:46,941 - llm.clients.aliyun_client - INFO - 阿里云百炼客户端初始化完成
+2025-09-13 18:08:46,943 - llm.utils.file_handler - INFO - 文件处理器初始化完成，上传目录: ./uploads
+2025-09-13 18:08:46,944 - docx_processor.template_processor - INFO - 模板加载成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\templates\teaching_design_template.docx
+2025-09-13 18:08:46,945 - __main__ - INFO - 组件初始化成功
+2025-09-13 18:08:46,954 - __main__ - INFO - 启动AI文档助手，端口: 5000, 调试模式: False
+2025-09-13 18:08:47,882 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.124.11:5000
+2025-09-13 18:08:47,886 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-13 18:08:52,596 - llm.utils.file_handler - INFO - 文件验证完成: 集合与函数.docx, 结果: 通过
+2025-09-13 18:08:52,597 - llm.utils.file_handler - INFO - 文件保存成功: 集合与函数.docx -> af5891cb-04f9-4123-a5d8-a312b851b59c.docx
+2025-09-13 18:08:52,619 - llm.utils.file_handler - INFO - 文本提取成功: ./uploads\af5891cb-04f9-4123-a5d8-a312b851b59c.docx
+2025-09-13 18:08:52,620 - __main__ - INFO - 开始处理文件: af5891cb-04f9-4123-a5d8-a312b851b59c
+2025-09-13 18:08:57,595 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-13 18:08:57,627 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-13 18:08:58,357 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-13 18:08:58,361 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-13 18:10:14,284 - __main__ - INFO - AI处理成功，正在更新文件状态...
+2025-09-13 18:10:14,285 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:10:14] "POST /upload HTTP/1.1" 200 -
+2025-09-13 18:10:16,379 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:10:16] "GET /status/46a52201-48f7-439e-83f7-be6048b5d8fb HTTP/1.1" 200 -
+2025-09-13 18:10:18,069 - docx_processor.template_processor - INFO - 模板加载成功: templates/final_table_template.docx
+2025-09-13 18:10:18,097 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-13 18:10:18,099 - llm.clients.aliyun_client - INFO - 调用阿里云大模型API (尝试 1/3): https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-13 18:10:54,039 - llm.clients.aliyun_client - INFO - API调用成功
+2025-09-13 18:10:54,044 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:10:54] "POST /generate_teaching_design HTTP/1.1" 200 -
+2025-09-13 18:12:26,398 - llm.clients.aliyun_client - INFO - 阿里云百炼客户端初始化完成
+2025-09-13 18:12:26,399 - llm.utils.file_handler - INFO - 文件处理器初始化完成，上传目录: ./uploads
+2025-09-13 18:12:26,400 - docx_processor.template_processor - INFO - 模板加载成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\templates\teaching_design_template.docx
+2025-09-13 18:12:26,400 - __main__ - INFO - 组件初始化成功
+2025-09-13 18:12:26,417 - __main__ - INFO - 启动AI文档助手，端口: 5000, 调试模式: False
+2025-09-13 18:12:27,336 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.124.11:5000
+2025-09-13 18:12:27,337 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-13 18:12:28,873 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:12:28] "GET / HTTP/1.1" 200 -
+2025-09-13 18:12:29,325 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:12:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-09-13 18:12:29,582 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:12:29] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-09-13 18:12:29,951 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:12:29] "GET /templates HTTP/1.1" 200 -
+2025-09-13 18:12:36,990 - llm.utils.file_handler - INFO - 文件验证完成: 集合与函数.docx, 结果: 通过
+2025-09-13 18:12:36,991 - llm.utils.file_handler - INFO - 文件保存成功: 集合与函数.docx -> 912b55d8-bfc5-4e50-9ea1-738d00032318.docx
+2025-09-13 18:12:37,004 - llm.utils.file_handler - INFO - 文本提取成功: ./uploads\912b55d8-bfc5-4e50-9ea1-738d00032318.docx
+2025-09-13 18:12:37,005 - __main__ - INFO - 开始处理文件: 912b55d8-bfc5-4e50-9ea1-738d00032318
+2025-09-13 18:12:40,698 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-13 18:12:40,711 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-13 18:12:41,305 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-13 18:12:41,308 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-13 18:14:01,365 - __main__ - INFO - AI处理成功，正在更新文件状态...
+2025-09-13 18:14:01,365 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:14:01] "POST /upload HTTP/1.1" 200 -
+2025-09-13 18:14:03,378 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:14:03] "GET /status/54086dec-2eb7-4f10-81bd-af313a8204dc HTTP/1.1" 200 -
+2025-09-13 18:14:05,063 - docx_processor.template_processor - INFO - 模板加载成功: templates/final_table_template.docx
+2025-09-13 18:14:05,074 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-13 18:14:05,076 - llm.clients.aliyun_client - INFO - 调用阿里云大模型API (尝试 1/3): https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-13 18:15:24,616 - llm.clients.aliyun_client - INFO - API调用成功
+2025-09-13 18:15:24,617 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:15:24] "POST /generate_teaching_design HTTP/1.1" 200 -
+2025-09-13 18:15:56,898 - llm.clients.aliyun_client - INFO - 阿里云百炼客户端初始化完成
+2025-09-13 18:15:56,899 - llm.utils.file_handler - INFO - 文件处理器初始化完成，上传目录: ./uploads
+2025-09-13 18:15:56,899 - docx_processor.template_processor - INFO - 模板加载成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\templates\teaching_design_template.docx
+2025-09-13 18:15:56,899 - __main__ - INFO - 组件初始化成功
+2025-09-13 18:15:56,906 - __main__ - INFO - 启动AI文档助手，端口: 5000, 调试模式: False
+2025-09-13 18:15:57,811 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.124.11:5000
+2025-09-13 18:15:57,812 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-13 18:16:00,524 - llm.utils.file_handler - INFO - 文件验证完成: 集合与函数.docx, 结果: 通过
+2025-09-13 18:16:00,525 - llm.utils.file_handler - INFO - 文件保存成功: 集合与函数.docx -> c767d960-5fdb-4d99-af79-3fe61a4c8f54.docx
+2025-09-13 18:16:00,541 - llm.utils.file_handler - INFO - 文本提取成功: ./uploads\c767d960-5fdb-4d99-af79-3fe61a4c8f54.docx
+2025-09-13 18:16:00,542 - __main__ - INFO - 开始处理文件: c767d960-5fdb-4d99-af79-3fe61a4c8f54
+2025-09-13 18:16:03,753 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-13 18:16:03,775 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-13 18:16:04,494 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-13 18:16:04,495 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-13 18:17:20,151 - __main__ - INFO - AI处理成功，正在更新文件状态...
+2025-09-13 18:17:20,153 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:17:20] "POST /upload HTTP/1.1" 200 -
+2025-09-13 18:17:22,374 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:17:22] "GET /status/e9115b96-2085-47e7-8073-8aba0b921bcb HTTP/1.1" 200 -
+2025-09-13 18:17:24,068 - docx_processor.template_processor - INFO - 模板加载成功: templates/final_table_template.docx
+2025-09-13 18:17:24,108 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-13 18:17:24,110 - llm.clients.aliyun_client - INFO - 调用阿里云大模型API (尝试 1/3): https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-13 18:17:57,327 - llm.clients.aliyun_client - INFO - API调用成功
+2025-09-13 18:17:57,427 - docx_processor.template_processor - INFO - 文档生成成功: outputs\教学设计_集合与函数.docx, 大小: 32897 bytes
+2025-09-13 18:17:57,428 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:17:57] "POST /generate_teaching_design HTTP/1.1" 200 -
+2025-09-13 18:18:02,764 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:18:02] "GET /download_design/c767d960-5fdb-4d99-af79-3fe61a4c8f54 HTTP/1.1" 200 -
+2025-09-13 18:19:08,742 - llm.clients.aliyun_client - INFO - 阿里云百炼客户端初始化完成
+2025-09-13 18:19:08,742 - llm.utils.file_handler - INFO - 文件处理器初始化完成，上传目录: ./uploads
+2025-09-13 18:19:08,744 - docx_processor.template_processor - INFO - 模板加载成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\templates\teaching_design_template.docx
+2025-09-13 18:19:08,744 - __main__ - INFO - 组件初始化成功
+2025-09-13 18:19:08,749 - __main__ - INFO - 启动AI文档助手，端口: 5000, 调试模式: False
+2025-09-13 18:19:09,654 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.124.11:5000
+2025-09-13 18:19:09,656 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-13 18:19:18,558 - llm.utils.file_handler - INFO - 文件验证完成: 集合与函数.docx, 结果: 通过
+2025-09-13 18:19:18,559 - llm.utils.file_handler - INFO - 文件保存成功: 集合与函数.docx -> 24549400-425f-42c3-b14d-250b841834eb.docx
+2025-09-13 18:19:18,594 - llm.utils.file_handler - INFO - 文本提取成功: ./uploads\24549400-425f-42c3-b14d-250b841834eb.docx
+2025-09-13 18:19:18,596 - __main__ - INFO - 开始处理文件: 24549400-425f-42c3-b14d-250b841834eb
+2025-09-13 18:19:24,488 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-13 18:19:24,553 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-13 18:19:25,613 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-13 18:19:25,617 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-13 18:20:32,283 - __main__ - INFO - AI处理成功，正在更新文件状态...
+2025-09-13 18:20:32,285 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:20:32] "POST /upload HTTP/1.1" 200 -
+2025-09-13 18:20:33,636 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:20:33] "GET /status/fd798b66-45af-44e7-83ee-729be6ba00a1 HTTP/1.1" 200 -
+2025-09-13 18:20:34,669 - docx_processor.template_processor - INFO - 模板加载成功: templates/final_table_template.docx
+2025-09-13 18:20:34,701 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-13 18:20:34,708 - llm.clients.aliyun_client - INFO - 调用阿里云大模型API (尝试 1/3): https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-13 18:21:14,105 - llm.clients.aliyun_client - INFO - API调用成功
+2025-09-13 18:21:14,206 - docx_processor.template_processor - INFO - 文档生成成功: outputs\教学设计_集合与函数.docx, 大小: 33100 bytes
+2025-09-13 18:21:14,207 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:21:14] "POST /generate_teaching_design HTTP/1.1" 200 -
+2025-09-13 18:21:20,156 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:21:20] "GET /download_design/24549400-425f-42c3-b14d-250b841834eb HTTP/1.1" 200 -
+2025-09-13 18:27:43,025 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:27:43] "GET / HTTP/1.1" 200 -
+2025-09-13 18:27:43,156 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:27:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-09-13 18:27:43,268 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:27:43] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-09-13 18:27:43,610 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:27:43] "GET /templates HTTP/1.1" 200 -
+2025-09-13 18:27:51,647 - llm.utils.file_handler - INFO - 文件验证完成: 集合与函数.docx, 结果: 通过
+2025-09-13 18:27:51,648 - llm.utils.file_handler - INFO - 文件保存成功: 集合与函数.docx -> 99b37460-f7f0-4841-9e4c-805419f99fb3.docx
+2025-09-13 18:27:51,660 - llm.utils.file_handler - INFO - 文本提取成功: ./uploads\99b37460-f7f0-4841-9e4c-805419f99fb3.docx
+2025-09-13 18:27:51,663 - __main__ - INFO - 开始处理文件: 99b37460-f7f0-4841-9e4c-805419f99fb3
+2025-09-13 18:27:52,402 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-13 18:27:52,444 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-13 18:27:53,118 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-13 18:27:53,120 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-13 18:28:12,353 - llm.clients.aliyun_client - ERROR - Qwen-Long双文件模式调用失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-09-13 18:28:12,355 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:28:12] "POST /upload HTTP/1.1" 200 -
+2025-09-13 18:28:13,701 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:28:13] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 18:28:14,387 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:28:14] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 18:28:15,680 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:28:15] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 18:28:16,390 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:28:16] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 18:28:17,704 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:28:17] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 18:28:18,387 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:28:18] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 18:28:19,706 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:28:19] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 18:28:20,376 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:28:20] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 18:28:21,685 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:28:21] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 18:28:22,376 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:28:22] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 18:28:23,682 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:28:23] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 18:28:24,380 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:28:24] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 18:28:25,694 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:28:25] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 18:28:26,378 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:28:26] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 18:28:27,689 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:28:27] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 18:28:28,382 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:28:28] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 18:28:29,682 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:28:29] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 18:28:30,376 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:28:30] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 18:28:31,691 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:28:31] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 18:28:32,387 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:28:32] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 18:28:33,686 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:28:33] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 18:28:34,373 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:28:34] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 18:28:35,685 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:28:35] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 18:28:36,378 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:28:36] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 18:28:37,687 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:28:37] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 18:28:38,378 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:28:38] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 18:28:39,691 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:28:39] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 18:28:40,388 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:28:40] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 18:28:41,712 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:28:41] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 18:28:42,381 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:28:42] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 18:28:43,683 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:28:43] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 18:28:44,378 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:28:44] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 18:28:45,694 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:28:45] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 18:28:46,389 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:28:46] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 18:28:47,693 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:28:47] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 18:28:48,377 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:28:48] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 18:28:49,680 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:28:49] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 18:28:50,384 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:28:50] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 18:28:51,691 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:28:51] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 18:28:52,378 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:28:52] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 18:28:53,683 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:28:53] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 18:28:54,389 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:28:54] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 18:28:55,688 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:28:55] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 18:28:56,376 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:28:56] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 18:28:57,675 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:28:57] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 18:28:58,378 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:28:58] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 18:28:59,691 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:28:59] "GET /status/undefined HTTP/1.1" 200 -
+2025-09-13 18:29:16,942 - llm.clients.aliyun_client - INFO - 阿里云百炼客户端初始化完成
+2025-09-13 18:29:16,943 - llm.utils.file_handler - INFO - 文件处理器初始化完成，上传目录: ./uploads
+2025-09-13 18:29:16,943 - docx_processor.template_processor - INFO - 模板加载成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\templates\teaching_design_template.docx
+2025-09-13 18:29:16,944 - __main__ - INFO - 组件初始化成功
+2025-09-13 18:29:16,950 - __main__ - INFO - 启动AI文档助手，端口: 5000, 调试模式: False
+2025-09-13 18:29:17,844 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.124.11:5000
+2025-09-13 18:29:17,845 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-13 18:29:19,359 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:29:19] "GET / HTTP/1.1" 200 -
+2025-09-13 18:29:20,093 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:29:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-09-13 18:29:20,194 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:29:20] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-09-13 18:29:20,552 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:29:20] "GET /templates HTTP/1.1" 200 -
+2025-09-13 18:29:28,869 - llm.utils.file_handler - INFO - 文件验证完成: 集合与函数.docx, 结果: 通过
+2025-09-13 18:29:28,871 - llm.utils.file_handler - INFO - 文件保存成功: 集合与函数.docx -> 229ea49e-8778-4dec-a63f-67664babfc3c.docx
+2025-09-13 18:29:28,895 - llm.utils.file_handler - INFO - 文本提取成功: ./uploads\229ea49e-8778-4dec-a63f-67664babfc3c.docx
+2025-09-13 18:29:28,897 - __main__ - INFO - 开始处理文件: 229ea49e-8778-4dec-a63f-67664babfc3c
+2025-09-13 18:29:33,677 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-13 18:29:33,694 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-13 18:29:34,475 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-13 18:29:34,477 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-13 18:31:03,079 - __main__ - INFO - AI处理成功，正在更新文件状态...
+2025-09-13 18:31:03,084 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:31:03] "POST /upload HTTP/1.1" 200 -
+2025-09-13 18:31:04,425 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:31:04] "GET /status/e264173d-a36a-47d5-b9e0-39608cbcea3c HTTP/1.1" 200 -
+2025-09-13 18:31:05,464 - docx_processor.template_processor - INFO - 模板加载成功: templates/final_table_template.docx
+2025-09-13 18:31:05,511 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-13 18:31:05,516 - llm.clients.aliyun_client - INFO - 调用阿里云大模型API (尝试 1/3): https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-13 18:31:43,987 - llm.clients.aliyun_client - INFO - API调用成功
+2025-09-13 18:31:44,076 - docx_processor.template_processor - INFO - 文档生成成功: outputs\教学设计_集合与函数.docx, 大小: 32775 bytes
+2025-09-13 18:31:44,076 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:31:44] "POST /generate_teaching_design HTTP/1.1" 200 -
+2025-09-13 18:31:57,760 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:31:57] "GET /download_design/229ea49e-8778-4dec-a63f-67664babfc3c HTTP/1.1" 200 -
+2025-09-13 19:24:54,826 - llm.clients.aliyun_client - INFO - 阿里云百炼客户端初始化完成
+2025-09-13 19:24:54,828 - llm.utils.file_handler - INFO - 文件处理器初始化完成，上传目录: ./uploads
+2025-09-13 19:24:54,831 - docx_processor.template_processor - INFO - 模板加载成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\templates\teaching_design_template.docx
+2025-09-13 19:24:54,832 - __main__ - INFO - 组件初始化成功
+2025-09-13 19:24:54,858 - __main__ - INFO - 启动AI文档助手，端口: 5000, 调试模式: False
+2025-09-13 19:24:55,791 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.124.11:5000
+2025-09-13 19:24:55,794 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-13 19:24:58,270 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 19:24:58] "GET / HTTP/1.1" 200 -
+2025-09-13 19:24:59,223 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 19:24:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-09-13 19:24:59,405 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 19:24:59] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-09-13 19:24:59,747 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 19:24:59] "GET /templates HTTP/1.1" 200 -
+2025-09-13 19:25:08,343 - llm.utils.file_handler - INFO - 文件验证完成: 集合与函数.docx, 结果: 通过
+2025-09-13 19:25:08,344 - llm.utils.file_handler - INFO - 文件保存成功: 集合与函数.docx -> fb38b064-7190-46a6-93ec-8821ed9b1dac.docx
+2025-09-13 19:25:08,369 - llm.utils.file_handler - INFO - 文本提取成功: ./uploads\fb38b064-7190-46a6-93ec-8821ed9b1dac.docx
+2025-09-13 19:25:08,371 - __main__ - INFO - 开始处理文件: fb38b064-7190-46a6-93ec-8821ed9b1dac
+2025-09-13 19:25:12,232 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-13 19:25:12,259 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-13 19:25:12,930 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/files "HTTP/1.1 200 OK"
+2025-09-13 19:25:12,933 - llm.clients.aliyun_client - INFO - 调用Qwen-Long模型API（双文件模式）: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-13 19:26:48,367 - __main__ - INFO - AI处理成功，正在更新文件状态...
+2025-09-13 19:26:48,368 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 19:26:48] "POST /upload HTTP/1.1" 200 -
+2025-09-13 19:26:50,362 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 19:26:50] "GET /status/eb7de6f3-cea4-4eb9-815a-022fdd638462 HTTP/1.1" 200 -
+2025-09-13 19:26:52,056 - docx_processor.template_processor - INFO - 模板加载成功: templates/final_table_template.docx
+2025-09-13 19:26:52,077 - llm.utils.file_handler - INFO - 文本提取成功: C:\Users\86157\Desktop\docxtpl\pythondocx\pythondocx\2023【教学设计模板】思维发展型课堂-XX学校-XX教师.docx
+2025-09-13 19:26:52,078 - llm.clients.aliyun_client - INFO - 调用阿里云大模型API (尝试 1/3): https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+2025-09-13 19:27:17,737 - llm.clients.aliyun_client - INFO - API调用成功
+2025-09-13 19:27:17,808 - docx_processor.template_processor - INFO - 文档生成成功: outputs\教学设计_集合与函数.docx, 大小: 32622 bytes
+2025-09-13 19:27:17,809 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 19:27:17] "POST /generate_teaching_design HTTP/1.1" 200 -
+2025-09-13 19:27:24,899 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 19:27:24] "GET /download_design/fb38b064-7190-46a6-93ec-8821ed9b1dac HTTP/1.1" 200 -
