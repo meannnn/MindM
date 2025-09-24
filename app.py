@@ -228,6 +228,8 @@ def upload():
                     uploaded_files[file_id]['error'] = ai_result.get('message', 'AI处理失败')
                     return jsonify({
                         'success': False,
+                        'task_id': task_id,  # 添加task_id，确保前端能获取到
+                        'file_id': file_id,
                         'error': uploaded_files[file_id]['error']
                     })
                     
@@ -237,6 +239,8 @@ def upload():
                 uploaded_files[file_id]['error'] = str(e)
                 return jsonify({
                     'success': False,
+                    'task_id': task_id,  # 添加task_id，确保前端能获取到
+                    'file_id': file_id,
                     'error': str(e)
                 })
         else:

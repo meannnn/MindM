@@ -251,11 +251,27 @@ async function startProcessing() {
         }
         
         const result = await response.json();
-        currentTaskId = result.task_id;
-        currentFileId = result.file_id;
         
-        // 开始流式轮询
-        startStreamingPolling();
+        // 检查响应是否成功
+        if (result.success) {
+            currentTaskId = result.task_id;
+            currentFileId = result.file_id;
+            
+            // 开始流式轮询
+            startStreamingPolling();
+        } else {
+            // 处理失败情况，但可能仍有task_id
+            currentTaskId = result.task_id;
+            currentFileId = result.file_id;
+            
+            // 显示错误信息
+            showError(result.error || '处理失败');
+            
+            // 如果有task_id，仍然开始轮询以获取更详细的状态
+            if (currentTaskId) {
+                startStreamingPolling();
+            }
+        }
         
     } catch (error) {
         console.error('处理失败:', error);
