@@ -9211,3 +9211,52 @@ jinja2.exceptions.TemplateNotFound: index.html
 2025-09-25 11:35:47 | [32mINFO[0m | ai_doc_assistant | log_ai_processing_complete:264 | 🤖 AI PROCESSING COMPLETE: ✅ SUCCESS - Generated 4982 characters using qwen-long
 2025-09-25 11:35:47 | [32mINFO[0m | ai_doc_assistant | upload:235 | ✅ AI PROCESSING SUCCESSFUL - Updating file status
 2025-09-25 11:35:47 | [32mINFO[0m | ai_doc_assistant | upload:242 | 🎉 COMPLETE SUCCESS - Task ID: 6ef9dbf3-11fc-4f79-97d6-4d36f7e88724, Response length: 4982
+2025-09-25 21:23:57 | [32mINFO[0m | ai_doc_assistant | <module>:58 | 组件初始化成功
+2025-09-25 21:23:57 | [32mINFO[0m | ai_doc_assistant | <module>:763 | 启动AI文档助手，端口: 5000, 调试模式: False
+2025-09-25 21:24:42 | [32mINFO[0m | ai_doc_assistant | upload:139 | 🚀 STARTING FILE UPLOAD PROCESS - Task ID: d1ade8fb-909d-4d60-8334-6fd51b59bea4
+2025-09-25 21:24:42 | [32mINFO[0m | ai_doc_assistant | upload:155 | 📋 PROCESSING PARAMETERS - Template: final_table, AI Model: deepseek-chat
+2025-09-25 21:24:42 | [32mINFO[0m | ai_doc_assistant | start_timer:32 | ⏱️  START: d1ade8fb-909d-4d60-8334-6fd51b59bea4.upload - Uploading 集合与函数.docx
+2025-09-25 21:24:42 | [32mINFO[0m | ai_doc_assistant | log_upload_start:232 | 📤 UPLOAD START: 集合与函数.docx (23012 bytes)
+2025-09-25 21:24:42 | [32mINFO[0m | ai_doc_assistant | end_timer:50 | ⏱️  END: d1ade8fb-909d-4d60-8334-6fd51b59bea4.upload - ✅ SUCCESS - Duration: 0.012s Saved as 3d645bdd-190c-4b51-b504-8151906efd03.docx
+2025-09-25 21:24:42 | [32mINFO[0m | ai_doc_assistant | log_upload_complete:238 | 📤 UPLOAD COMPLETE: ✅ SUCCESS - Saved as 3d645bdd-190c-4b51-b504-8151906efd03.docx
+2025-09-25 21:24:42 | [32mINFO[0m | ai_doc_assistant | start_timer:32 | ⏱️  START: d1ade8fb-909d-4d60-8334-6fd51b59bea4.extraction - Extracting text from document
+2025-09-25 21:24:42 | [32mINFO[0m | ai_doc_assistant | log_text_extraction_start:243 | 📄 TEXT EXTRACTION START: Processing document content
+2025-09-25 21:24:43 | [32mINFO[0m | ai_doc_assistant | end_timer:50 | ⏱️  END: d1ade8fb-909d-4d60-8334-6fd51b59bea4.extraction - ✅ SUCCESS - Duration: 0.151s 
+2025-09-25 21:24:43 | [32mINFO[0m | ai_doc_assistant | log_text_extraction_complete:249 | 📄 TEXT EXTRACTION COMPLETE: ✅ SUCCESS - Extracted 1649 characters
+2025-09-25 21:24:43 | [32mINFO[0m | ai_doc_assistant | upload:187 | 🤖 STARTING AI PROCESSING - File ID: 3d645bdd-190c-4b51-b504-8151906efd03
+2025-09-25 21:24:43 | [32mINFO[0m | ai_doc_assistant | upload:191 | 📤 UPLOADING USER FILE TO ALIYUN
+2025-09-25 21:24:49 | [32mINFO[0m | ai_doc_assistant | upload:203 | ✅ USER FILE UPLOADED SUCCESSFULLY - File ID: file-fe-37ebca35844d4147accbff0f
+2025-09-25 21:24:49 | [32mINFO[0m | ai_doc_assistant | upload:206 | 📤 UPLOADING TEMPLATE FILE TO ALIYUN
+2025-09-25 21:24:50 | [32mINFO[0m | ai_doc_assistant | upload:219 | ✅ TEMPLATE FILE UPLOADED SUCCESSFULLY - File ID: file-fe-2f0142cc475242a78f15d68d
+2025-09-25 21:24:50 | [32mINFO[0m | ai_doc_assistant | start_timer:32 | ⏱️  START: d1ade8fb-909d-4d60-8334-6fd51b59bea4.ai_processing - AI processing with qwen-long
+2025-09-25 21:24:50 | [32mINFO[0m | ai_doc_assistant | log_ai_processing_start:254 | 🤖 AI PROCESSING START: Using model qwen-long
+2025-09-25 21:24:50 | [32mINFO[0m | ai_doc_assistant | log_stage:71 | 📋 STAGE: d1ade8fb-909d-4d60-8334-6fd51b59bea4.ai_processing -> file_preparation - Files uploaded, starting AI conversation
+2025-09-25 21:25:52 | [32mINFO[0m | ai_doc_assistant | end_timer:50 | ⏱️  END: d1ade8fb-909d-4d60-8334-6fd51b59bea4.ai_processing - ✅ SUCCESS - Duration: 62.112s 
+2025-09-25 21:25:52 | [32mINFO[0m | ai_doc_assistant | log_ai_processing_complete:264 | 🤖 AI PROCESSING COMPLETE: ✅ SUCCESS - Generated 5157 characters using qwen-long
+2025-09-25 21:25:52 | [32mINFO[0m | ai_doc_assistant | upload:235 | ✅ AI PROCESSING SUCCESSFUL - Updating file status
+2025-09-25 21:25:52 | [32mINFO[0m | ai_doc_assistant | upload:242 | 🎉 COMPLETE SUCCESS - Task ID: d1ade8fb-909d-4d60-8334-6fd51b59bea4, Response length: 5157
+2025-09-25 21:32:42 | [32mINFO[0m | ai_doc_assistant | <module>:58 | 组件初始化成功
+2025-09-25 21:33:29 | [32mINFO[0m | ai_doc_assistant | <module>:58 | 组件初始化成功
+2025-09-25 21:33:29 | [32mINFO[0m | ai_doc_assistant | <module>:763 | 启动AI文档助手，端口: 5000, 调试模式: False
+2025-09-25 21:34:30 | [32mINFO[0m | ai_doc_assistant | upload:139 | 🚀 STARTING FILE UPLOAD PROCESS - Task ID: 33339b7c-cb54-49a4-aec8-c256aea00a17
+2025-09-25 21:34:30 | [32mINFO[0m | ai_doc_assistant | upload:155 | 📋 PROCESSING PARAMETERS - Template: final_table, AI Model: deepseek-chat
+2025-09-25 21:34:30 | [32mINFO[0m | ai_doc_assistant | start_timer:32 | ⏱️  START: 33339b7c-cb54-49a4-aec8-c256aea00a17.upload - Uploading 集合与函数.docx
+2025-09-25 21:34:30 | [32mINFO[0m | ai_doc_assistant | log_upload_start:232 | 📤 UPLOAD START: 集合与函数.docx (23012 bytes)
+2025-09-25 21:34:30 | [32mINFO[0m | ai_doc_assistant | end_timer:50 | ⏱️  END: 33339b7c-cb54-49a4-aec8-c256aea00a17.upload - ✅ SUCCESS - Duration: 0.013s Saved as 0244ba7d-1969-44f4-a471-74db2acb04c6.docx
+2025-09-25 21:34:30 | [32mINFO[0m | ai_doc_assistant | log_upload_complete:238 | 📤 UPLOAD COMPLETE: ✅ SUCCESS - Saved as 0244ba7d-1969-44f4-a471-74db2acb04c6.docx
+2025-09-25 21:34:30 | [32mINFO[0m | ai_doc_assistant | start_timer:32 | ⏱️  START: 33339b7c-cb54-49a4-aec8-c256aea00a17.extraction - Extracting text from document
+2025-09-25 21:34:30 | [32mINFO[0m | ai_doc_assistant | log_text_extraction_start:243 | 📄 TEXT EXTRACTION START: Processing document content
+2025-09-25 21:34:30 | [32mINFO[0m | ai_doc_assistant | end_timer:50 | ⏱️  END: 33339b7c-cb54-49a4-aec8-c256aea00a17.extraction - ✅ SUCCESS - Duration: 0.039s 
+2025-09-25 21:34:30 | [32mINFO[0m | ai_doc_assistant | log_text_extraction_complete:249 | 📄 TEXT EXTRACTION COMPLETE: ✅ SUCCESS - Extracted 1649 characters
+2025-09-25 21:34:30 | [32mINFO[0m | ai_doc_assistant | upload:187 | 🤖 STARTING AI PROCESSING - File ID: 0244ba7d-1969-44f4-a471-74db2acb04c6
+2025-09-25 21:34:30 | [32mINFO[0m | ai_doc_assistant | upload:191 | 📤 UPLOADING USER FILE TO ALIYUN
+2025-09-25 21:34:36 | [32mINFO[0m | ai_doc_assistant | upload:203 | ✅ USER FILE UPLOADED SUCCESSFULLY - File ID: file-fe-2bfc3f51cd034c1aa1a9fd9d
+2025-09-25 21:34:36 | [32mINFO[0m | ai_doc_assistant | upload:206 | 📤 UPLOADING TEMPLATE FILE TO ALIYUN
+2025-09-25 21:34:36 | [32mINFO[0m | ai_doc_assistant | upload:219 | ✅ TEMPLATE FILE UPLOADED SUCCESSFULLY - File ID: file-fe-c4deaacc3c694f9491d841bd
+2025-09-25 21:34:36 | [32mINFO[0m | ai_doc_assistant | start_timer:32 | ⏱️  START: 33339b7c-cb54-49a4-aec8-c256aea00a17.ai_processing - AI processing with qwen-long
+2025-09-25 21:34:36 | [32mINFO[0m | ai_doc_assistant | log_ai_processing_start:254 | 🤖 AI PROCESSING START: Using model qwen-long
+2025-09-25 21:34:36 | [32mINFO[0m | ai_doc_assistant | log_stage:71 | 📋 STAGE: 33339b7c-cb54-49a4-aec8-c256aea00a17.ai_processing -> file_preparation - Files uploaded, starting AI conversation
+2025-09-25 21:35:41 | [32mINFO[0m | ai_doc_assistant | end_timer:50 | ⏱️  END: 33339b7c-cb54-49a4-aec8-c256aea00a17.ai_processing - ✅ SUCCESS - Duration: 64.307s 
+2025-09-25 21:35:41 | [32mINFO[0m | ai_doc_assistant | log_ai_processing_complete:264 | 🤖 AI PROCESSING COMPLETE: ✅ SUCCESS - Generated 5215 characters using qwen-long
+2025-09-25 21:35:41 | [32mINFO[0m | ai_doc_assistant | upload:235 | ✅ AI PROCESSING SUCCESSFUL - Updating file status
+2025-09-25 21:35:41 | [32mINFO[0m | ai_doc_assistant | upload:242 | 🎉 COMPLETE SUCCESS - Task ID: 33339b7c-cb54-49a4-aec8-c256aea00a17, Response length: 5215
