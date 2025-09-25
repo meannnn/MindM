@@ -7,9 +7,9 @@ AI文档助手 - 主应用文件
 
 import os
 import sys
-import logging
 import tempfile
 import atexit
+import time
 from datetime import datetime
 from flask import Flask, render_template, request, jsonify, send_file
 from werkzeug.utils import secure_filename
@@ -25,6 +25,7 @@ try:
     from docx_processor.template_processor import TemplateProcessor
     from prompts.teaching_design_prompt import get_teaching_design_prompt
     from schemas.teaching_design_schema import validate_teaching_design_data
+    from utils.logger import setup_logger, get_logger, DocumentProcessingLogger, timing_decorator
 except ImportError as e:
     print(f"导入模块失败: {e}")
     print("请确保所有模块已正确安装")
@@ -33,16 +34,14 @@ except ImportError as e:
 # 加载环境变量
 load_dotenv()
 
-# 配置日志
-logging.basicConfig(
-    level=os.getenv("LOG_LEVEL", "INFO").upper(),
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.StreamHandler(),
-        logging.FileHandler(os.getenv("LOG_FILE", "./logs/app.log"), encoding='utf-8')
-    ]
+# 配置集中式日志系统
+logger = setup_logger(
+    name="ai_doc_assistant",
+    log_level=os.getenv("LOG_LEVEL", "DEBUG"),  # 改为DEBUG以获得更详细日志
+    log_file=os.getenv("LOG_FILE", "./logs/app.log"),
+    console_output=True,
+    enable_colors=True
 )
-logger = logging.getLogger(__name__)
 
 # 创建Flask应用
 app = Flask(__name__, 
@@ -129,36 +128,53 @@ def upload_file():
         return jsonify({'success': False, 'error': str(e)})
 
 @app.route('/upload', methods=['POST'])
+@timing_decorator("file_upload_and_processing")
 def upload():
     """文件上传接口（兼容前端）"""
+    import uuid
+    task_id = str(uuid.uuid4())
+    doc_logger = DocumentProcessingLogger(task_id, logger)
+    
     try:
+        doc_logger.logger.info(f"🚀 STARTING FILE UPLOAD PROCESS - Task ID: {task_id}")
+        
+        # 验证文件
         if 'file' not in request.files:
+            doc_logger.logger.error("❌ NO FILE PROVIDED")
             return jsonify({'success': False, 'error': '没有选择文件'})
         
         file = request.files['file']
         if file.filename == '':
+            doc_logger.logger.error("❌ EMPTY FILENAME")
             return jsonify({'success': False, 'error': '没有选择文件'})
         
         # 获取其他参数
         template = request.form.get('template', '思维发展型课堂教学设计模板')
         ai_model = request.form.get('ai_model', 'DeepSeek Chat')
         
+        doc_logger.logger.info(f"📋 PROCESSING PARAMETERS - Template: {template}, AI Model: {ai_model}")
+        
         # 保存文件
         file_content = file.read()
+        doc_logger.log_upload_start(file.filename, len(file_content))
+        
         result = file_handler.save_uploaded_file(file_content, file.filename)
         
         if result['success']:
+            doc_logger.log_upload_complete(True, f"Saved as {result['saved_filename']}")
+            
             file_id = result['file_id']
             uploaded_files[file_id] = result
             
             # 提取文本内容
+            doc_logger.log_text_extraction_start()
             text_result = file_handler.extract_text_from_docx(result['file_path'])
             if text_result['success']:
                 uploaded_files[file_id]['text_content'] = text_result['text_content']
-            
-            # 生成任务ID（模拟异步处理）
-            import uuid
-            task_id = str(uuid.uuid4())
+                doc_logger.log_text_extraction_complete(True, len(text_result['text_content']))
+            else:
+                doc_logger.log_text_extraction_complete(False)
+                doc_logger.logger.error(f"❌ TEXT EXTRACTION FAILED: {text_result.get('message', 'Unknown error')}")
             
             # 存储任务信息
             uploaded_files[file_id]['task_id'] = task_id
@@ -168,13 +184,15 @@ def upload():
             
             # 立即开始AI处理
             try:
-                logger.info(f"开始处理文件: {file_id}")
+                doc_logger.logger.info(f"🤖 STARTING AI PROCESSING - File ID: {file_id}")
                 
                 # 使用Qwen-Long模型和文件上传方式生成教学设计
                 # 上传用户文件到阿里云
+                doc_logger.logger.info("📤 UPLOADING USER FILE TO ALIYUN")
                 user_upload_result = llm_client.upload_file_with_openai_client(uploaded_files[file_id]['file_path'])
                 
                 if not user_upload_result['success']:
+                    doc_logger.logger.error(f"❌ USER FILE UPLOAD FAILED: {user_upload_result.get('message', 'Unknown error')}")
                     uploaded_files[file_id]['status'] = 'failed'
                     uploaded_files[file_id]['error'] = f'用户文件上传失败: {user_upload_result.get("message", "未知错误")}'
                     return jsonify({
@@ -182,11 +200,15 @@ def upload():
                         'error': uploaded_files[file_id]['error']
                     })
                 
+                doc_logger.logger.info(f"✅ USER FILE UPLOADED SUCCESSFULLY - File ID: {user_upload_result['file_id']}")
+                
                 # 上传模板文件到阿里云
+                doc_logger.logger.info("📤 UPLOADING TEMPLATE FILE TO ALIYUN")
                 template_path = file_handler.get_template_file_content()['template_path']
                 template_upload_result = llm_client.upload_file_with_openai_client(template_path)
                 
                 if not template_upload_result['success']:
+                    doc_logger.logger.error(f"❌ TEMPLATE FILE UPLOAD FAILED: {template_upload_result.get('message', 'Unknown error')}")
                     uploaded_files[file_id]['status'] = 'failed'
                     uploaded_files[file_id]['error'] = f'模板文件上传失败: {template_upload_result.get("message", "未知错误")}'
                     return jsonify({
@@ -194,7 +216,12 @@ def upload():
                         'error': uploaded_files[file_id]['error']
                     })
                 
+                doc_logger.logger.info(f"✅ TEMPLATE FILE UPLOADED SUCCESSFULLY - File ID: {template_upload_result['file_id']}")
+                
                 # 使用Qwen-Long模型和文件ID进行对话
+                doc_logger.log_ai_processing_start("qwen-long")
+                doc_logger.log_ai_processing_stage("file_preparation", "Files uploaded, starting AI conversation")
+                
                 ai_result = llm_client.chat_with_qwen_long_and_files(
                     user_file_id=user_upload_result['file_id'],
                     template_file_id=template_upload_result['file_id'],
@@ -202,12 +229,17 @@ def upload():
                 )
                 
                 if ai_result['success']:
-                    logger.info("AI处理成功，正在更新文件状态...")
+                    response_length = len(ai_result.get('text', ''))
+                    doc_logger.log_ai_processing_complete(True, response_length, "qwen-long")
+                    
+                    doc_logger.logger.info("✅ AI PROCESSING SUCCESSFUL - Updating file status")
                     uploaded_files[file_id]['status'] = 'completed'
                     uploaded_files[file_id]['result'] = ai_result['text']
                     uploaded_files[file_id]['ai_response'] = ai_result
                     uploaded_files[file_id]['user_file_id'] = user_upload_result['file_id']
                     uploaded_files[file_id]['template_file_id'] = template_upload_result['file_id']
+                    
+                    doc_logger.logger.info(f"🎉 COMPLETE SUCCESS - Task ID: {task_id}, Response length: {response_length}")
                     
                     return jsonify({
                         'success': True,
@@ -224,30 +256,33 @@ def upload():
                         'model': ai_result.get('model')
                     })
                 else:
+                    doc_logger.log_ai_processing_complete(False, 0, "qwen-long")
+                    doc_logger.logger.error(f"❌ AI PROCESSING FAILED: {ai_result.get('message', 'Unknown error')}")
                     uploaded_files[file_id]['status'] = 'failed'
                     uploaded_files[file_id]['error'] = ai_result.get('message', 'AI处理失败')
                     return jsonify({
                         'success': False,
-                        'task_id': task_id,  # 添加task_id，确保前端能获取到
+                        'task_id': task_id,
                         'file_id': file_id,
                         'error': uploaded_files[file_id]['error']
                     })
                     
             except Exception as e:
-                logger.error(f"AI处理失败: {e}")
+                doc_logger.logger.error(f"💥 AI PROCESSING EXCEPTION: {str(e)}", exc_info=True)
                 uploaded_files[file_id]['status'] = 'failed'
                 uploaded_files[file_id]['error'] = str(e)
                 return jsonify({
                     'success': False,
-                    'task_id': task_id,  # 添加task_id，确保前端能获取到
+                    'task_id': task_id,
                     'file_id': file_id,
                     'error': str(e)
                 })
         else:
+            doc_logger.log_upload_complete(False, result.get('message', 'Unknown error'))
             return jsonify({'success': False, 'error': result['message']})
             
     except Exception as e:
-        logger.error(f"文件上传失败: {e}")
+        doc_logger.logger.error(f"💥 UPLOAD PROCESS EXCEPTION: {str(e)}", exc_info=True)
         return jsonify({'success': False, 'error': str(e)})
 
 @app.route('/send_message', methods=['POST'])

@@ -5,14 +5,21 @@
 """
 
 import os
-import logging
 import requests
 import json
 from typing import Dict, List, Any, Optional, Union
 from http import HTTPStatus
 from datetime import datetime
 
-logger = logging.getLogger(__name__)
+# 导入集中式日志系统
+import sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+try:
+    from utils.logger import get_logger, timing_decorator
+    logger = get_logger(__name__)
+except ImportError:
+    import logging
+    logger = logging.getLogger(__name__)
 
 
 class AliyunClient:
@@ -37,7 +44,7 @@ class AliyunClient:
             'Content-Type': 'application/json'
         })
         
-        logger.info("阿里云百炼客户端初始化完成")
+        logger.info("✅ ALIYUN CLIENT INITIALIZED SUCCESSFULLY")
     
     def call_model(self, prompt: str, model: Optional[str] = None, parameters: Optional[Dict[str, Any]] = None, max_retries: int = 2) -> Dict[str, Any]:
         """
@@ -76,8 +83,8 @@ class AliyunClient:
                     **(parameters or {})
                 }
                 
-                logger.info(f"调用阿里云大模型API (尝试 {attempt + 1}/{max_retries + 1}): {url}")
-                logger.debug(f"请求数据: {json.dumps(data, ensure_ascii=False, indent=2)}")
+                logger.info(f"🚀 CALLING ALIYUN API (Attempt {attempt + 1}/{max_retries + 1}): {url}")
+                logger.debug(f"📤 REQUEST DATA: {json.dumps(data, ensure_ascii=False, indent=2)}")
                 
                 # 发送请求
                 response = self.session.post(url, json=data, timeout=120)
@@ -85,8 +92,8 @@ class AliyunClient:
                 # 处理响应
                 if response.status_code == HTTPStatus.OK:
                     result = response.json()
-                    logger.info("API调用成功")
-                    logger.debug(f"响应数据: {json.dumps(result, ensure_ascii=False, indent=2)}")
+                    logger.info("✅ API CALL SUCCESSFUL")
+                    logger.debug(f"📥 RESPONSE DATA: {json.dumps(result, ensure_ascii=False, indent=2)}")
                     
                     # 提取响应内容（OpenAI兼容格式）
                     choices = result.get('choices', [])

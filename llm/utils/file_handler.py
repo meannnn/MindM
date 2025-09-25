@@ -5,12 +5,19 @@
 """
 
 import os
-import logging
 from typing import Dict, Any, Optional
 from datetime import datetime
 import uuid
 
-logger = logging.getLogger(__name__)
+# 导入集中式日志系统
+import sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+try:
+    from utils.logger import get_logger, timing_decorator
+    logger = get_logger(__name__)
+except ImportError:
+    import logging
+    logger = logging.getLogger(__name__)
 
 
 class FileHandler:
@@ -32,7 +39,7 @@ class FileHandler:
         if not os.path.exists(self.upload_dir):
             os.makedirs(self.upload_dir)
         
-        logger.info(f"文件处理器初始化完成，上传目录: {self.upload_dir}")
+        logger.info(f"✅ FILE HANDLER INITIALIZED - Upload directory: {self.upload_dir}")
     
     def validate_file(self, file_path: str, filename: str) -> Dict[str, Any]:
         """
@@ -87,11 +94,11 @@ class FileHandler:
                 'upload_time': datetime.now().isoformat()
             })
             
-            logger.info(f"文件验证完成: {filename}, 结果: {'通过' if validation_result['is_valid'] else '失败'}")
+            logger.info(f"✅ FILE VALIDATION COMPLETE: {filename} - {'PASSED' if validation_result['is_valid'] else 'FAILED'}")
             return validation_result
             
         except Exception as e:
-            logger.error(f"文件验证失败: {e}")
+            logger.error(f"❌ FILE VALIDATION FAILED: {e}", exc_info=True)
             validation_result['is_valid'] = False
             validation_result['errors'].append(f"验证过程出错: {str(e)}")
             return validation_result

@@ -6,7 +6,6 @@
 """
 
 import os
-import logging
 import json
 from typing import Dict, Any, Optional, List
 from docxtpl import DocxTemplate
@@ -17,7 +16,14 @@ import sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from schemas.teaching_design_schema import TeachingDesignData, validate_teaching_design_data
 
-logger = logging.getLogger(__name__)
+# 导入集中式日志系统
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+try:
+    from utils.logger import get_logger, timing_decorator
+    logger = get_logger(__name__)
+except ImportError:
+    import logging
+    logger = logging.getLogger(__name__)
 
 class TemplateProcessor:
     """Word模板处理器"""
@@ -52,15 +58,17 @@ class TemplateProcessor:
         """加载Word模板"""
         try:
             if os.path.exists(self.template_path):
+                logger.debug(f"📝 LOADING TEMPLATE: {self.template_path}")
                 self.template = DocxTemplate(self.template_path)
-                logger.info(f"模板加载成功: {self.template_path}")
+                logger.info(f"✅ TEMPLATE LOADED SUCCESSFULLY: {self.template_path}")
             else:
-                logger.error(f"模板文件不存在: {self.template_path}")
+                logger.error(f"❌ TEMPLATE FILE NOT FOUND: {self.template_path}")
                 self.template = None
         except Exception as e:
-            logger.error(f"加载模板失败: {e}")
+            logger.error(f"❌ TEMPLATE LOADING FAILED: {e}", exc_info=True)
             self.template = None
     
+    @timing_decorator("template_processing")
     def process_teaching_design(self, json_data: str, output_path: str) -> Dict[str, Any]:
         """
         处理教学设计数据，生成Word文档
@@ -72,38 +80,50 @@ class TemplateProcessor:
         Returns:
             Dict[str, Any]: 处理结果
         """
+        logger.info(f"📝 STARTING TEMPLATE PROCESSING - Output: {output_path}")
+        
         try:
             # 解析JSON数据
+            logger.debug("🔍 PARSING JSON DATA")
             data_dict = json.loads(json_data)
+            logger.info(f"✅ JSON PARSED SUCCESSFULLY - Keys: {list(data_dict.keys())}")
             
             # 验证数据格式
+            logger.debug("✅ VALIDATING DATA FORMAT")
             is_valid, errors = validate_teaching_design_data(data_dict)
             if not is_valid:
+                logger.error(f"❌ DATA VALIDATION FAILED - Errors: {errors}")
                 return {
                     'success': False,
                     'error': 'invalid_data',
                     'message': '数据格式验证失败',
                     'errors': errors
                 }
+            logger.info("✅ DATA VALIDATION PASSED")
             
             # 创建教学设计数据对象
+            logger.debug("🏗️ CREATING DESIGN DATA OBJECT")
             design_data = TeachingDesignData.from_dict(data_dict)
+            logger.info("✅ DESIGN DATA OBJECT CREATED")
             
             # 转换为模板数据格式
+            logger.debug("🔄 CONVERTING TO TEMPLATE DATA FORMAT")
             template_data = self._convert_to_template_data(design_data)
+            logger.info(f"✅ TEMPLATE DATA CONVERTED - Activities: {len(template_data.get('learning_activities', []))}")
             
             # 生成Word文档
+            logger.debug("📄 GENERATING WORD DOCUMENT")
             return self._generate_document(template_data, output_path)
             
         except json.JSONDecodeError as e:
-            logger.error(f"JSON解析失败: {e}")
+            logger.error(f"❌ JSON PARSING FAILED: {e}", exc_info=True)
             return {
                 'success': False,
                 'error': 'json_parse_error',
                 'message': f'JSON格式错误: {str(e)}'
             }
         except Exception as e:
-            logger.error(f"处理教学设计失败: {e}")
+            logger.error(f"❌ TEMPLATE PROCESSING FAILED: {e}", exc_info=True)
             return {
                 'success': False,
                 'error': 'processing_error',
@@ -168,13 +188,13 @@ class TemplateProcessor:
     
     def _format_learning_objectives(self, learning_objectives: str) -> str:
         """
-        格式化学习目标，将JSON数组转换为字符串格式
+        格式化学习目标，确保采用序号形式呈现
         
         Args:
-            learning_objectives: 学习目标字符串（可能是JSON格式）
+            learning_objectives: 学习目标字符串
             
         Returns:
-            str: 格式化后的学习目标字符串
+            str: 格式化后的学习目标字符串（序号形式）
         """
         try:
             # 尝试解析JSON格式
@@ -194,8 +214,23 @@ class TemplateProcessor:
                 return learning_objectives
                 
         except (json.JSONDecodeError, TypeError):
-            # 如果不是JSON格式，直接返回原字符串
-            return learning_objectives
+            # 如果不是JSON格式，检查是否已经是序号格式
+            lines = learning_objectives.strip().split('\n')
+            formatted_lines = []
+            
+            for i, line in enumerate(lines):
+                line = line.strip()
+                if not line:
+                    continue
+                    
+                # 检查是否已经有序号
+                if line.startswith(('1.', '2.', '3.', '4.', '5.', '6.', '7.', '8.', '9.')):
+                    formatted_lines.append(line)
+                else:
+                    # 如果没有序号，添加序号
+                    formatted_lines.append(f"{i+1}. {line}")
+            
+            return '\n'.join(formatted_lines)
     
     def _generate_document(self, template_data: Dict[str, Any], output_path: str) -> Dict[str, Any]:
         """
